@@ -606,6 +606,17 @@ button:hover {
    color: #fff;
 }
 
+.project-details {
+   /* background-color: #000; */
+   grid-column: 1 / -1;
+   width: 100%;
+   min-height: 400px;
+   padding: 3rem;
+}
+
+
+
+
 #formStatus {
     margin-top: 1rem;
     font-size: 0.95rem;
