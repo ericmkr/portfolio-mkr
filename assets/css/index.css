@@ -610,10 +610,29 @@ button:hover {
    /* background-color: #000; */
    grid-column: 1 / -1;
    width: 100%;
-   min-height: 400px;
+   /* min-height: 400px; */
    padding: 3rem;
 }
 
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 3rem;
+}
+
+.screen {
+   border: solid 1px grey;
+   width: 100%;
+   aspect-ratio: 16/9;
+   object-fit: cover;
+   cursor: pointer;
+   border-radius: 11px;
+   transition: .3s;
+}
+
+.screen:hover {
+   transform: scale(1.03);
+}
 
 
 
