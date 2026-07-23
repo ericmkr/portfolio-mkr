@@ -55,7 +55,7 @@
          <div class="projects-content">
             <div class="section-header">
                <h2 id="projects-title">My projects</h2>
-               <p id="projects-description">A selection of my recent work in product design and UX/UI.</p>   
+               <p id="projects-description" class="projects-description">A selection of my recent work in product design and UX/UI.</p>   
             </div>
                
             <!-- <div class="filters">
@@ -110,7 +110,7 @@
       <section id="about" class="about" aria-labelledby="about-title" aria-describedby="about-description">
          <div class="about-content">   
             <h2 id="about-title">About me</h2>   
-            <p id="about-description">   
+            <p id="about-description" class="about-description">   
                Passionné par le design et l'expérience utilisateur, je combine créativité et méthodologie 
                pour créer des produits numériques qui résolvent de vrais problèmes. 
                Mon approche se concentre sur la recherche utilisateur, le prototypage rapide et l'itération continue.
@@ -155,7 +155,7 @@
       <section id="contact" class="contact" aria-labelledby="contact-title" aria-describedby="contact-intro">   
          <div class="contact-content">
             <h2 id="contact-title">Let's work together</h2>
-            <p class="contact-intro">
+            <p id="contact-intro" class="contact-intro">
                Do you have a project in mind? Don't hesitate to contact me to discuss your needs.
             </p>
 
@@ -214,7 +214,7 @@
 
                      <div class="form-group">
                         <label for="name">Name</label>
-                        <input id="name" name="name" type="text" placeholder="Your nom" size="30" autocomplete="name" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-' ][A-Za-zÀ-ÖØ-öø-ÿ]+)*$" required>
+                        <input id="name" name="name" type="text" placeholder="Your name" size="30" autocomplete="name" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-' ][A-Za-zÀ-ÖØ-öø-ÿ]+)*$" required>
                      </div>
 
                      <div class="form-group">
@@ -227,7 +227,7 @@
                         <textarea id="message" name="message" rows="3" cols="30" maxlength="1000" placeholder="Let me know what you need..." required></textarea>
                      </div>
 
-                     <button type="submit" class="btn-primary form-submit">Send</button>
+                     <button id="submit-btn" type="submit" class="btn-primary">Send</button>
 
                      <!-- <p id="formStatus"></p> -->
 

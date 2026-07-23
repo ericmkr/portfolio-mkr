@@ -220,7 +220,7 @@ strong {
    margin-bottom: 1rem;
 }
 
-.section-header p {
+.projects-description {
    color: var(--muted-foreground);
    font-size: 1.125rem;
    max-width: 44rem;
@@ -336,11 +336,11 @@ strong {
    margin-bottom: 1.5rem;
 }
 
-#about-description {
+.about-description {
    font-size: 1.25rem;
    color: var(--muted-foreground);
    margin-bottom: 3rem;
-   max-width: 50rem;
+   /* max-width: 50rem; */
 }
 
 .about-grid {
@@ -405,7 +405,7 @@ strong {
    margin: 0 auto;
 }
 
-.contact h2 {
+#contact-title {
    font-size: 2.5rem;
    font-weight: 500;
    margin-bottom: 1rem;
@@ -508,20 +508,20 @@ input:focus, textarea:focus {
 }
 
 textarea {
-   min-height: 150px;
+   min-height: 9.375rem;
    resize: vertical;
    margin-bottom: 1.5rem;
 }
 
-.form-submit {
-   width:100%;
+#submit-btn {
+   width: 100%;
 }
 
 
         
 footer {
    padding: 2rem 1.5rem;
-   border-top: solid.0625rem var(--border);
+   border-top: solid .0625rem var(--border);
    text-align: center;
    color: var(--muted-foreground);
 }
@@ -670,40 +670,40 @@ button:hover {
 
 
 
-#formStatus {
-    margin-top: 1rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    min-height: 24px;
+#formStatus { 
+   margin-top: 1rem;
+   font-size: 0.95rem;
+   font-weight: 500;
+   min-height: 24px;
 }
 
 #formStatus.success {
-    color: #22c55e;
+   color: #22c55e;
 }
 
 #formStatus.error {
-    color: #ef4444;
+   color: #ef4444;   
 }
 
 #submitBtn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
+   opacity: 0.7;
+   cursor: not-allowed;
 }
 
-.spinner{
-    width:18px;
-    height:18px;
-    border:2px solid rgba(255,255,255,.3);
-    border-top-color:#fff;
-    border-radius:50%;
-    animation:spin .8s linear infinite;
-    display:none;
+.spinner {
+   width:18px;
+   height:18px;
+   border:2px solid rgba(255,255,255,.3);
+   border-top-color:#fff;
+   border-radius:50%;
+   animation:spin .8s linear infinite;
+   display:none;
 }
 
 @keyframes spin{
-    to{
-        transform:rotate(360deg);
-    }
+   to {
+      transform:rotate(360deg);
+   }
 }
 
 
