@@ -614,13 +614,16 @@ button:hover {
    padding: 3rem;
 }
 
+.project-details-title {
+   margin: .7rem;
+}
+
 .gallery {
    display: flex;
    gap: 1.1rem;
    overflow-x: auto;
    overflow-y: hidden;
-   padding-bottom: .75rem;
-   padding-top: .75rem;
+   padding: .75rem;
    scroll-snap-type: x proximity;
 }
 
@@ -639,6 +642,14 @@ button:hover {
 
 .screen:hover {
    transform: scale(1.01);
+}
+
+.close {
+   display: block;
+   margin: 1.5rem auto 0;
+   font-size: 1.1rem;
+   color: var(--background);
+   background-color: rgb(232, 0, 0);
 }
 
 
