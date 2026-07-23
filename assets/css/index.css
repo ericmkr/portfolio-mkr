@@ -255,13 +255,13 @@ strong {
    gap: 3rem;
 }
 
-article {
+.card-link {
    text-decoration: none;
    color: #000;
+   transition: all .3s ease;
 }
 
 .project-card {
-   cursor: pointer;
    transition: all .3s ease;
 }
 
