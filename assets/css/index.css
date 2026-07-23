@@ -214,7 +214,7 @@ strong {
    margin-bottom: 3rem;
 }
 
-.section-header h2 {          /*change to #Titre-section-projets */
+#projects-title {
    font-size: 2.5rem;
    font-weight: 500;
    margin-bottom: 1rem;
@@ -330,13 +330,13 @@ strong {
    margin: 0 auto;
 }
 
-.about h2 {
+#about-title {
    font-size: 2.5rem;
    font-weight: 500;
    margin-bottom: 1.5rem;
 }
 
-.about-description {
+#about-description {
    font-size: 1.25rem;
    color: var(--muted-foreground);
    margin-bottom: 3rem;
@@ -369,6 +369,11 @@ strong {
    border: 1px solid var(--border);
    border-radius: 2rem;
    font-size: 0.95rem;
+}
+
+.experience-summary {
+   font-size: 1.25rem;
+   margin-bottom: 1.5rem;
 }
 
 .experience-item {
