@@ -42,7 +42,7 @@ header {
    z-index: 1000;
    background-color: rgba(255, 255, 255, .8);
    backdrop-filter: blur(11px);
-   border-bottom: solid 1px var(--border);
+   border-bottom: solid .0625rem var(--border);
 }
 
 .header-content {
@@ -512,6 +512,12 @@ textarea {
    resize: vertical;
    margin-bottom: 1.5rem;
 }
+
+.form-submit {
+   width:100%;
+}
+
+
         
 footer {
    padding: 2rem 1.5rem;
