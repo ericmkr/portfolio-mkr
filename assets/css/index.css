@@ -200,12 +200,12 @@ strong {
    opacity: .5;
 }
 
-.work {
+.projects {
    min-height: 100vh;
    padding: 6rem 1.5rem;
 }
 
-.work-content {
+.projects-content {
    max-width: 80rem;
    margin: 0 auto;
 }

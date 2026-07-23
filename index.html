@@ -16,7 +16,7 @@
          <nav class="navbar" aria-label="Main navigation">
             <ul class="navbar-nav">
                <li class="navbar-item">
-                  <a class="navbar-link" href="#work">Projects</a>
+                  <a class="navbar-link" href="#projects">Projects</a>
                </li>
                <li class="navbar-item">
                   <a class="navbar-link" href="#about">About</a>
@@ -30,32 +30,32 @@
    </header>
 
    <main id="main-content">
-      <section id="hero" class="hero" aria-label="hero-section">
+      <section id="hero" class="hero" aria-labelledby="hero-title" aria-describedby="hero-description">
          <div class="avatar">
-            <img class="avatar-img" src="assets/img/4x4.jpg" width="250" height="330" alt="Portrait de Victor Eric MOUKOURI"/>
+            <img class="avatar-img" src="assets/img/4x4.jpg" width="250" height="330" alt="Portrait of Victor Eric MOUKOURI"/>
          </div>
 
          <div class="hero-content">
-            <p class="hero-tag">Bonjour, je suis <strong>Eric Moukouri</strong></p>
-            <h1>
+            <p class="hero-tag">Hello, I'm <strong>Eric Moukouri</strong></p>
+            <h1 id="hero-title">
                <span id="typing-text" aria-live="polite">Front-End Developer</span>
                <span class="cursor" aria-hidden="true">_</span>
             </h1>
             <p class="hero-description">
-               Je crée des expériences numériques centrées sur l'utilisateur, alliant esthétique, fonctionnalité et validité.
+               I create user-centric digital experiences that combine aesthetics, functionality, and validity.
             </p>
             <div class="hero-buttons">
-               <a href="#work" class="btn-primary">Voir mes projets</a>
-               <a href="#contact" class="btn-secondary">Me contacter</a>
+               <a href="#projects" class="btn-primary">See my projects</a>
+               <a href="#contact" class="btn-secondary">Contact me</a>
             </div>
          </div>
       </section>
 
-      <section id="work" class="work" aria-labelledby="Titre-section-projets">
-         <div class="work-content">
+      <section id="projects" class="projects" aria-labelledby="projects-title" aria-describedby="projects-description">
+         <div class="projects-content">
             <div class="section-header">
-               <h2 id="Titre-section-projets">Mes projets</h2>
-               <p>Une sélection de mes travaux récents en Product Design et UX/UI.</p>   
+               <h2 id="projects-title">My projects</h2>
+               <p id="projects-description">A selection of my recent work in product design and UX/UI.</p>   
             </div>
                
             <!-- <div class="filters">
@@ -73,8 +73,8 @@
                            <span class="project-category">UX/UI Design</span>
                         </div>   
                      </div>
-                     <h3>FlowTrack – Application mobile de gestion des tâches quotidiennes</h3>
-                     <p>Conception UX/UI Design d'une application mobile pour la gestion des tâches quotidiennes</p>
+                     <h3>FlowTrack – Mobile app for daily task management</h3>
+                     <p>UX/UI design of a mobile app for daily task management.</p>
                   </article>
                </a>
    
@@ -109,7 +109,7 @@
 
       <section id="about" class="about" aria-labelledby="Titre-section-a-propos">
          <div class="about-content">   
-            <h2 id="Titre-section-a-propos">À propos de moi</h2>   
+            <h2 id="about">À propos de moi</h2>   
             <p class="about-description">   
                Passionné par le design et l'expérience utilisateur, je combine créativité et méthodologie pour créer des produits numériques qui résolvent de vrais problèmes. Mon approche se concentre sur la recherche utilisateur, le prototypage rapide et l'itération continue.
             </p>
