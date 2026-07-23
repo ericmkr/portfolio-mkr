@@ -1,0 +1,292 @@
+      
+
+/* =========================
+   FRONTEND MENTOR TESTIMONIALS
+========================= */
+      
+      <section>
+         <div>
+            <h2 class="sr-only">Testimonials</h2> 
+            <div class="container-sm flex flex-col gap-5 desktop:container-xl desktop:flex-row">
+               <div class="basis-0 bg-white border border-neutral-200 flex flex-col flex-grow flex-shrink gap-6 items-center rounded-2xl p-5 shadow">
+                  <p class="tablet:text-lg desktop:my-auto">"I highly recommend Frontend Mentor. Skip the search for project ideas and dive into ready-made challenges that help you level up as a developer."</p>
+                  <div class="flex flex-wrap gap-4 items-center justify-between w-full">
+                     <div class="flex gap-3 items-center">
+                        <div class="bg-white flex-shrink-0 rounded-full relative shadow-inner before:absolute before:h-full before:left-0 before:rounded-full before:shadow-[inset_-1px_1px_3px_rgba(0,0,0,0.2)] before:top-0 before:w-full w-[3.125rem]">
+                           <img alt="" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" class="aspect-square h-full object-cover rounded-full w-full" srcset="/_next/image?url=%2Fimages%2Fhome-avatar-kevin.webp&amp;w=64&amp;q=75 1x, /_next/image?url=%2Fimages%2Fhome-avatar-kevin.webp&amp;w=128&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fhome-avatar-kevin.webp&amp;w=128&amp;q=75" style="color: transparent;">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                           <span class="font-bold text-blue-500">Kevin Powell</span>
+                           <span class="text-neutral-500 text-sm">Web Developer &amp; YouTuber</span>
+                        </div>
+                     </div>
+                     <i aria-hidden="true" class="fa-solid fa-quote-right text-indigo-100 text-[3.5rem]"></i>
+                  </div>
+               </div>
+               
+               <div class="basis-0 bg-white border border-neutral-200 flex flex-col flex-grow flex-shrink gap-6 items-center rounded-2xl p-5 shadow">
+                  <p class="tablet:text-lg desktop:my-auto">"Frontend Mentor is a win-win. You can sharpen your skills building websites and add finished projects to your portfolio to help land a job!"</p>
+                  <div class="flex flex-wrap gap-4 items-center justify-between w-full">
+                     <div class="flex gap-3 items-center">
+                        <div class="bg-white flex-shrink-0 rounded-full relative shadow-inner before:absolute before:h-full before:left-0 before:rounded-full before:shadow-[inset_-1px_1px_3px_rgba(0,0,0,0.2)] before:top-0 before:w-full w-[3.125rem]">
+                           <img alt="" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" class="aspect-square h-full object-cover rounded-full w-full" srcset="/_next/image?url=%2Fimages%2Fhome-avatar-jessica.webp&amp;w=64&amp;q=75 1x, /_next/image?url=%2Fimages%2Fhome-avatar-jessica.webp&amp;w=128&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fhome-avatar-jessica.webp&amp;w=128&amp;q=75" style="color: transparent;">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                           <span class="font-bold text-blue-500">Jessica Chan</span>
+                           <span class="text-neutral-500 text-sm">Web Developer &amp; YouTuber</span>
+                        </div>
+                     </div>
+                     <i aria-hidden="true" class="fa-solid fa-quote-right text-indigo-100 text-[3.5rem]"></i>
+                  </div>
+               </div>               </div>
+            </div>
+         </div>
+      </section>
+
+.shadow {
+   --tw-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
+   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.p-5 { 
+   padding: clamp(1.5rem, 1.3835rem + .5825vi, 1.875rem);
+}
+
+.bg-white { 
+   --tw-bg-opacity: 1; 
+   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.border-neutral-200 {
+    --tw-border-opacity: 1;
+    border-color: rgb(229 229 229 / var(--tw-border-opacity, 1));
+}
+
+.border {
+    border-width: 1px;
+}
+
+.rounded-2xl {
+    border-radius: 1rem;
+}
+
+.gap-6 {
+    gap: clamp(2rem, 1.8447rem + .7767vi, 2.5rem);
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.basis-0 {
+    flex-basis: 0;
+}
+
+.flex-grow, .grow {
+    flex-grow: 1;
+}
+
+.flex-shrink {
+    flex-shrink: 1;
+}
+
+.flex {
+    display: flex;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+
+
+
+/* =========================
+   FRONTEND MENTOR BILLING
+========================= */
+
+<div class="container-xl flex flex-col gap-8 items-center pb-9 px-5">
+   <h2 class="sr-only">Plans</h2>
+   <div class="container-lg flex flex-col gap-8 items-center">
+      <div class="flex flex-col gap-6 items-center w-full">
+         <div class="bg-white border border-neutral-200 mb-5 p-1 rounded-full">
+            <button class="font-bold font-secondary italic px-4 py-2 text-sm transition-colors uppercase rounded-full mobile:px-5 mobile:py-3 mobile:text-base bg-blue-500 text-white">For individuals</button>
+            <button class="font-bold font-secondary italic px-4 py-2 text-sm transition-colors uppercase rounded-full mobile:px-5 mobile:py-3 mobile:text-base">For teams</button>
+         </div>
+         <div class="flex flex-col gap-4 max-w-[24rem] w-full tablet:container-md tablet:flex-row">
+            <div class="bg-white border border-neutral-200 isolate relative rounded-2xl w-full flex flex-col gap-4 items-center px-3 py-4">
+               <span class="font-secondary text-lg">Monthly</span>
+               <div class="flex flex-col gap-1 items-center justify-center mb-auto text-center w-full">
+                  <del class="font-bold line-through opacity-40 text-neutral-500">US$12/month</del>
+                  <div class="flex flex-col gap-1 items-center">
+                     <span class="font-semibold text-2xl">US$6/mo</span>
+                  </div>
+                  <span class="font-normal pt-1 text-sm text-neutral-500">Billed monthly</span>
+                  <div class="border border-blue-200 bg-blue-50 flex flex-wrap gap-2 items-center p-2 rounded-lg w-full">
+                     <span class="text-xl/0">🇨🇲</span>
+                     <span class="font-semibold text-base">Country Discount</span>
+                     <span class="font-bold text-blue-600">50% off</span>
+                     <span class="inline-flex text-sm bg-green-100 text-green-700 px-2 py-0.5 rounded font-semibold">Applied</span>
+                     <span class="block text-[0.8em] text-neutral-600"></span>
+                  </div>
+               </div>
+               <a class="border disabled:bg-neutral-500 disabled:border-neutral-500 flex font-bold font-secondary italic items-center justify-center px-5 py-3 text-center text-base tracking-wider transition-colors rounded-full uppercase leading-none bg-rose-600 border-rose-600 hover:bg-red-700 hover:border-red-700 text-white w-full" href="/pro">Learn more</a>
+                  <ul class="flex flex-col gap-4 list-none self-start">
+                     <li class="flex gap-3">
+                        <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                        <span>
+                           <span>Free challenges</span> 
+                           <span class="sr-only">(included)</span>
+                        </span>
+                     </li>
+                     <li class="flex gap-3">
+                        <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                        <span>
+                           <span class="font-bold">AI code review on every solution</span>
+                           <span class="sr-only">(included)</span>
+                        </span>
+                     </li>
+                     <li class="flex gap-3">
+                        <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                        <span>
+                           <span class="font-bold">5 Figma design files/month</span>
+                           <span class="sr-only">(included)</span>
+                        </span>
+                     </li>
+                     <li class="flex gap-3">
+                        <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                        <span>
+                           <span class="font-bold">2 premium challenges/month</span> 
+                           <span class="sr-only">(included)</span>
+                        </span>
+                     </li>
+                     <li class="flex gap-3">
+                        <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                        <span>
+                           <span>Private solutions</span>
+                           <span class="sr-only">(included)</span>
+                        </span>
+                     </li>
+                     <li class="flex gap-3">
+                        <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                        <span>
+                           <span>Custom solution domains</span>
+                           <span class="sr-only">(included)</span>
+                        </span>
+                     </li>
+                     <li class="flex gap-3">
+                        <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                        <span>
+                           <span>View challenge solutions early</span>
+                           <span class="sr-only">(included)</span>
+                        </span>
+                     </li>   
+                  </ul>         
+            </div>
+            
+            <div class="bg-white isolate rounded-2xl w-full border-blue-500 border-2 flex flex-col gap-4 items-center px-3 py-4 rounded-tl-none rounded-tr-none relative mt-[2rem] overflow-visible tablet:mt-0">
+               <div class="absolute bg-blue-500 left-[-2px] bottom-full py-[0.5rem] rounded-tr-2xl rounded-tl-2xl text-white w-[calc(100%+4px)]">
+                  <span class="font-bold uppercase block font-secondary italic text-sm tracking-wider text-center">Best value</span>
+               </div>
+               <span class="font-secondary text-lg">Yearly</span>
+               <div class="flex flex-col gap-1 items-center justify-center text-center">
+                  <del class="font-bold line-through opacity-40 text-neutral-500">US$8 /month</del>
+                     <div class="flex flex-col gap-1 items-center">
+                        <span class="font-semibold text-2xl">US$4/mo</span>
+                     </div>
+                     <span class="font-normal pt-1 text-sm text-neutral-500">US$48 billed yearly (save 33% vs monthly)</span>
+                        <div class="border border-blue-200 bg-blue-50 flex flex-wrap gap-2 items-center p-2 rounded-lg w-full">
+                           <span class="text-xl/0">🇨🇲</span>
+                           <span class="font-semibold text-base">Country Discount</span>
+                           <span class="font-bold text-blue-600">50% off</span>
+                           <span class="inline-flex text-sm bg-green-100 text-green-700 px-2 py-0.5 rounded font-semibold">Applied</span>
+                           <span class="block text-[0.8em] text-neutral-600"></span>
+                        </div>
+            </div>
+                     <a class="border disabled:bg-neutral-500 disabled:border-neutral-500 flex font-bold font-secondary italic items-center justify-center px-5 py-3 text-center text-base tracking-wider transition-colors rounded-full uppercase leading-none bg-rose-600 border-rose-600 hover:bg-red-700 hover:border-red-700 text-white w-full" href="/pro">Learn more</a>
+                     <ul class="flex flex-col gap-4 list-none self-start">
+                        <li class="flex gap-3">
+                           <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                           <span>
+                              <span>Free challenges</span> 
+                              <span class="sr-only">(included)</span>
+                           </span>
+                        </li>
+                        <li class="flex gap-3">
+                           <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                           <span>
+                              <span class="font-bold">AI code review on every solution</span> 
+                              <span class="sr-only">(included)</span>
+                           </span>
+                        </li>
+                        <li class="flex gap-3">
+                           <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                           <span>
+                              <span class="font-bold">Unlimited Figma design files</span> 
+                              <span class="sr-only">(included)</span>
+                           </span>
+                        </li>
+                        <li class="flex gap-3">
+                           <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                           <span>
+                              <span class="font-bold">Unlimited premium challenges</span> 
+                              <span class="sr-only">(included)</span>
+                           </span>
+                        </li>
+                        <li class="flex gap-3">
+                           <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                           <span>
+                              <span>Private solutions</span>
+                              <span class="sr-only">(included)</span>
+                           </span>
+                        </li>
+                        <li class="flex gap-3">
+                           <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                           <span>
+                              <span>Custom solution domains</span> 
+                              <span class="sr-only">(included)</span>
+                           </span>
+                        </li>
+                        <li class="flex gap-3">
+                           <i aria-hidden="true" class="fa-solid fa-circle-check pt-1 text-lg text-blue-500"></i>
+                           <span>
+                              <span>View challenge solutions early</span> 
+                              <span class="sr-only">(included)</span>
+                           </span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <div class="bg-gray-100 p-5 rounded-lg w-fit">
+                  <h3 class="sr-only">Accepted payment methods</h3>
+                  <ul class="flex flex-wrap gap-4 justify-center">
+                     <li>
+                        <img alt="Visa" loading="lazy" width="60" height="40" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fvisa.png&amp;w=64&amp;q=75 1x, /_next/image?url=%2Fimages%2Fvisa.png&amp;w=128&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fvisa.png&amp;w=128&amp;q=75" style="color: transparent;">
+                     </li>
+                     <li>
+                        <img alt="MasterCard" loading="lazy" width="60" height="40" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fmastercard.png&amp;w=64&amp;q=75 1x, /_next/image?url=%2Fimages%2Fmastercard.png&amp;w=128&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fmastercard.png&amp;w=128&amp;q=75" style="color: transparent;">
+                     </li>
+                     <li>
+                        <img alt="American Express" loading="lazy" width="60" height="40" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Famex.png&amp;w=64&amp;q=75 1x, /_next/image?url=%2Fimages%2Famex.png&amp;w=128&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Famex.png&amp;w=128&amp;q=75" style="color: transparent;">
+                     </li>
+                     <li>
+                        <img alt="Maestro" loading="lazy" width="60" height="40" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fmaestro.png&amp;w=64&amp;q=75 1x, /_next/image?url=%2Fimages%2Fmaestro.png&amp;w=128&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fmaestro.png&amp;w=128&amp;q=75" style="color: transparent;">
+                     </li>
+                     <li>
+                        <img alt="PayPal" loading="lazy" width="60" height="40" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fpaypal.png&amp;w=64&amp;q=75 1x, /_next/image?url=%2Fimages%2Fpaypal.png&amp;w=128&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fpaypal.png&amp;w=128&amp;q=75" style="color: transparent;">
+                     </li>
+                     <li>
+                        <img alt="Google Pay" loading="lazy" width="60" height="40" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fgpay.png&amp;w=64&amp;q=75 1x, /_next/image?url=%2Fimages%2Fgpay.png&amp;w=128&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fgpay.png&amp;w=128&amp;q=75" style="color: transparent;">
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
