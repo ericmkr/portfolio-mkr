@@ -7,7 +7,6 @@
    box-sizing: border-box;
 }
 
-
 :root {
    --primary: #d2af67;
    --primary-foreground: #ffffff;
@@ -136,6 +135,12 @@ strong {
       opacity: 0;
    }
 }
+
+@media (prefers-reduced-motion: reduce) {
+   .cursor, .typing {
+      animation: none;
+   }
+}
    
 .hero-description {
    font-size: 1.5rem;
@@ -209,7 +214,7 @@ strong {
    margin-bottom: 3rem;
 }
 
-.section-header h2 {
+.section-header h2 {          /*change to #work-title */
    font-size: 2.5rem;
    font-weight: 500;
    margin-bottom: 1rem;
@@ -250,7 +255,7 @@ strong {
    gap: 3rem;
 }
 
-.article {
+article {
    text-decoration: none;
    color: #000;
 }

@@ -38,7 +38,7 @@
          <div class="hero-content">
             <p class="hero-tag">Bonjour, je suis <strong>Eric Moukouri</strong></p>
             <h1>
-               <span id="typing-text" aria-live="polite"></span>
+               <span id="typing-text" aria-live="polite">Front-End Developer</span>
                <span class="cursor" aria-hidden="true">_</span>
             </h1>
             <p class="hero-description">
@@ -51,32 +51,35 @@
          </div>
       </section>
 
-      <section id="work" class="work">
+      <section id="work" class="work" aria-labelledby="work-title">
          <div class="work-content">
             <div class="section-header">
-               <h2>Mes projets</h2>
-               <p>Une sélection de mes travaux récents en Product Design et UX/UI.</p>
-               </div>
-
-               <!-- <div class="filters">
-                  <button class="filter-btn active">Tous</button>
-                  <button class="filter-btn">UX/UI Design</button>
-                  <button class="filter-btn">Product Design</button>
-               </div> -->
-
-               <div class="projects-grid">
-                  <a class="article" href="">
+               <h2 id="work-title">Mes projets</h2>
+               <p>Une sélection de mes travaux récents en Product Design et UX/UI.</p>   
+            </div>
+               
+            <!-- <div class="filters">
+               <button class="filter-btn active">Tous</button>
+               <button class="filter-btn">UX/UI Design</button>
+               <button class="filter-btn">Product Design</button>
+            </div> -->
+            
+            <div class="projects-grid">
+               <a class="card-link" href="#">
+                  <article class="card">
                      <div class="project-card" data-project="flowtrack">
                         <div class="project-image">
-                           <img src="assets/img/FlowTrack logo.jpg" alt="FlowTrack">
+                           <img src="assets/img/FlowTrack logo.jpg" alt="Logo de FlowTrack">
                            <div class="project-overlay">
                               <span class="project-category">UX/UI Design</span>
                            </div>
                         </div>
+            
                         <h3>FlowTrack – Application mobile de gestion des tâches quotidiennes</h3>
                         <p>Conception UX/UI Design d'une application mobile pour la gestion des tâches quotidiennes</p>
                      </div>
-                  </a>
+                  </article>
+               </a>
 
                   <a class="article" href=""> <!-- # nav -->
                      <div class="project-card">

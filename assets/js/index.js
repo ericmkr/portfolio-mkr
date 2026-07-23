@@ -3,12 +3,12 @@
 ========================= */
 
 const roles = [ 
-  "UX/UI Designer",
-  "Front-End Developer",
-  "Product Designer",
-  "Web Designer",
-  "Graphic Designer",
-  "QA Analyst"
+   "Front-End Developer",
+   "UX/UI Designer",
+   "Product Designer",
+   "Web Designer",
+   "Graphic Designer",
+   "QA Analyst"
 ];
 
 const typingText = document.getElementById("typing-text");
@@ -26,7 +26,7 @@ function typeEffect() {
 
       if (charIndex === currentRole.length) {
          isDeleting = true;
-         setTimeout(typeEffect, 3000); // pause après écriture
+         setTimeout(typeEffect, 3000);
          return;
       }
    } else {
