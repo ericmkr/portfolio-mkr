@@ -537,7 +537,7 @@ footer {
 }
 
 .back-to-top:focus-visible {
-   outline: solid .1875rem var(--accent);
+   outline: solid .1875rem var(--foreground);
    outline-offset: .1875rem;
 }
 
