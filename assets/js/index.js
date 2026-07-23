@@ -226,7 +226,6 @@ typeEffect();
    BACK TO TOP BTN
 ========================= */
 
-// Back-to-top button: reveal on scroll and smooth return to top
 var backTopBtn = document.getElementById('back-to-top');
 
 function updateBackToTopVisibility() {
