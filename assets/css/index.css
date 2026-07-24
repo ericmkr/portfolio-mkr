@@ -522,6 +522,14 @@ textarea {
    cursor: not-allowed;
 }
 
+.availability {
+   font-size: .75rem;
+   display: block;
+   text-align: center;
+   margin: 1.3rem 0;
+   color: var(--muted-foreground);
+}
+
 footer {
    padding: 2rem 1.5rem;
    border-top: solid .0625rem var(--border);
