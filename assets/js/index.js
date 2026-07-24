@@ -170,6 +170,42 @@ typeEffect();
 // });
 
 /* =========================
+   PREFILLED FORM
+========================= */
+
+const isDev = true;
+
+if (isDev) {
+   document.getElementById("name").value = "Tester";
+   document.getElementById("email").value = "tester@tests.test";
+   document.getElementById("message").value = "Hello, this is a test message sent automatically to verify that the form is working correctly.";
+}
+
+/* =========================
+   BACK TO TOP BTN
+========================= */
+
+var backTopBtn = document.getElementById('back-to-top');
+
+function updateBackToTopVisibility() {
+   if(!backTopBtn) return;
+
+   var shouldShow = window.scrollY > 240;
+   
+   if(shouldShow) backTopBtn.classList.add('show');   
+   else backTopBtn.classList.remove('show');   
+}
+  
+if(backTopBtn){ 
+   backTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); 
+   });
+   window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+   window.addEventListener('resize', updateBackToTopVisibility);
+   updateBackToTopVisibility();  
+};
+
+/* =========================
    FORM SUBMIT FEEDBACK
 ========================= */
 
@@ -222,26 +258,148 @@ typeEffect();
 //     submitBtn.textContent = "Envoyer";
 // });
 
-/* =========================
-   BACK TO TOP BTN
-========================= */
 
-var backTopBtn = document.getElementById('back-to-top');
 
-function updateBackToTopVisibility() {
-   if(!backTopBtn) return;
 
-   var shouldShow = window.scrollY > 240;
-   
-   if(shouldShow) backTopBtn.classList.add('show');   
-   else backTopBtn.classList.remove('show');   
-}
-  
-if(backTopBtn){ 
-   backTopBtn.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' }); 
+
+
+const form = document.querySelector("form");
+const overlay = document.getElementById("modal-overlay");
+const modal = document.getElementById("form-modal");
+const icon = document.getElementById("modal-icon");
+const title = document.getElementById("modal-title");
+const message = document.getElementById("modal-message");
+// const countdown = document.getElementById("modal-countdown");
+// const closeBtn = document.getElementById("modal-close");
+// let redirectTimer;
+
+const DISPLAY_TIME = 11000;
+
+function openModal() {
+   overlay.hidden = false;
+   modal.hidden = false;
+
+   requestAnimationFrame(()=>{
+      overlay.classList.add("show");
+      modal.classList.add("show");
    });
-   window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
-   window.addEventListener('resize', updateBackToTopVisibility);
-   updateBackToTopVisibility();
-  }
+}
+
+
+
+
+// function closeModal() {
+//    overlay.classList.remove("show");
+//    modal.classList.remove("show");
+ 
+   // setTimeout(()=>{
+   //    overlay.hidden = true;
+   //    modal.hidden = true;
+   // }, 
+   // 350
+   // );
+
+   // closeBtn.addEventListener("click", ()=>{
+   //    clearTimeout(redirectTimer);
+   //    closeModal();
+   // });
+// }
+
+
+
+
+
+function updateModal(state) {
+   switch(state) {
+      case "loading":
+         icon.textContent="⏳";
+         title.textContent="Sending...";
+         message.textContent="Your message is currently being sent.";
+      break;
+
+      case "success":
+         icon.textContent="✓";
+         title.textContent="Message sent successfully!";
+         message.textContent="Thank you for contacting me. You will be redirected shortly.";
+      break;
+
+      // case "error":
+      //    icon.textContent="⚠";
+      //    title.textContent="An error occurred.";
+      //    message.textContent="Your message could not be sent. Please try again later.";
+      // break;
+   }
+}
+
+
+
+
+
+form.addEventListener("submit", async (e)=>{
+   e.preventDefault();
+
+   openModal();
+
+   updateModal("loading");
+
+   try {
+      const response = await fetch(form.action, {
+         method:"POST",
+         body:new FormData(form)
+      });
+
+      if(response.ok) {
+         updateModal("success");
+      } 
+
+      else {
+         updateModal("error");
+      }
+   }
+
+   catch {
+      updateModal("error");
+   }
+
+   setTimeout(()=>{
+      window.location.reload();
+   }, 
+   DISPLAY_TIME);
+});
+
+
+
+
+
+
+
+// document.addEventListener("keydown",(e)=>{
+//    if(e.key==="Escape" && modal.classList.contains("show")){
+//       clearTimeout(redirectTimer);
+//       closeModal();
+//    }
+// });
+
+// function startCountdown(seconds){
+//    let remaining = seconds;
+
+//    countdown.textContent = `Redirecting in ${remaining} seconds...`;
+
+//    const interval = setInterval(()=>{
+//       remaining--;
+
+//       if (remaining > 1) {
+//          countdown.textContent = `Redirecting in ${remaining} seconds...`;
+//       }
+
+//       else if (remaining === 1) {
+//          countdown.textContent = "Redirecting in 1 second...";
+//       }
+
+//       else{
+//          clearInterval(interval);
+//       }
+//    }, 
+//    1000);
+// }
+
