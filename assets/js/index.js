@@ -18,6 +18,7 @@ let charIndex = 0;
 let isDeleting = false;
 
 function typeEffect() {
+
    const currentRole = roles[roleIndex];
 
    if (!isDeleting) {
@@ -29,7 +30,9 @@ function typeEffect() {
          setTimeout(typeEffect, 3000);
          return;
       }
-   } else {
+   } 
+   
+   else {
       typingText.textContent = currentRole.substring(0, charIndex - 1);
       charIndex--;
 
@@ -323,12 +326,12 @@ function updateModal(state) {
          message.textContent="Thank you for contacting me. You will be redirected shortly.";
       break;
 
-      // case "error":
-      //    icon.textContent="⚠";
-      //    title.textContent="An error occurred.";
-      //    message.textContent="Your message could not be sent. Please try again later.";
-      // break;
-   }
+      case "error":
+         icon.textContent="⚠";
+         title.textContent="An error occurred.";
+         message.textContent="Your message could not be sent. Please try again later.";
+      break;
+   };
 }
 
 
@@ -357,7 +360,8 @@ form.addEventListener("submit", async (e)=>{
       }
    }
 
-   catch {
+   catch(error) {
+      console.error(error);
       updateModal("error");
    }
 

@@ -604,14 +604,14 @@ footer {
 }
 
 .form-modal p {
-   line-height: 1.6;
+   line-height: 1.5;
 }
 
-.modal-countdown {
+/* .modal-countdown {
    margin-top: 1rem;
    font-size: .9rem;
    color: #6b7280;
-}
+} */
 
 /* .modal-close {
    position: absolute;
@@ -629,8 +629,8 @@ footer {
    font-weight: 400;
    color: red;
    cursor: pointer;
-   transition: background .3s, color .3s, transform .3s; */
-}
+   transition: background .3s, color .3s, transform .3s;
+} */
 
 /* .modal-close:hover {
    background: red;
