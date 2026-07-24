@@ -348,7 +348,8 @@ form.addEventListener("submit", async (e)=>{
    try {
       const response = await fetch(form.action, {
          method:"POST",
-         body:new FormData(form)
+         body:new FormData(form),
+         headers: {Accept: "application/json"}
       });
 
       if(response.ok) {
