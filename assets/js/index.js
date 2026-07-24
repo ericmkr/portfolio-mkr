@@ -365,12 +365,21 @@ form.addEventListener("submit", async (e)=>{
       }
 
       else {
+         alert (
+            `Erreur HTTP ${response.status}\n\n${response.statusText}`
+         );
+
          updateModal("error");
       }
    }
 
    catch(error) {
       console.error(error);
+
+      alert (
+         "Une erreur réseau est survenue.\n\n" +
+         error.message
+      );
       updateModal("error");
    }
 
