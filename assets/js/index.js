@@ -191,21 +191,28 @@ if (isDev) {
 var backTopBtn = document.getElementById('back-to-top');
 
 function updateBackToTopVisibility() {
-   if(!backTopBtn) return;
+
+   if (!backTopBtn) return;
 
    var shouldShow = window.scrollY > 240;
    
-   if(shouldShow) backTopBtn.classList.add('show');   
+   if (shouldShow) backTopBtn.classList.add('show'); 
+
    else backTopBtn.classList.remove('show');   
+
 }
   
-if(backTopBtn){ 
+if (backTopBtn) {
+
    backTopBtn.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' }); 
    });
+
    window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
    window.addEventListener('resize', updateBackToTopVisibility);
+
    updateBackToTopVisibility();  
+
 };
 
 /* =========================
@@ -279,13 +286,17 @@ const message = document.getElementById("modal-message");
 // const DISPLAY_TIME = 11000;
 
 function openModal() {
+
    overlay.hidden = false;
    modal.hidden = false;
 
-   requestAnimationFrame(()=>{
+   requestAnimationFrame(() => {
+
       overlay.classList.add("show");
       modal.classList.add("show");
+
    });
+
 }
 
 
@@ -313,7 +324,9 @@ function openModal() {
 
 
 function updateModal(state) {
-   switch(state) {
+
+   switch (state) {
+
       case "loading":
          icon.textContent="⏳";
          title.textContent="Sending...";
@@ -331,14 +344,17 @@ function updateModal(state) {
          title.textContent="An error occurred.";
          message.textContent="Your message could not be sent. Please try again later.";
       break;
+
    };
+
 }
 
 
 
 
 
-form.addEventListener("submit", async (e)=>{
+form.addEventListener("submit", async (e) => {
+
    e.preventDefault();
 
    openModal();
@@ -346,6 +362,7 @@ form.addEventListener("submit", async (e)=>{
    updateModal("loading");
 
    try {
+
       const response = await fetch(form.action, {
          method:"POST",
          body:new FormData(form),
@@ -354,19 +371,22 @@ form.addEventListener("submit", async (e)=>{
 
       await debugResponse(response);
 
-      if(response.ok) {
+      if (response.ok) {
+
          updateModal("success");
+      
       } 
 
-      else if (response.status === 429) {
-         // alert (
-         //    "⚠️ Error 429 - Too Many Requests\n\n" +
-         //    "You have sent too many requests in a short period of time.\n\n" +
-         //    "Please wait a few minutes before trying again."
-         // )
-      }
+      // else if (response.status === 429) {
+      //    // alert (
+      //    //    "⚠️ Error 429 - Too Many Requests\n\n" +
+      //    //    "You have sent too many requests in a short period of time.\n\n" +
+      //    //    "Please wait a few minutes before trying again."
+      //    // )
+      // }
 
       else {
+         
          // alert (
          //    `Erreur HTTP ${response.status}\n\n${response.statusText}`
          // );
@@ -379,8 +399,7 @@ form.addEventListener("submit", async (e)=>{
       console.error(error);
 
       alert (
-         "Une erreur réseau est survenue.\n\n" +
-         error.message
+         "Une erreur réseau est survenue.\n\n" + error.message
       );
       updateModal("error");
    }
