@@ -759,7 +759,7 @@ button:hover {
 
 
 
-#formStatus { 
+/* #formStatus { 
    margin-top: 1rem;
    font-size: 0.95rem;
    font-weight: 500;
@@ -772,7 +772,7 @@ button:hover {
 
 #formStatus.error {
    color: #ef4444;   
-}
+} */
 
 #submitBtn:disabled {
    opacity: 0.7;
@@ -780,13 +780,13 @@ button:hover {
 }
 
 .spinner {
-   width:18px;
-   height:18px;
-   border:2px solid rgba(255,255,255,.3);
-   border-top-color:#fff;
-   border-radius:50%;
-   animation:spin .8s linear infinite;
-   display:none;
+   width: 1.125rem;
+   height: 1.125rem;
+   border: solid .125rem rgba(255, 255, 255, .3);
+   border-top-color: #fff;
+   border-radius: 50%;
+   animation: spin .8s linear infinite;
+   /* display: none; */
 }
 
 @keyframes spin{

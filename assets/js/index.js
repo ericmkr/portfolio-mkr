@@ -276,7 +276,7 @@ const message = document.getElementById("modal-message");
 // const closeBtn = document.getElementById("modal-close");
 // let redirectTimer;
 
-const DISPLAY_TIME = 11000;
+// const DISPLAY_TIME = 11000;
 
 function openModal() {
    overlay.hidden = false;
@@ -427,7 +427,7 @@ form.addEventListener("submit", async (e)=>{
 //    1000);
 // }
 
-async function debugResponse(response) {
+function debugResponse(response) {
    console.group("HTTP");
 
    console.log("Status :", response.status);
@@ -435,17 +435,6 @@ async function debugResponse(response) {
    console.log("OK :", response.ok);
    console.log("Redirected :", response.redirected);
    console.log("URL :", response.url);
-
-   try {
-      const body = await response.clone().text();
-
-      console.log("Body :");
-      console.log(body);
-   } 
-   
-   catch(e) {
-      console.log("Impossible de lire la réponse.");
-   }
 
    console.groupEnd();
 }
