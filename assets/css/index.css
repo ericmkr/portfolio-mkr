@@ -517,6 +517,11 @@ textarea {
    width: 100%;
 }
 
+#submit-btn:disabled {
+   opacity: 0.7;
+   cursor: not-allowed;
+}
+
 footer {
    padding: 2rem 1.5rem;
    border-top: solid .0625rem var(--border);
@@ -650,6 +655,11 @@ footer {
    PORTFOLIO
 ========================= */
 
+#submitBtn:disabled {
+   opacity: 0.7;
+   cursor: not-allowed;
+}
+
 .portfolio {
    width: 100%;
    background: #f5f5f5;
@@ -759,25 +769,6 @@ button:hover {
 
 
 
-/* #formStatus { 
-   margin-top: 1rem;
-   font-size: 0.95rem;
-   font-weight: 500;
-   min-height: 24px;
-}
-
-#formStatus.success {
-   color: #22c55e;
-}
-
-#formStatus.error {
-   color: #ef4444;   
-} */
-
-#submitBtn:disabled {
-   opacity: 0.7;
-   cursor: not-allowed;
-}
 
 .spinner {
    width: 1.125rem;
