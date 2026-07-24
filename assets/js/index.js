@@ -352,22 +352,24 @@ form.addEventListener("submit", async (e)=>{
          headers: {Accept: "application/json"}
       });
 
+      await debugResponse(response);
+
       if(response.ok) {
          updateModal("success");
       } 
 
       else if (response.status === 429) {
-         alert (
-            "⚠️ Error 429 - Too Many Requests\n\n" +
-            "You have sent too many requests in a short period of time.\n\n" +
-            "Please wait a few minutes before trying again."
-         )
+         // alert (
+         //    "⚠️ Error 429 - Too Many Requests\n\n" +
+         //    "You have sent too many requests in a short period of time.\n\n" +
+         //    "Please wait a few minutes before trying again."
+         // )
       }
 
       else {
-         alert (
-            `Erreur HTTP ${response.status}\n\n${response.statusText}`
-         );
+         // alert (
+         //    `Erreur HTTP ${response.status}\n\n${response.statusText}`
+         // );
 
          updateModal("error");
       }
@@ -425,3 +427,25 @@ form.addEventListener("submit", async (e)=>{
 //    1000);
 // }
 
+async function debugResponse(response) {
+   console.group("HTTP");
+
+   console.log("Status :", response.status);
+   console.log("Status Text :", response.statusText);
+   console.log("OK :", response.ok);
+   console.log("Redirected :", response.redirected);
+   console.log("URL :", response.url);
+
+   try {
+      const body = await response.clone().text();
+
+      console.log("Body :");
+      console.log(body);
+   } 
+   
+   catch(e) {
+      console.log("Impossible de lire la réponse.");
+   }
+
+   console.groupEnd();
+}
