@@ -219,60 +219,6 @@ if (backTopBtn) {
    FORM SUBMIT FEEDBACK
 ========================= */
 
-// const form = document.getElementById('contactForm');
-// const status = document.getElementById('formStatus');
-// const submitBtn = document.getElementById('submitBtn');
-
-// form.addEventListener('submit', async (e) => { 
-//    e.preventDefault();
-
-//     submitBtn.disabled = true;
-//     submitBtn.textContent = "Envoi en cours...";
-
-//     const formData = new FormData(form);
-
-//     try {
-//         const response = await fetch(form.action, {
-//             method: "POST",
-//             body: formData
-//         });
-
-//         const data = await response.json();
-
-//         if (data.success === "true") {
-
-//             status.textContent =
-//                 "✓ Message envoyé avec succès !";
-
-//             status.className = "success";
-
-//             form.reset();
-
-//         } else {
-
-//             status.textContent =
-//                 "Une erreur est survenue.";
-
-//             status.className = "error";
-//         }
-
-//     } catch (error) {
-
-//         status.textContent =
-//             "Impossible d'envoyer le message.";
-
-//         status.className = "error";
-//     }
-
-//     submitBtn.disabled = false;
-//     submitBtn.textContent = "Envoyer";
-// });
-
-
-
-
-
-
 const form = document.querySelector("form");
 const overlay = document.getElementById("modal-overlay");
 const modal = document.getElementById("form-modal");
@@ -357,6 +303,9 @@ form.addEventListener("submit", async (e) => {
 
    e.preventDefault();
 
+   // submit-btn.disabled = true;
+   // submit-btn.textContent = "Sending...";
+
    openModal();
 
    updateModal("loading");
@@ -378,15 +327,17 @@ form.addEventListener("submit", async (e) => {
       } 
 
       // else if (response.status === 429) {
-      //    // alert (
-      //    //    "⚠️ Error 429 - Too Many Requests\n\n" +
-      //    //    "You have sent too many requests in a short period of time.\n\n" +
-      //    //    "Please wait a few minutes before trying again."
-      //    // )
+
+      //    alert (
+      //       "⚠️ Error 429 - Too Many Requests\n\n" +
+      //       "You have sent too many requests in a short period of time.\n\n" +
+      //       "Please wait a few minutes before trying again."
+      //    )
+      
       // }
 
       else {
-         
+
          // alert (
          //    `Erreur HTTP ${response.status}\n\n${response.statusText}`
          // );
@@ -396,18 +347,28 @@ form.addEventListener("submit", async (e) => {
    }
 
    catch(error) {
+
       console.error(error);
 
-      alert (
-         "Une erreur réseau est survenue.\n\n" + error.message
-      );
+      // alert (
+      //    "Une erreur réseau est survenue.\n\n" + error.message
+      // );
+
       updateModal("error");
+
    }
 
-   setTimeout(()=>{
+   // submit-btn.disabled = false;
+   // submit-btn.textContent = "Send message";
+
+   setTimeout(() => {
+
       window.location.reload();
+
    }, 
+
    DISPLAY_TIME);
+
 });
 
 
@@ -446,14 +407,21 @@ form.addEventListener("submit", async (e) => {
 //    1000);
 // }
 
-function debugResponse(response) {
-   console.group("HTTP");
 
-   console.log("Status :", response.status);
-   console.log("Status Text :", response.statusText);
-   console.log("OK :", response.ok);
-   console.log("Redirected :", response.redirected);
-   console.log("URL :", response.url);
 
-   console.groupEnd();
-}
+
+
+
+// function debugResponse(response) {
+
+//    console.group("HTTP");
+
+//    console.log("Status :", response.status);
+//    console.log("Status Text :", response.statusText);
+//    console.log("OK :", response.ok);
+//    console.log("Redirected :", response.redirected);
+//    console.log("URL :", response.url);
+
+//    console.groupEnd();
+
+// }
