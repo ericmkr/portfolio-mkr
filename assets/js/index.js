@@ -356,6 +356,14 @@ form.addEventListener("submit", async (e)=>{
          updateModal("success");
       } 
 
+      else if (response.status === 429) {
+         alert (
+            "⚠️ Error 429 - Too Many Requests\n\n" +
+            "You have sent too many requests in a short period of time.\n\n" +
+            "Please wait a few minutes before trying again."
+         )
+      }
+
       else {
          updateModal("error");
       }
