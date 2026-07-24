@@ -326,15 +326,15 @@ form.addEventListener("submit", async (e) => {
       
       } 
 
-      // else if (response.status === 429) {
+      else if (response.status === 429) {
 
-      //    alert (
-      //       "⚠️ Error 429 - Too Many Requests\n\n" +
-      //       "You have sent too many requests in a short period of time.\n\n" +
-      //       "Please wait a few minutes before trying again."
-      //    )
+         alert (
+            "⚠️ Error 429 - Too Many Requests\n\n" +
+            "You have sent too many requests in a short period of time.\n\n" +
+            "Please wait a few minutes before trying again."
+         )
       
-      // }
+      }
 
       else {
 
@@ -354,7 +354,7 @@ form.addEventListener("submit", async (e) => {
       //    "Une erreur réseau est survenue.\n\n" + error.message
       // );
 
-      updateModal("error");
+      // updateModal("error");
 
    }
 
