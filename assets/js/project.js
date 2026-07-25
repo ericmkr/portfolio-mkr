@@ -8,7 +8,7 @@ const projectCards = [
       link: "#",
       id: "eden-market"
    },
-
+   
    {
       title: "ONCOLINK – Cancer patient care companion",
       description: "UX/UI design of a mobile healthcare app for cancer patient monitoring and medical follow-up.",
@@ -28,7 +28,8 @@ function createProjectCard(project) {
    cardLink.className = "card-link";
    cardLink.href = project.link;
 
-   cardLink.innerHTML = `
+   cardLink.innerHTML = 
+   `
       <article class="project-card" data-project="${project.id}">
          <div class="project-image">
             <img src="${project.image}" alt="${project.imageAlt}"/>
