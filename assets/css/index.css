@@ -445,10 +445,13 @@ strong {
    background-color: var(--background);
    border: solid .0625rem var(--border);
    border-radius: .9rem;
+}
+
+.testimonial-card,
+.rate-card {
    transition: transform .3s, box-shadow .3s, border-color .3s;
 }
 
-.service-card:hover,
 .testimonial-card:hover,
 .rate-card:hover {
    transform: translateY(-4px);
