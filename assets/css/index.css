@@ -395,6 +395,209 @@ strong {
    font-size: 0.95rem;
 }
 
+.services,
+.partners,
+.testimonials,
+.rates {
+   padding: 6rem 1.5rem;
+}
+
+.partners,
+.rates {
+   background-color: #FAF7F0;
+}
+
+.services-content,
+.partners-content,
+.testimonials-content,
+.rates-content {
+   max-width: 68.75rem;
+   margin: 0 auto;
+}
+
+.services h2,
+.partners h2,
+.testimonials h2,
+.rates h2 {
+   font-size: 2.5rem;
+   font-weight: 500;
+   margin-bottom: 1rem;
+}
+
+.section-description {
+   color: var(--muted-foreground);
+   font-size: 1.125rem;
+   max-width: 44rem;
+}
+
+.services-grid,
+.testimonials-grid,
+.rates-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1.5rem;
+}
+
+.service-card,
+.testimonial-card,
+.rate-card {
+   padding: 1.5rem;
+   background-color: var(--background);
+   border: solid .0625rem var(--border);
+   border-radius: .9rem;
+   transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+
+.service-card:hover,
+.testimonial-card:hover,
+.rate-card:hover {
+   transform: translateY(-4px);
+   border-color: rgba(210, 175, 103, .45);
+   box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .08);
+}
+
+.service-number {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 2.5rem;
+   height: 2.5rem;
+   margin-bottom: 1.5rem;
+   border-radius: 50%;
+   background-color: var(--accent);
+   color: var(--primary);
+   font-weight: 700;
+}
+
+.service-card h3,
+.testimonial-card h3,
+.rate-card h3 {
+   font-size: 1.25rem;
+   font-weight: 500;
+   margin-bottom: .75rem;
+}
+
+.service-card p,
+.testimonial-card p,
+.rate-card li,
+.rate-note {
+   color: var(--muted-foreground);
+}
+
+.partners-carousel {
+   position: relative;
+   overflow: hidden;
+   padding: .75rem 0;
+   mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.partners-track {
+   display: flex;
+   width: max-content;
+   gap: 1rem;
+   animation: scrollPartners 24s linear infinite;
+}
+
+.partners-carousel:hover .partners-track {
+   animation-play-state: paused;
+}
+
+.partner-card {
+   min-width: 12rem;
+   padding: 1.5rem 2rem;
+   background-color: var(--background);
+   border: solid .0625rem var(--border);
+   border-radius: 1rem;
+   color: var(--foreground);
+   font-size: 1.1rem;
+   font-weight: 600;
+   text-align: center;
+   box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .05);
+}
+
+@keyframes scrollPartners {
+   from {
+      transform: translateX(0);
+   }
+
+   to {
+      transform: translateX(calc(-50% - .5rem));
+   }
+}
+
+.testimonial-profile {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   margin-bottom: 1.25rem;
+}
+
+.testimonial-avatar {
+   width: 3.5rem;
+   height: 3.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex: 0 0 auto;
+   border-radius: 50%;
+   background: linear-gradient(135deg, var(--primary), #f6d898);
+   color: var(--primary-foreground);
+   font-weight: 700;
+}
+
+.testimonial-profile h3 {
+   margin-bottom: .15rem;
+}
+
+.testimonial-profile p {
+   font-size: .9rem;
+}
+
+.testimonial-message {
+   margin-bottom: 1.25rem;
+}
+
+.testimonial-rating {
+   color: var(--primary);
+   letter-spacing: .08rem;
+}
+
+.testimonial-rating span {
+   color: var(--foreground);
+   letter-spacing: 0;
+   font-weight: 600;
+}
+
+.rate-card {
+   display: flex;
+   flex-direction: column;
+}
+
+.featured-rate {
+   border-color: rgba(210, 175, 103, .75);
+   box-shadow: 0 1.25rem 3rem rgba(210, 175, 103, .18);
+}
+
+.rate-price {
+   color: var(--primary);
+   font-size: 2rem;
+   font-weight: 700;
+   margin-bottom: 1rem;
+}
+
+.rate-card ul {
+   display: grid;
+   gap: .75rem;
+   margin: 0 0 1.5rem 1.25rem;
+}
+
+.rate-note {
+   margin-top: auto;
+   padding-top: 1rem;
+   border-top: solid .0625rem var(--border);
+   font-size: .95rem;
+}
+
 .contact {
    min-height: 100vh;
    padding: 6rem 1.5rem;
@@ -806,6 +1009,10 @@ button:hover {
 
    .section-header h2,
    .about h2,
+   .services h2,
+   .partners h2,
+   .testimonials h2,
+   .rates h2,
    .contact h2 {
       font-size: 2rem;
    }
@@ -816,8 +1023,15 @@ button:hover {
 
 
    .about-grid,
+   .services-grid,
+   .testimonials-grid,
+   .rates-grid,
    .contact-grid {
       grid-template-columns: 1fr;
+   }
+
+   .partners-carousel {
+      mask-image: none;
    }
 }
 
