@@ -48,129 +48,77 @@ function typeEffect() {
 typeEffect();
 
 /* =========================
-   PROJECT SHOWCASE
+   PROJECTS SHOWCASE
 ========================= */
 
+const projectCards = [
+   {
+      title: "Eden Market – Digital marketplace for local merchants",
+      description: "UX/UI design of a mobile marketplace connecting local merchants and customers.",
+      image: "assets/img/eden-market-logo.jpg",
+      imageAlt: "Eden Market logo",
+      category: "UX/UI Design",
+      link: "#",
+      id: "eden-market"
+   },
+   
+   {
+      title: "ONCOLINK – Cancer patient care companion",
+      description: "UX/UI design of a mobile healthcare app for cancer patient monitoring and medical follow-up.",
+      image: "assets/img/ONCOLINK-splash-logo.png",
+      imageAlt: "ONCOLINK logo",
+      category: "UX/UI Design",
+      link: "#",
+      id: "oncolink"
+   }
+];
+
+const projectsGrid = document.querySelector(".projects-grid");
+
+function createProjectCard(project) {
+
+   const cardLink = document.createElement("a");
+   cardLink.className = "card-link";
+   cardLink.href = project.link;
+
+   cardLink.innerHTML = 
+   `
+      <article class="project-card" data-project="${project.id}">
+         <div class="project-image">
+            <img src="${project.image}" alt="${project.imageAlt}"/>
+            <div class="project-overlay">
+               <span class="project-category">${project.category}</span>
+            </div>
+         </div>
+         <h3>${project.title}</h3>
+         <p>${project.description}</p>
+      </article>
+   `;
+
+   return cardLink;
+}
+
+if (projectsGrid) {
+   projectCards.forEach(project => {
+      projectsGrid.appendChild(createProjectCard(project));
+   });
+}
+
+/* =========================
+   TOOLS SHOWCASE
+========================= */
+
+// const track = document.querySelector(".tools-track");
+// const cards = [...track.children];
+
+// cards.forEach(card => {
+//    track.appendChild(card.cloneNode(true));
+// });
 
 /* =========================
    PROJECT DATABASE
 ========================= */
 
-// const projects = {
-//    flowtrack: {
-//       title: "FlowTrack",
-
-//       category: "Mobile App",
-
-//       description:
-//          "FlowTrack est une application de gestion des tâches permettant aux utilisateurs d'organiser leurs journées, suivre leur progression et améliorer leur productivité.",
-
-//       role: "UX/UI Designer",
-
-//       tools: [
-//          "Figma",
-//          "Miro",
-//          "Photoshop"
-//       ],
-
-//       challenge:
-//          "Aider les utilisateurs à gérer efficacement leurs tâches sans surcharge cognitive.",
-
-//       solution:
-//          "Création d'une interface minimaliste avec système de priorisation visuelle.",
-
-//       images: [
-//          "assets/img/flowtrack-1.png",
-//          "assets/img/flowtrack-2.png",
-//          "assets/img/flowtrack-3.png"
-//       ]
-//    }
-// };
-
-/* =========================
-   AUTO GENERATION
-========================= */
-
-// const buttons = document.querySelectorAll(".learn-more-btn");
-
-// buttons.forEach(button => {
-
-//    button.addEventListener("click", () => {
-
-//       const projectId = button.dataset.project;
-
-//       const project = projects[projectId];
-
-//       if (!project) return;
-
-//       const parentCard = button.closest(".card.text");
-
-//       const existingDetail =
-//          parentCard.parentElement.querySelector(".project-details");
-
-//       if (existingDetail) {
-//          existingDetail.remove();
-//          return;
-//       }
-
-//       const details = document.createElement("div");
-
-//       details.classList.add("project-details");
-
-//       details.innerHTML = `
-      
-//          <div class="details-container">
-
-//             <h2>${project.title}</h2>
-
-//             <span class="category">
-//                ${project.category}
-//             </span>
-
-//             <p class="description">
-//                ${project.description}
-//             </p>
-
-//             <div class="info-grid">
-
-//                <div>
-//                   <h3>Role</h3>
-//                   <p>${project.role}</p>
-//                </div>
-
-//                <div>
-//                   <h3>Tools</h3>
-//                   <p>${project.tools.join(", ")}</p>
-//                </div>
-
-//             </div>
-
-//             <div class="section">
-//                <h3>Challenge</h3>
-//                <p>${project.challenge}</p>
-//             </div>
-
-//             <div class="section">
-//                <h3>Solution</h3>
-//                <p>${project.solution}</p>
-//             </div>
-
-//             <div class="gallery">
-
-//                ${project.images.map(img => `
-//                   <img src="${img}" alt="">
-//                `).join("")}
-
-//             </div>
-
-//          </div>
-
-//       `;
-
-//       parentCard.parentElement.appendChild(details);
-//    });
-
-// });
 
 /* =========================
    PREFILLED FORM
