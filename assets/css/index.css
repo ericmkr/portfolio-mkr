@@ -18,6 +18,7 @@
 }
 
 html {
+   background-color: #717182;
    scroll-behavior: smooth;
    margin: 0; 
    padding: 0;
@@ -96,7 +97,7 @@ header {
 }
         
 .hero-content {
-   max-width: 50rem;
+   /* max-width: 50rem; */
 }
 
 .hero-tag {
@@ -567,7 +568,7 @@ strong {
    color: var(--muted-foreground);
    text-align: center;
    margin-bottom: 3rem;
-   max-width: 43.75rem;
+   /* max-width: 43.75rem; */
    margin-left: auto;
    margin-right: auto;
 }
@@ -685,7 +686,7 @@ footer {
    border-top: solid .0625rem var(--border);
    text-align: center;
    color: var(--muted-foreground);
-   margin: -4.8125rem;
+   margin-top: -4.8125rem;
 }
 
 .back-to-top {
