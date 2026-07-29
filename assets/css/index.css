@@ -195,9 +195,16 @@ strong {
 .projects {
    min-height: 100vh;
    padding: 3rem;
+   border-bottom: solid 3px red;
 }
 
-
+/* .project-content {
+   background-color: cyan;
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   padding: 1.5rem;
+} */
 
 /* min-height: 100vh; */
 /* .projects, .about, .services, .partners, .testimonials, .rates, .contact {
