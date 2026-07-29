@@ -319,7 +319,6 @@ strong {
    font-size: 1.25rem;
    color: var(--muted-foreground);
    margin-bottom: 3rem;
-   /* max-width: 50rem; */
 }
 
 .about-grid {
@@ -345,35 +344,35 @@ strong {
 }
 
 .skill-item {
-  margin-bottom:1.5rem;
+   margin-bottom:1.5rem;
 }
 
 .skill-header {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom: .6rem;
+   display:flex;
+   align-items:center;
+   justify-content:space-between;
+   margin-bottom: .6rem;
 }
 
 .skill-left {
-  display:flex;
-  align-items:center;
-  gap:1rem;
+   display:flex;
+   align-items:center;
+   gap:1rem;
 }
 
-.skill-left span{
-  font-size:1.3rem;
-  font-weight:500;
+.skill-left span {
+   font-size:1.3rem;
+   font-weight:500;
 }
 
-.icon-box{
-  width: 40px;
-  height: 40px;
-  border-radius:16px;
-  background:#f6dcd0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.icon-box {
+   width: 40px;
+   height: 40px;
+   border-radius:16px;
+   background:#f6dcd0;
+   display:flex;
+   align-items:center;
+   justify-content:center;
 }
 
 .icon-box i{
