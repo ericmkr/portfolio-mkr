@@ -193,7 +193,6 @@ strong {
 }
 
 .projects {
-   background-color: #d2af67;
    min-height: 100vh;
    padding: 3rem;
 }
@@ -215,7 +214,8 @@ strong {
 
 .section-header {
    background-color: orange;
-   margin-bottom: 3rem;
+   margin-bottom: 1.5rem;
+   margin-top: 1.1rem;
 }
 
 #projects-title, #about-title, #services-title, #partners-title, #testimonials-title, #rates-title, #contact-title {
@@ -252,7 +252,6 @@ strong {
    overflow: hidden;
    background-color: var(--background);
    transition: all .3s ease;
-
 }
 
 /* .project-card, .service-card, .testimonial-card, .rate-card {
