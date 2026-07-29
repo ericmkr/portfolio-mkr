@@ -81,6 +81,8 @@ header {
 }
 
 .hero {
+   background-color: #717182;
+   border-bottom: solid 3px red;
    min-height: 100vh;
    display: flex;
    align-items: center;
@@ -190,19 +192,29 @@ strong {
    opacity: .5;
 }
 
-.projects, .about, .services, .partners, .testimonials, .rates, .contact {
-   background-color: pink;
-   /* min-height: 100vh; */
+.projects {
+   background-color: #d2af67;
+   min-height: 100vh;
    padding: 3rem;
 }
 
-.projects-content, .about-content, .services-content, .partners-content, .testimonials-content, .rates-content {
+
+
+/* min-height: 100vh; */
+/* .projects, .about, .services, .partners, .testimonials, .rates, .contact {
+   background-color: pink;
+   
+   padding: 3rem;
+} */
+
+/* .projects-content, .about-content, .services-content, .partners-content, .testimonials-content, .rates-content {
    background-color: blueviolet;
    max-width: 1280px;
    margin: 0 auto;
-}
+} */
 
 .section-header {
+   background-color: orange;
    margin-bottom: 3rem;
 }
 
@@ -223,6 +235,7 @@ strong {
    grid-template-columns: repeat(3, 1fr);
    /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
    gap: 1.5rem;
+   align-items: stretch;
 }
 
 .card-link {
@@ -230,13 +243,25 @@ strong {
    color: var(--foreground);
 }
 
-.project-card, .service-card, .testimonial-card, .rate-card {
+.project-card {
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   border-radius: 1.5rem;
+   overflow: hidden;
+   background-color: var(--background);
+   transition: all .3s ease;
+
+}
+
+/* .project-card, .service-card, .testimonial-card, .rate-card {
    padding: 1.5rem;
    background-color: var(--background);
    border: solid .0625rem var(--border);
    border-radius: .9rem;
    transition: all .3s ease;
-}
+} */
 
 .project-card:hover {
    transform: translateY(-3px);

@@ -102,8 +102,10 @@ function createProjectCard(project) {
                <span class="project-category">${project.category}</span>
             </div>
          </div>
-         <h3>${project.title}</h3>
-         <p>${project.description}</p>
+         <div class="projects-content">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+         </div>
       </article>
    `;
 
