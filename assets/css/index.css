@@ -85,7 +85,7 @@ header {
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 6rem 1.5rem 3rem;
+   padding: 6rem 1.5rem 3rem 1.5rem;
    text-align: center;
 }
 
@@ -101,7 +101,6 @@ header {
 
 .hero-tag {
    font-size: 1.125rem;
-   margin-bottom: 1rem;
    font-weight: 500;
 }
 
@@ -110,9 +109,9 @@ strong {
 }
 
 #typing-text {
+   /* background-color: limegreen; */
    font-size: 4rem;
-   font-weight: 500;
-   margin-bottom: 1.5rem;            
+   font-weight: 500;           
    line-height: 1.2;
    color: var(--primary);
 }
