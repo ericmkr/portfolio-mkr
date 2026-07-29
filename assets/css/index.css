@@ -18,7 +18,6 @@
 }
 
 html {
-   background-color: #717182;
    scroll-behavior: smooth;
    margin: 0; 
    padding: 0;
@@ -46,8 +45,6 @@ header {
 }
 
 .header-content {
-   max-width: 1280px;
-   margin: 0 auto;
    padding: 1rem 1.5rem;
    display: flex;
    justify-content: space-between;
@@ -60,6 +57,7 @@ header {
    color: var(--primary);
    cursor: pointer;
    text-decoration: none;
+   margin-left: 3rem;
 }
 
 .navbar-nav {
@@ -68,6 +66,7 @@ header {
    list-style: none;
    margin: 0;
    padding: 0;
+   margin-right: 3rem;
 }
 
 .navbar-link {
@@ -194,13 +193,14 @@ strong {
 }
 
 .projects, .about, .services, .partners, .testimonials, .rates, .contact {
-   min-height: 100vh;
-   padding: 6rem 1.5rem;
+   background-color: pink;
+   /* min-height: 100vh; */
+   padding: 3rem;
 }
 
 .projects-content, .about-content, .services-content, .partners-content, .testimonials-content, .rates-content {
-   /* background-color: blueviolet; */
-   /* max-width: 80rem; */
+   background-color: blueviolet;
+   max-width: 1280px;
    margin: 0 auto;
 }
 
