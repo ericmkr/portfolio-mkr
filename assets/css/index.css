@@ -192,31 +192,38 @@ strong {
    opacity: .5;
 }
 
-.projects, .about, .services, .tools, .testimonials, .rates, .contact {
+.projects, .about, .services, .partners, .testimonials, .rates, .contact {
    min-height: 100vh;
    padding: 6rem 1.5rem;
+}
+
+.projects-content, .about-content, .services-content, .partners-content, .testimonials-content, .rates-content {
+   background-color: blueviolet;
+   /* max-width: 80rem; */
+   margin: 0 auto;
 }
 
 .section-header {
    margin-bottom: 3rem;
 }
 
-#projects-title, #about-title, #services-title, #tools-title, #testimonials-title, #rates-title {
+#projects-title, #about-title, #services-title, #partners-title, #testimonials-title, #rates-title, #contact-title {
    font-size: 2.5rem;
    font-weight: 500;
    margin-bottom: 1rem;
 }
 
-.projects-description {
+.projects-description, .about-description, .services-description, .partners-description, .testimonials-description, .rates-description {
    color: var(--muted-foreground);
    font-size: 1.125rem;
    max-width: 44rem;
 }
 
-.projects-grid {
+.projects-grid, .services-grid, .testimonials-grid, .rates-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-   gap: 3rem;
+   grid-template-columns: repeat(3, 1fr);
+   /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+   gap: 1.5rem;
 }
 
 .card-link {
@@ -284,25 +291,7 @@ strong {
 }
 
 .about, .rates, .partners {
-   min-height: 100vh;
    background-color: #FAF7F0;
-}
-
-.about-content {
-   max-width: 68.75rem;
-   margin: 0 auto;
-}
-
-#about-title {
-   font-size: 2.5rem;
-   font-weight: 500;
-   margin-bottom: 1.5rem;
-}
-
-.about-description {
-   font-size: 1.25rem;
-   color: var(--muted-foreground);
-   margin-bottom: 3rem;
 }
 
 .about-grid {
@@ -315,7 +304,7 @@ strong {
 .about h3 {
    font-size: 1.5rem;
    font-weight: 500;
-   color: var(--primary);
+   color: var(--foreground);
    margin-bottom: 1.5rem;
 }
 
@@ -421,29 +410,6 @@ strong {
 }
 
 
-.projects-content, .services-content, .partners-content, .testimonials-content, .rates-content {
-   background-color: blueviolet;
-   /* max-width: 80rem; */
-   margin: 0 auto;
-}
-
-.services h2, .partners h2, .testimonials h2, .rates h2 {
-   font-size: 2.5rem;
-   font-weight: 500;
-   margin-bottom: 1rem;
-}
-
-.services-description {
-   color: var(--muted-foreground);
-   font-size: 1.125rem;
-   max-width: 44rem;
-}
-
-.services-grid, .testimonials-grid, .rates-grid {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 1.5rem;
-}
 
 .service-card, .testimonial-card, .rate-card {
    padding: 1.5rem;
