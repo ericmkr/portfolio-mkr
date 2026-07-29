@@ -192,21 +192,16 @@ strong {
    opacity: .5;
 }
 
-.projects {
+.projects, .about, .services, .tools, .testimonials, .rates, .contact {
    min-height: 100vh;
    padding: 6rem 1.5rem;
-}
-
-.projects-content {
-   max-width: 80rem;
-   margin: 0 auto;
 }
 
 .section-header {
    margin-bottom: 3rem;
 }
 
-#projects-title {
+#projects-title, #about-title, #services-title, #tools-title, #testimonials-title, #rates-title {
    font-size: 2.5rem;
    font-weight: 500;
    margin-bottom: 1rem;
@@ -288,9 +283,8 @@ strong {
    color: var(--muted-foreground);
 }
 
-.about {
+.about, .rates, .partners {
    min-height: 100vh;
-   padding: 6rem 1.5rem;
    background-color: #FAF7F0;
 }
 
@@ -426,20 +420,10 @@ strong {
    font-size: 0.95rem;
 }
 
-.services {
-   min-height: 100vh;
-}
 
-.services, .partners, .testimonials, .rates {
-   padding: 6rem 1.5rem;
-}
-
-.partners, .rates {
-   background-color: #FAF7F0;
-}
-
-.services-content, .partners-content, .testimonials-content, .rates-content {
-   max-width: 68.75rem;
+.projects-content, .services-content, .partners-content, .testimonials-content, .rates-content {
+   background-color: blueviolet;
+   /* max-width: 80rem; */
    margin: 0 auto;
 }
 
