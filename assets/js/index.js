@@ -5,10 +5,10 @@
 const roles = [ 
    "Front-End Developer",
    "UX/UI Designer",
-   "Product Designer",
-   "Web Designer",
-   "Graphic Designer",
-   "QA Analyst"
+   // "Product Designer",
+   // "Web Designer",
+   // "Graphic Designer",
+   // "QA Analyst"
 ];
 
 const typingText = document.getElementById("typing-text");
@@ -22,27 +22,39 @@ function typeEffect() {
    const currentRole = roles[roleIndex];
 
    if (!isDeleting) {
+
       typingText.textContent = currentRole.substring(0, charIndex + 1);
       charIndex++;
 
       if (charIndex === currentRole.length) {
+
          isDeleting = true;
+
          setTimeout(typeEffect, 3000);
+
          return;
+
       }
+
    } 
    
    else {
+
       typingText.textContent = currentRole.substring(0, charIndex - 1);
       charIndex--;
 
       if (charIndex === 0) {
+
          isDeleting = false;
+
          roleIndex = (roleIndex + 1) % roles.length;
+
       }
+
    }
 
    setTimeout(typeEffect, isDeleting ? 50 : 100);
+
 }
 
 typeEffect();
@@ -262,8 +274,9 @@ form.addEventListener("submit", async (e) => {
 
       const response = await fetch(form.action, {
          method:"POST",
-         body:new FormData(form),
-         headers: {Accept: "application/json"}
+         headers: {Accept: "application/json"},
+         body:new FormData(form)
+         
       });
 
       await debugResponse(response);
