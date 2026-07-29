@@ -289,6 +289,7 @@ strong {
 }
 
 .about {
+   min-height: 100vh;
    padding: 6rem 1.5rem;
    background-color: #FAF7F0;
 }
@@ -409,7 +410,7 @@ strong {
 .experience-item {
    padding: 1rem;
    background-color: var(--background);
-   border: 1px solid var(--border);
+   border: solid .0625rem var(--border);
    border-radius: 0.5rem;
    margin-bottom: 1.5rem;
 }
@@ -423,6 +424,10 @@ strong {
 .experience-item p {
    color: var(--muted-foreground);
    font-size: 0.95rem;
+}
+
+.services {
+   min-height: 100vh;
 }
 
 .services, .partners, .testimonials, .rates {
@@ -444,7 +449,7 @@ strong {
    margin-bottom: 1rem;
 }
 
-.section-description {
+.services-description {
    color: var(--muted-foreground);
    font-size: 1.125rem;
    max-width: 44rem;
