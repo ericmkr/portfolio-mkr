@@ -10,6 +10,7 @@
 :root {
    --primary: #d2af67;
    --primary-foreground: #ffffff;
+   --primary-hover: #111;
    --background: #ffffff;
    --foreground: #1a1a1a;
    --muted-foreground: #717182;
@@ -94,7 +95,7 @@ header {
    text-align: center;
 }
 
-.avatar-img{
+.avatar-img {
    display:block;
    border-radius: 300px;
    margin-right: 1.875rem;
@@ -167,11 +168,11 @@ strong {
    cursor: pointer;
    text-decoration: none;
    display: inline-block;
-   transition: opacity .3s;
+   transition: all .3s ease;
 }
 
 .btn-primary:hover {
-   opacity: .9;
+   background-color: var(--primary-hover);
 }
 
 .btn-primary:active {
@@ -226,29 +227,6 @@ strong {
    max-width: 44rem;
 }
 
-/* .filters {
-   display: flex;
-   gap: 1rem;
-   margin-bottom: 2rem;
-   flex-wrap: wrap;
-}
-
-.filter-btn {
-   padding: 0.5rem 1rem;
-   border-radius: 2rem;
-   border: 1px solid var(--border);
-   background: transparent;
-   cursor: pointer;
-   font-size: 0.95rem;
-   transition: all 0.3s;
-}
-
-.filter-btn:hover, .filter-btn.active {
-   background-color: var(--primary);
-   color: var(--primary-foreground);
-   border-color: var(--primary);
-} */
-
 .projects-grid {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -259,6 +237,7 @@ strong {
    text-decoration: none;
    color: #000;
    transition: all .3s ease;
+   border-radius: .7rem;
 }
 
 .project-card {
@@ -357,35 +336,19 @@ strong {
    margin-bottom: 1.5rem;
 }
 
-.skills {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 1.5rem;
+.skills-section {
+   /* background-color: #c06c84; */
+   max-width: 650px;
+   padding: 0 1rem;
+   /* flex:1; */
+   /* display: none; */
 }
 
-.skill-tag {
-   padding: 0.5rem 1rem;
-   background-color: var(--background);
-   border: 1px solid var(--border);
-   border-radius: 2rem;
-   font-size: 0.95rem;
-}
-
-.skills-section{
-   background-color: #c06c84;
-   max-width:650px;
-   margin: auto;
-   padding: 1rem;
-   flex:1;
-   /* backdrop-filter:blur(11px); */
-}
-
-.skill-item{
+.skill-item {
   margin-bottom:1.5rem;
-  /* display: none; */
 }
 
-.skill-header{
+.skill-header {
   display:flex;
   align-items:center;
   justify-content:space-between;
