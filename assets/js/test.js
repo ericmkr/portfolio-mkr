@@ -51,7 +51,6 @@ if (isDev) {
    FORM SUBMIT FEEDBACK
    ========================= */
 
-const form = document.querySelector("form");
 const overlay = document.getElementById("modal-overlay");
 const modal = document.getElementById("form-modal");
 const icon = document.getElementById("modal-icon");
