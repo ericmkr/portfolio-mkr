@@ -330,9 +330,14 @@ strong {
    color: var(--muted-foreground);
 }
 
+/* .about {
+   min-height: 100vh;
+   padding: 3rem;
+   border-bottom: solid 3px red;
+   background-color: #FAF7F0;
+} */
 
-
-.about, .rates, .partners {
+.about, .services, .rates, .partners {
    min-height: 100vh;
    padding: 3rem;
    border-bottom: solid 3px red;
