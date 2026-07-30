@@ -337,12 +337,12 @@ strong {
    background-color: #FAF7F0;
 } */
 
-.about, .services, .rates, .partners {
+/* .about, .services, .rates, .partners {
    min-height: 100vh;
    padding: 3rem;
    border-bottom: solid 3px red;
    background-color: #FAF7F0;
-}
+} */
 
 .about-grid {
    display: grid;
@@ -456,6 +456,13 @@ strong {
 .experience-item p {
    color: var(--muted-foreground);
    font-size: 0.95rem;
+}
+
+.services {
+   min-height: 100vh;
+   padding: 3rem;
+   border-bottom: solid 3px red;
+   background-color: #FAF7F0;
 }
 
 .service-number {
