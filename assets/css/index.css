@@ -590,12 +590,6 @@ strong {
    transition: all .3s ease;
 }
 
-
-
-
-
-
-
 .testimonial-profile {
    display: flex;
    align-items: center;
@@ -639,9 +633,33 @@ strong {
    font-weight: 600;
 }
 
-.rate-card {
+.rates {
+   padding: 3rem;
+   border-bottom: solid 3px red;
+}
+
+.rates-content {
+   background-color: blueviolet;
    display: flex;
    flex-direction: column;
+   flex: 1;
+   padding: 1rem 1.5rem;
+}
+
+.rates-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+   gap: 1.5rem;
+   align-items: stretch;
+}
+
+.rate-card {
+   padding: 1.5rem;
+   background-color: var(--background);
+   border: solid .0625rem var(--border);
+   border-radius: .9rem;
+   transition: all .3s ease;
 }
 
 .featured-rate {
@@ -669,9 +687,13 @@ strong {
    font-size: .95rem;
 }
 
-.contact {
-   min-height: 100vh;
-   padding: 6rem 1.5rem;
+
+
+
+
+.contact {   
+   padding: 3rem;
+   border-bottom: solid 3px red;
 }
 
 .contact-content {
@@ -688,7 +710,6 @@ strong {
    color: var(--muted-foreground);
    text-align: center;
    margin-bottom: 3rem;
-   /* max-width: 43.75rem; */
    margin-left: auto;
    margin-right: auto;
 }
@@ -797,7 +818,7 @@ textarea {
    font-size: .75rem;
    display: block;
    text-align: center;
-   margin: 1.1rem 0;
+   margin: .5rem 0;
    color: var(--muted-foreground);
 }
 
@@ -806,7 +827,7 @@ footer {
    border-top: solid .0625rem var(--border);
    text-align: center;
    color: var(--muted-foreground);
-   margin-top: -4.8125rem;
+   /* margin-top: -4.8125rem; */
 }
 
 .back-to-top {
