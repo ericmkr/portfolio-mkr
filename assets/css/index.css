@@ -199,7 +199,7 @@ strong {
 }
 
 .projects-content {
-   background-color: green;
+   /* background-color: green; */
    display: flex;
    flex-direction: column;
    flex: 1;
@@ -209,37 +209,22 @@ strong {
 .projects-grid {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
    gap: 1.5rem;
    align-items: stretch;
 }
-
-/* min-height: 100vh; */
-/* .projects, .about, .services, .partners, .testimonials, .rates, .contact {
-   background-color: pink;
-   
-   padding: 3rem;
-} */
-
-/* .projects-content, .about-content, .services-content, .partners-content, .testimonials-content, .rates-content {
-   background-color: blueviolet;
-   max-width: 1280px;
-   margin: 0 auto;
-} */
 
 .section-header {
    background-color: orange;
    margin-bottom: 1.5rem;
 }
 
-#projects-title, #about-title, #services-title, #partners-title, #testimonials-title, #rates-title, #contact-title {
+#projects-title, #about-title, #services-title, #partners-title, #testimonials-title, #rates-title {
    background-color: orange;
-   
    font-size: 2.5rem;
    font-weight: 500;
    margin-bottom: 1rem;
    margin-top: 1rem; 
-   /* padding-top: 1rem; */
+   padding-top: 1rem;
 }
 
 .projects-description, .about-description, .services-description, .partners-description, .testimonials-description, .rates-description {
@@ -247,11 +232,6 @@ strong {
    font-size: 1.25rem;
    /* max-width: 44rem; */
 }
-
-/* .projects-grid, .services-grid, .testimonials-grid, .rates-grid {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
 
 .card-link {
    text-decoration: none;
@@ -269,14 +249,6 @@ strong {
    background-color: var(--background);
    transition: all .3s ease;
 }
-
-/* .project-card, .service-card, .testimonial-card, .rate-card {
-   padding: 1.5rem;
-   background-color: var(--background);
-   border: solid .0625rem var(--border);
-   border-radius: .9rem;
-   transition: all .3s ease;
-} */
 
 .project-card:hover {
    transform: translateY(-3px);
@@ -350,7 +322,7 @@ strong {
    padding: 0 1.5rem;
 }
 
-/* .about, .services, .rates, .partners {
+/* .partners {
    min-height: 100vh;
    padding: 3rem;
    border-bottom: solid 3px red;
@@ -577,7 +549,6 @@ strong {
 .testimonials-grid {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
    gap: 1.5rem;
    align-items: stretch;
 }
@@ -603,7 +574,7 @@ strong {
    display: flex;
    align-items: center;
    justify-content: center;
-   flex: 0 0 auto;
+   /* flex: 0 0 auto; */
    border-radius: 50%;
    background: linear-gradient(135deg, var(--primary), #f6d898);
    color: var(--primary-foreground);
@@ -649,7 +620,6 @@ strong {
 .rates-grid {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
    gap: 1.5rem;
    align-items: stretch;
 }
@@ -687,22 +657,24 @@ strong {
    font-size: .95rem;
 }
 
-
-
-
-
 .contact {   
    padding: 3rem;
    border-bottom: solid 3px red;
 }
 
 .contact-content {
-   max-width: 65rem;
+   max-width: 80rem;
+   padding: 0 3rem;
    margin: 0 auto;
 }
 
 #contact-title {
+   background-color: orange;
    text-align: center;
+   font-size: 2.5rem;
+   font-weight: 500;
+   margin-bottom: 1rem;
+   margin-top: 1rem; 
 }
 
 .contact-intro {
@@ -736,6 +708,7 @@ strong {
    color: var(--foreground);
    transition: background-color .3s;
    margin-bottom: 1rem;
+   width: 26rem;
 }
 
 .contact-link:hover {
@@ -758,7 +731,7 @@ strong {
 }
 
 .contact-link:hover .contact-icon svg {
-   stroke: white;
+   stroke: var(--background);
 }
 
 .contact-details p:first-child {
@@ -810,9 +783,15 @@ textarea {
 }
 
 #submit-btn:disabled {
-   opacity: 0.7;
+   opacity: 0.5;
    cursor: not-allowed;
+   filter: grayscale(20%);
 }
+
+#submit-btn:not(:disabled):hover {
+   transform: translateY(-2px);
+}
+
 
 .availability {
    font-size: .75rem;
@@ -827,7 +806,6 @@ footer {
    border-top: solid .0625rem var(--border);
    text-align: center;
    color: var(--muted-foreground);
-   /* margin-top: -4.8125rem; */
 }
 
 .back-to-top {
