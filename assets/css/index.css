@@ -897,7 +897,7 @@ footer {
    color: #6b7280;
 } */
 
-/* .modal-close {
+.modal-close {
    position: absolute;
    top: 1rem;
    right: 1rem;
@@ -914,21 +914,21 @@ footer {
    color: red;
    cursor: pointer;
    transition: background .3s, color .3s, transform .3s;
-} */
+}
 
-/* .modal-close:hover {
+.modal-close:hover {
    background: red;
    color: var(--background);
-} */
+}
 
-/* .modal-close:active {
-   transform:scale(.75);
-} */
+.modal-close:active {
+   transform:scale(.8);
+}
 
-/* .modal-close:focus-visible {
+.modal-close:focus-visible {
    outline: solid .1875rem var(--foreground);
    outline-offset: .1875rem;
-} */
+}
 
 /* =========================
    PORTFOLIO

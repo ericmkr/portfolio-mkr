@@ -56,11 +56,11 @@ const modal = document.getElementById("form-modal");
 const icon = document.getElementById("modal-icon");
 const title = document.getElementById("modal-title");
 const message = document.getElementById("modal-message");
-// const countdown = document.getElementById("modal-countdown");
+const countdown = document.getElementById("modal-countdown");
 // const closeBtn = document.getElementById("modal-close");
 // let redirectTimer;
 
-// const DISPLAY_TIME = 11000;
+// const DISPLAY_TIME = 3000;
 
 function openModal() {
 
@@ -126,16 +126,9 @@ function updateModal(state) {
 
 }
 
-
-
-
-
 form.addEventListener("submit", async (e) => {
 
    e.preventDefault();
-
-   // submit-btn.disabled = true;
-   // submit-btn.textContent = "Sending...";
 
    openModal();
 
@@ -144,8 +137,11 @@ form.addEventListener("submit", async (e) => {
    try {
 
       const response = await fetch(form.action, {
+
          method:"POST",
+
          headers: {Accept: "application/json"},
+         
          body:new FormData(form)
          
       });
