@@ -19,13 +19,10 @@
 
 html {
    scroll-behavior: smooth;
-   margin: 0; 
-   padding: 0;
+   scrollbar-gutter: stable;
 }
 
 body {
-   margin: 0;
-   padding: 0;
    min-height: 100vh;
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
    line-height: 1.5;
@@ -780,18 +777,30 @@ textarea {
 
 #submit-btn {
    width: 100%;
+
+   /* display:flex;
+   align-items:center;
+   justify-content:center;
+   gap:10px; */
 }
+
+/* #submit-btn.loading .spinner {
+   display: block;
+} */
+
+/* #sunmit-btn.loading .btn-text {
+   opacity: .8;
+} */
 
 #submit-btn:disabled {
    opacity: 0.5;
    cursor: not-allowed;
-   filter: grayscale(20%);
+   filter: grayscale(30%);
 }
 
 #submit-btn:not(:disabled):hover {
    transform: translateY(-2px);
 }
-
 
 .availability {
    font-size: .75rem;
@@ -839,20 +848,49 @@ footer {
    outline-offset: .1875rem;
 }
 
+html.modal-open {
+   scrollbar-gutter: auto;
+}
+
+.spinner {
+   width: 18px;
+   height: 18px;
+   border: solid .125rem rgba(255,255,255,.3);
+   border-top-color: var(--background);
+   border-radius: 50%;
+   animation: spin .8s linear infinite;
+   display: none;
+}
+
+@keyframes spin {
+    
+   to {
+      
+      transform:rotate(360deg);
+   
+   }
+}
+
 .modal-overlay {
    position: fixed;
    inset: 0;
+   width: 100vw;
+   height: 100vh;
    background: rgba(0, 0, 0, .65);
    backdrop-filter: blur(3px);
    opacity: 0;
    visibility: hidden;
-   transition: .3s;
-   z-index: 998;
+   transition: all .3s ease;
+   z-index: 1001;
 }
 
 .modal-overlay.show {
    opacity: 1;
    visibility: visible;
+}
+
+body.modal-open {
+   overflow: hidden;
 }
 
 .form-modal {
