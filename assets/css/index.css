@@ -847,10 +847,10 @@ footer {
    outline: solid .1875rem var(--foreground);
    outline-offset: .1875rem;
 }
-/* 
+
 html.modal-open {
    scrollbar-gutter: auto;
-} */
+}
 
 /* .spinner {
    width: 18px;

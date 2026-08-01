@@ -73,11 +73,13 @@ function openModal() {
    console.log(document.body.className);           ///
 
    overlay.hidden = false;
+
    // modal.hidden = true;
 
    requestAnimationFrame(() => {
 
       overlay.classList.add("show");
+
       // modal.classList.add("show");
 
    });
@@ -88,17 +90,25 @@ function closeModal() {
 
    overlay.classList.remove("show");
 
+   //    modal.classList.remove("show");
+
    overlay.addEventListener("click", closeModal);
 
-   document.body.classList.remove("modal-open");
+   document.documentElement.classList.remove("modal-open");          ///
+
+   document.body.classList.remove("modal-open");         ///
 
    // setTimeout(() => {
-
-   //    overlay.hidden = true;
-
-   // }, 
    
-   // 300);
+   // overlay.hidden = true;
+
+   // modal.hidden = true;
+ 
+   // }, 
+ 
+   // 350
+
+   // );
 
 }
 
@@ -120,15 +130,11 @@ form.addEventListener("submit", async (e) => {
 
    setTimeout(() => {
 
-      // window.location.reload();
-
-      closeModal();
+      window.location.reload();
 
    }, 
 
    DISPLAY_TIME);
    
-   
-
 });
 
