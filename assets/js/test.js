@@ -84,6 +84,24 @@ function openModal() {
 
 }
 
+function closeModal() {
+
+   overlay.classList.remove("show");
+
+   overlay.addEventListener("click", closeModal);
+
+   document.body.classList.remove("modal-open");
+
+   // setTimeout(() => {
+
+   //    overlay.hidden = true;
+
+   // }, 
+   
+   // 300);
+
+}
+
 form.addEventListener("submit", async (e) => {
 
    e.preventDefault();
@@ -94,7 +112,7 @@ form.addEventListener("submit", async (e) => {
 
 /// 
 
-   updateModal("loading");
+   // updateModal("loading");
 
 
 
@@ -102,7 +120,9 @@ form.addEventListener("submit", async (e) => {
 
    setTimeout(() => {
 
-      window.location.reload();
+      // window.location.reload();
+
+      closeModal();
 
    }, 
 
@@ -112,20 +132,3 @@ form.addEventListener("submit", async (e) => {
 
 });
 
-function closeModal() {
-
-   overlay.classList.remove("show");
-
-   overlay.addEventListener("click", closeModal);
-
-   document.body.classList.remove("modal-open");
-
-   setTimeout(() => {
-
-      overlay.hidden = true;
-
-   }, 
-   
-   300);
-
-}

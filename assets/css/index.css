@@ -847,12 +847,12 @@ footer {
    outline: solid .1875rem var(--foreground);
    outline-offset: .1875rem;
 }
-
+/* 
 html.modal-open {
    scrollbar-gutter: auto;
-}
+} */
 
-.spinner {
+/* .spinner {
    width: 18px;
    height: 18px;
    border: solid .125rem rgba(255,255,255,.3);
@@ -860,33 +860,36 @@ html.modal-open {
    border-radius: 50%;
    animation: spin .8s linear infinite;
    display: none;
-}
+} */
 
-@keyframes spin {
+/* @keyframes spin {
     
    to {
       
       transform:rotate(360deg);
    
    }
-}
+} */
 
 .modal-overlay {
    position: fixed;
-   inset: 0;
-   width: 100vw;
-   height: 100vh;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
    background: rgba(0, 0, 0, .65);
    backdrop-filter: blur(3px);
    opacity: 0;
    visibility: hidden;
    transition: all .3s ease;
    z-index: 1001;
+   /* pointer-events: none; */
 }
 
 .modal-overlay.show {
    opacity: 1;
    visibility: visible;
+   /* pointer-events: auto; */
 }
 
 body.modal-open {
