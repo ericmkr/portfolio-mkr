@@ -62,6 +62,8 @@ const overlay = document.getElementById("modal-overlay");
 
 const DISPLAY_TIME = 3000;
 
+overlay.addEventListener("click", closeModal);
+
 function openModal() {
 
    submitBtn.disabled = true;
@@ -92,7 +94,7 @@ function closeModal() {
 
    //    modal.classList.remove("show");
 
-   overlay.addEventListener("click", closeModal);
+   overlay.hidden = true;
 
    document.documentElement.classList.remove("modal-open");          ///
 
@@ -110,7 +112,17 @@ function closeModal() {
 
    // );
 
+   // closeBtn.addEventListener("click", () => {
+
+   //    clearTimeout(redirectTimer);
+   
+   //    closeModal();
+   
+   // });
+
 }
+
+
 
 form.addEventListener("submit", async (e) => {
 

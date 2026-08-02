@@ -848,10 +848,6 @@ footer {
    outline-offset: .1875rem;
 }
 
-html.modal-open {
-   scrollbar-gutter: auto;
-}
-
 /* .spinner {
    width: 18px;
    height: 18px;
@@ -873,27 +869,28 @@ html.modal-open {
 
 .modal-overlay {
    position: fixed;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
+   inset: 0;
    background: rgba(0, 0, 0, .65);
    backdrop-filter: blur(3px);
    opacity: 0;
    visibility: hidden;
    transition: all .3s ease;
    z-index: 1001;
-   /* pointer-events: none; */
 }
 
 .modal-overlay.show {
    opacity: 1;
    visibility: visible;
-   /* pointer-events: auto; */
 }
 
-body.modal-open {
+html.modal-open, body.modal-open {
    overflow: hidden;
+   /* scrollbar-gutter: auto; */
+}
+
+body.modal-open main {
+   user-select: none;
+   pointer-events: none;
 }
 
 .form-modal {
