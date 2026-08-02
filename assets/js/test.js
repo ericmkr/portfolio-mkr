@@ -62,8 +62,6 @@ const overlay = document.getElementById("modal-overlay");
 
 const DISPLAY_TIME = 3000;
 
-overlay.addEventListener("click", closeModal);
-
 function openModal() {
 
    submitBtn.disabled = true;
@@ -231,3 +229,4 @@ form.addEventListener("submit", async (e) => {
    
 });
 
+overlay.addEventListener("click", closeModal);
