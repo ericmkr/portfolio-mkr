@@ -19,7 +19,7 @@
 
 html {
    scroll-behavior: smooth;
-   scrollbar-gutter: stable;
+   /* scrollbar-gutter: stable; */
 }
 
 body {
@@ -319,13 +319,6 @@ strong {
    padding: 0 1.5rem;
 }
 
-/* .partners {
-   min-height: 100vh;
-   padding: 3rem;
-   border-bottom: solid 3px red;
-   background-color: #FAF7F0;
-} */
-
 .about-grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));            
@@ -489,6 +482,13 @@ strong {
    margin-bottom: .75rem;
 }
 
+/* .partners {
+   min-height: 100vh;
+   padding: 3rem;
+   border-bottom: solid 3px red;
+   background-color: #FAF7F0;
+} */
+
 /* .partners-carousel {
    position: relative;
    overflow: hidden;
@@ -630,7 +630,7 @@ strong {
 }
 
 .featured-rate {
-   border-color: rgba(210, 175, 103, .75);
+   border: solid .1875rem rgba(210, 175, 103, .75);;
    box-shadow: 0 1.25rem 3rem rgba(210, 175, 103, .18);
 }
 

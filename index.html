@@ -1,88 +1,113 @@
-   <!DOCTYPE html>
-   <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+      <title>Portfolio - Victor Eric MOUKOURI</title>
+      <link rel="stylesheet" href="assets/css/index.css">
+      <!-- <script src="assets/js/index.js" defer></script> -->
+      <script src="assets/js/test.js" defer></script>
+   </head>
+   
+   <body>
 
-      <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
-         <title>Portfolio - Victor Eric MOUKOURI</title>
-         <link rel="stylesheet" href="assets/css/index.css">
-         <!-- <script src="assets/js/index.js" defer></script> -->
-         <script src="assets/js/test.js" defer></script>
-      </head>
+      <a class="skip-link" href="#main-content" hidden>Skip to main content</a>
 
-      <body>
-         <a class="skip-link" href="#main-content" hidden>Skip to main content</a>
-         <header>
-            <div class="header-content">
-               <a class="logo" href="#" aria-label="Back to homepage">Portfolio</a>
-               <nav class="navbar" aria-label="Main navigation">
-                  <ul class="navbar-nav">
-                     <li class="navbar-item">
-                        <a class="navbar-link" href="#projects">Projects</a>
-                     </li>
-                     <li class="navbar-item">
-                        <a class="navbar-link" href="#about">About</a>
-                     </li>
-                     <li class="navbar-item">
-                        <a class="navbar-link" href="#services">Services</a>
-                     </li>
-                     <li class="navbar-item">
-                        <a class="navbar-link" href="#rates">Pricing</a>
-                     </li>
-                     <li class="navbar-item">
-                        <a class="navbar-link" href="#contact">Contact</a>
-                     </li>
-                  </ul>
-               </nav>
+      <header>
+         <div class="header-content">
+            <a class="logo" href="#" aria-label="Back to homepage">Portfolio</a>
+            <nav class="navbar" aria-label="Main navigation">
+               <ul class="navbar-nav">
+                  <li class="navbar-item">
+                     <a class="navbar-link" href="#projects">Projects</a>
+                  </li>
+                  <li class="navbar-item">
+                     <a class="navbar-link" href="#about">About</a>
+                  </li>
+                  <li class="navbar-item">
+                     <a class="navbar-link" href="#services">Services</a>
+                  </li>
+                  <li class="navbar-item">
+                     <a class="navbar-link" href="#rates">Pricing</a>
+                  </li>
+                  <li class="navbar-item">
+                     <a class="navbar-link" href="#contact">Contact</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+
+        
+      <main id="main-content">
+         <section id="hero" class="hero" aria-labelledby="hero-title" aria-describedby="hero-description">
+            <div class="avatar">
+               <img class="avatar-img" src="assets/img/4x4.jpg" width="250" height="330" alt="Portrait of Victor Eric MOUKOURI"/>
             </div>
-         </header>
-
-         <main id="main-content">
-            <section id="hero" class="hero" aria-labelledby="hero-title" aria-describedby="hero-description">
-               <div class="avatar">
-                  <img class="avatar-img" src="assets/img/4x4.jpg" width="250" height="330" alt="Portrait of Victor Eric MOUKOURI"/>
+            
+            <div class="hero-content">
+               <p class="hero-tag">Hello, I'm <strong>Eric Moukouri</strong></p>
+               <h1 id="hero-title">
+                  <span id="typing-text" aria-live="polite">Front-End Developer</span>
+                  <span class="cursor" aria-hidden="true">_</span>
+               </h1>
+               <p class="hero-description">
+                  I create user-centric digital experiences that combine aesthetics, functionality, and validity.
+               </p>
+            
+               <div class="hero-buttons">
+                  <a href="#projects" class="btn-primary">See my projects</a>
+                  <a href="#contact" class="btn-secondary">Contact me</a>
                </div>
+            </div>
+         </section>
 
-               <div class="hero-content">
-                  <p class="hero-tag">Hello, I'm <strong>Eric Moukouri</strong></p>
-                  <h1 id="hero-title">
-                     <span id="typing-text" aria-live="polite">Front-End Developer</span>
-                     <span class="cursor" aria-hidden="true">_</span>
-                  </h1>
-                  <p class="hero-description">
-                     I create user-centric digital experiences that combine aesthetics, functionality, and validity.
-                  </p>
-                  <div class="hero-buttons">
-                     <a href="#projects" class="btn-primary">See my projects</a>
-                     <a href="#contact" class="btn-secondary">Contact me</a>
-                  </div>
+         <section id="projects" class="projects" aria-labelledby="projects-title" aria-describedby="projects-description">
+         <div class="projects-content">
+         
+               <div class="section-header">
+         
+                  <h2 id="projects-title">My projects</h2>
+         
+                  <p id="projects-description" class="projects-description">A selection of my recent work in product design and UX/UI.</p>   
+         
                </div>
-            </section>
-
-            <section id="projects" class="projects" aria-labelledby="projects-title" aria-describedby="projects-description">
-               <div class="projects-content">
-                  <div class="section-header">
-                     <h2 id="projects-title">My projects</h2>
-                     <p id="projects-description" class="projects-description">A selection of my recent work in product design and UX/UI.</p>   
-                  </div>
-                  
-                  <div class="projects-grid">
-                     <a class="card-link" href="#">
-                        <article class="project-card" data-project="flowtrack">   
-                           <div class="project-image">   
-                              <img src="assets/img/FlowTrack logo.jpg" alt="FlowTrack logo"/>
-                              <div class="project-overlay">
-                                 <span class="project-category">UX/UI Design</span>
-                              </div>   
-                           </div>
-                           <h3>FlowTrack – Mobile app for daily task management</h3>
-                           <p>UX/UI design of a mobile app for daily task management.</p>   
-                        </article>
-                     </a>
-                  </div>
+         
+               
+               
+               <div class="projects-grid">
+               
+                  <a class="card-link" href="#">
+               
+                     <article class="project-card" data-project="flowtrack">   
+               
+                        <div class="project-image">   
+               
+                           <img src="assets/img/FlowTrack logo.jpg" alt="FlowTrack logo"/>
+               
+                           <div class="project-overlay">
+               
+                              <span class="project-category">UX/UI Design</span>
+               
+                           </div>   
+               
+                        </div>
+               
+                        <h3>FlowTrack – Mobile app for daily task management</h3>
+               
+                        <p>UX/UI design of a mobile app for daily task management.</p>   
+               
+                     </article>
+               
+                  </a>
+               
                </div>
-            </section>
+               
+            </div>
+            
+         </section>
 
             <section id="about" class="about" aria-labelledby="about-title" aria-describedby="about-description">
                <div class="about-content">   

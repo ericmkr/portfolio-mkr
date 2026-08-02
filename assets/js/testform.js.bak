@@ -186,9 +186,6 @@ form.addEventListener("submit", async (e) => {
 
    }
 
-   // submit-btn.disabled = false;
-   // submit-btn.textContent = "Send message";
-
    setTimeout(() => {
 
       window.location.reload();

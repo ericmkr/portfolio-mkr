@@ -68,11 +68,11 @@ function openModal() {
 
    submitBtn.disabled = true;
 
-   document.documentElement.classList.add("modal-open");          ///
+   document.documentElement.classList.add("modal-open");
    
-   document.body.classList.add("modal-open");         ///
+   document.body.classList.add("modal-open");
 
-   console.log(document.body.className);           ///
+   console.log(document.body.className);
 
    overlay.hidden = false;
 
@@ -96,9 +96,11 @@ function closeModal() {
 
    overlay.hidden = true;
 
-   document.documentElement.classList.remove("modal-open");          ///
+   document.documentElement.classList.remove("modal-open");
 
-   document.body.classList.remove("modal-open");         ///
+   document.body.classList.remove("modal-open");
+
+   console.log("modal-close");
 
    // setTimeout(() => {
    
@@ -122,7 +124,31 @@ function closeModal() {
 
 }
 
+// function updateModal(state) {
 
+//    switch (state) {
+
+//       case "loading":
+//          icon.textContent="⏳";
+//          title.textContent="Sending...";
+//          message.textContent="Your message is currently being sent.";
+//       break;
+
+//       case "success":
+//          icon.textContent="✓";
+//          title.textContent="Message sent successfully!";
+//          message.textContent="Thank you for contacting me. You will be redirected shortly.";
+//       break;
+
+//       case "error":
+//          icon.textContent="⚠";
+//          title.textContent="An error occurred.";
+//          message.textContent="Your message could not be sent. Please try again later.";
+//       break;
+
+//    };
+
+// }
 
 form.addEventListener("submit", async (e) => {
 
@@ -135,6 +161,61 @@ form.addEventListener("submit", async (e) => {
 /// 
 
    // updateModal("loading");
+
+    
+   // try {
+
+   //    const response = await fetch(form.action, {
+
+   //       method:"POST",
+
+   //       headers: {Accept: "application/json"},
+         
+   //       body:new FormData(form)
+         
+   //    });
+
+   //    await debugResponse(response);
+
+   //    if (response.ok) {
+
+   //       updateModal("success");
+      
+   //    } 
+
+   //    else if (response.status === 429) {
+
+   //       alert (
+   //          "⚠️ Error 429 - Too Many Requests\n\n" +
+   //          "You have sent too many requests in a short period of time.\n\n" +
+   //          "Please wait a few minutes before trying again."
+   //       )
+      
+   //    }
+
+   //    else {
+
+   //       // alert (
+   //       //    `Erreur HTTP ${response.status}\n\n${response.statusText}`
+   //       // );
+
+   //       updateModal("error");
+
+   //    }
+
+   // }
+
+   // catch(error) {
+
+   //    console.error(error);
+
+   //    // alert (
+   //    //    "Une erreur réseau est survenue.\n\n" + error.message
+   //    // );
+
+   //    // updateModal("error");
+
+   // }
 
 
 
