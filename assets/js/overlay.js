@@ -68,6 +68,8 @@ const message = document.getElementById("modal-message");
 
 const closeBtn = document.getElementById("modal-close");
 
+const countdown = document.getElementById("modal-countdown");
+
 const DISPLAY_TIME = 3000;
 
 function getScrollbarWidth() {
@@ -155,6 +157,39 @@ function closeModal() {
 
 }
 
+// function startCountdown(seconds) {
+
+//    let remaining = seconds;
+
+//    countdown.textContent = `Redirecting in ${remaining} seconds...`;
+
+//    const interval = setInterval(() => {
+
+//       remaining--;
+
+//       if (remaining > 1) {
+
+//          countdown.textContent = `Redirecting in ${remaining} seconds...`;
+      
+//       }
+
+//       else if (remaining === 1) {
+       
+//          countdown.textContent = "Redirecting in 1 second...";
+      
+//       }
+
+//       else {
+
+//          clearInterval(interval);
+      
+//       }
+   
+//    }, 
+   
+//    1000);
+// }
+
 form.addEventListener("submit", async (e) => {
 
    e.preventDefault();
@@ -165,6 +200,8 @@ form.addEventListener("submit", async (e) => {
 
    // updateModal("loading");
 
+
+   // countdown();
       
    setTimeout(() => {
 
@@ -184,3 +221,12 @@ overlay.addEventListener("click", closeModal);
 
 closeBtn.addEventListener("click", closeModal);
 
+document.addEventListener("keydown",(e) => {
+
+   if (e.key === "Escape" && modal.classList.contains("show")) {
+   
+      closeModal();
+   
+   }
+
+});

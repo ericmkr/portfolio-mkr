@@ -872,7 +872,7 @@ body.no-scroll {
    padding-right: var(--scrollbar-width);
 }
 
-body.no-scroll .navbar {
+body.no-scroll .navbar, body.no-scroll .form-modal {
    padding-right: var(--scrollbar-width);
 }
 
@@ -900,8 +900,6 @@ body.no-scroll .navbar {
    visibility: visible;
    /* display: block; */
 }
-
-
 
 .form-modal {
    position: fixed;
@@ -939,11 +937,11 @@ body.no-scroll .navbar {
    line-height: 1.5;
 }
 
-/* .modal-countdown {
+.modal-countdown {
    margin-top: 1rem;
    font-size: .9rem;
    color: #6b7280;
-} */
+}
 
 .modal-close {
    position: absolute;
