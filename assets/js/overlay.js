@@ -66,7 +66,7 @@ const title = document.getElementById("modal-title");
 
 const message = document.getElementById("modal-message");
 
-const DISPLAY_TIME = 11000;
+const DISPLAY_TIME = 3000;
 
 function getScrollbarWidth() {
  
@@ -79,22 +79,26 @@ function openModal() {
    const scrollbarWidth = getScrollbarWidth();
  
    document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
- 
+
+   // document.documentElement.classList.add("modal-open");
+
    document.body.classList.add('no-scroll');
+   
+   document.body.classList.add("modal-open");
+ 
+   console.log(document.body.className);
 
    submitBtn.disabled = true;
-
-   console.log(document.body.className);
     
    overlay.hidden = false;
 
-   // modal.hidden = false;
+   modal.hidden = false;
 
    requestAnimationFrame(() => {
       
       overlay.classList.add("show");
 
-      // modal.classList.add("show");
+      modal.classList.add("show");
 
    });
 
@@ -129,29 +133,33 @@ function updateModal(state) {
 
 function closeModal() {
  
-   document.body.classList.remove('no-scroll');
- 
    document.documentElement.style.setProperty('--scrollbar-width', `0px`);
 
-   // overlay.classList.remove("show");
-
-   // modal.classList.remove("show");
-
-   overlay.hidden = true;
-
-   console.log("modal-close");
-
-   // setTimeout(() => {
+   // document.documentElement.classList.remove("modal-open");
    
-   // overlay.hidden = true;
+   document.body.classList.remove('no-scroll');
 
-   // modal.hidden = true;
- 
-   // }, 
- 
-   // 350
+   document.body.classList.remove("modal-open");
 
-   // );
+   console.log(document.body.className);
+
+   submitBtn.disabled = false;
+
+   overlay.classList.remove("show");
+
+   modal.classList.remove("show");
+
+   setTimeout(() => {
+      
+      overlay.hidden = true;
+   
+      modal.hidden = true;
+ 
+   }, 
+ 
+   350
+
+   );
 
 }
 
