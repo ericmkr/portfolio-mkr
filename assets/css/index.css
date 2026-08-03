@@ -881,6 +881,7 @@ footer {
 .modal-overlay.show {
    opacity: 1;
    visibility: visible;
+   /* display: block; */
 }
 
 html.modal-open, body.modal-open {

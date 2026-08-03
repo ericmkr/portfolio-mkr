@@ -120,9 +120,21 @@ if (projectsGrid) {
    SKILLS SHOWCASE
    ========================= */
 
+const skills = [
+   {
+      title: "Front-End Development",
+      icon: "fa-regular fa-user",
+      percent: 90
+   }, 
 
+   {
+      title: "Front-End Development",
+      icon: "fa-regular fa-user",
+      percent: 90
+   }, 
+];
 
-
+const skillsGrid = document.querySelector("skills-container");
 
 /* =========================
    TOOLS SHOWCASE
