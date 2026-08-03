@@ -66,6 +66,8 @@ const title = document.getElementById("modal-title");
 
 const message = document.getElementById("modal-message");
 
+const closeBtn = document.getElementById("modal-close");
+
 const DISPLAY_TIME = 3000;
 
 function getScrollbarWidth() {
@@ -149,6 +151,8 @@ function closeModal() {
 
    modal.classList.remove("show");
 
+   submitBtn.textContent = "Send message";
+
 }
 
 form.addEventListener("submit", async (e) => {
@@ -166,11 +170,9 @@ form.addEventListener("submit", async (e) => {
 
       // window.location.reload();
 
-      // overlay.classList.remove("show");
+      closeModal();
 
-      // modal.classList.remove("show");
-
-      // submitBtn.disabled = false;
+      // form.reset();
 
    }, 
 
@@ -179,4 +181,6 @@ form.addEventListener("submit", async (e) => {
 });
 
 overlay.addEventListener("click", closeModal);
+
+closeBtn.addEventListener("click", closeModal);
 
