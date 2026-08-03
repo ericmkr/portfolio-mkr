@@ -149,21 +149,7 @@ function closeModal() {
 
    modal.classList.remove("show");
 
-   setTimeout(() => {
-      
-      overlay.hidden = true;
-   
-      modal.hidden = true;
- 
-   }, 
- 
-   350
-
-   );
-
 }
-
-
 
 form.addEventListener("submit", async (e) => {
 
@@ -178,7 +164,13 @@ form.addEventListener("submit", async (e) => {
       
    setTimeout(() => {
 
-      window.location.reload();
+      // window.location.reload();
+
+      // overlay.classList.remove("show");
+
+      // modal.classList.remove("show");
+
+      // submitBtn.disabled = false;
 
    }, 
 
