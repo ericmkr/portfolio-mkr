@@ -58,9 +58,15 @@ updateSubmitButton();
 
 const overlay = document.getElementById("modal-overlay");
 
+const modal = document.getElementById("form-modal");
 
+const icon = document.getElementById("modal-icon");
 
-const DISPLAY_TIME = 3000;
+const title = document.getElementById("modal-title");
+
+const message = document.getElementById("modal-message");
+
+const DISPLAY_TIME = 11000;
 
 function getScrollbarWidth() {
  
@@ -68,7 +74,7 @@ function getScrollbarWidth() {
 
 }
 
-function openOverlay() {
+function openModal() {
  
    const scrollbarWidth = getScrollbarWidth();
  
@@ -76,39 +82,80 @@ function openOverlay() {
  
    document.body.classList.add('no-scroll');
 
+   submitBtn.disabled = true;
+
+   console.log(document.body.className);
+    
+   overlay.hidden = false;
+
+   // modal.hidden = false;
+
+   requestAnimationFrame(() => {
+      
+      overlay.classList.add("show");
+
+      // modal.classList.add("show");
+
+   });
+
 }
 
-function closeOverlay() {
+function updateModal(state) {
+
+   switch (state) {
+
+      case "loading":
+         icon.textContent="⏳";
+         title.textContent="Sending...";
+         message.textContent="Your message is currently being sent.";
+      break;
+
+      case "success":
+         icon.textContent="✓";
+         title.textContent="Message sent successfully!";
+         message.textContent="Thank you for contacting me. You will be redirected shortly.";
+      break;
+
+      case "error":
+         icon.textContent="⚠";
+         title.textContent="An error occurred.";
+         message.textContent="Your message could not be sent. Please try again later.";
+      break;
+
+   };
+
+}
+
+
+function closeModal() {
  
    document.body.classList.remove('no-scroll');
  
    document.documentElement.style.setProperty('--scrollbar-width', `0px`);
 
+   // overlay.classList.remove("show");
+
+   // modal.classList.remove("show");
+
+   overlay.hidden = true;
+
+   console.log("modal-close");
+
+   // setTimeout(() => {
+   
+   // overlay.hidden = true;
+
+   // modal.hidden = true;
+ 
+   // }, 
+ 
+   // 350
+
+   // );
+
 }
 
-// function openModal() {
 
-//    submitBtn.disabled = true;
-
-//    document.documentElement.classList.add("modal-open");
-   
-//    document.body.classList.add("modal-open");
-
-//    console.log(document.body.className);
-
-//    overlay.hidden = false;
-
-//    // modal.hidden = true;
-
-//    requestAnimationFrame(() => {
-
-//       overlay.classList.add("show");
-
-//       // modal.classList.add("show");
-
-//    });
-
-// }
 
 form.addEventListener("submit", async (e) => {
 
@@ -116,7 +163,9 @@ form.addEventListener("submit", async (e) => {
 
    submitBtn.textContent = "Sending...";
 
-   openOverlay();
+   openModal();
+
+   // updateModal("loading");
 
       
    setTimeout(() => {
@@ -130,3 +179,4 @@ form.addEventListener("submit", async (e) => {
 });
 
 overlay.addEventListener("click", closeModal);
+

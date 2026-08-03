@@ -15,11 +15,11 @@
    --muted-foreground: #717182;
    --border: rgba(0, 0, 0, .1);
    --input-bg: #f3f3f5;
+   --scrollbar-width: 0px;
 }
 
 html {
    scroll-behavior: smooth;
-   /* scrollbar-gutter: stable; */
 }
 
 body {
@@ -869,8 +869,17 @@ footer {
 
 body.no-scroll {
    overflow: hidden;
-   padding-right: var(--scrollbar-width--);
+   padding-right: var(--scrollbar-width);
 }
+
+body.no-scroll .navbar {
+   padding-right: var(--scrollbar-width);
+}
+
+/* body.no-scroll main {
+   user-select: none;
+   pointer-events: none;
+} */
 
 .modal-overlay {
    position: fixed;
@@ -893,16 +902,6 @@ body.no-scroll {
 }
 
 
-
-/* html.modal-open, body.modal-open {
-   overflow: hidden;
-   scrollbar-gutter: auto;
-} */
-
-body.modal-open main {
-   user-select: none;
-   pointer-events: none;
-}
 
 .form-modal {
    position: fixed;
