@@ -34,21 +34,17 @@ const fields = [
 
 function updateSubmitButton() {
 
-   console.log(form.checkValidity());        ///
+   console.log(form.checkValidity());
 
    submitBtn.disabled = !form.checkValidity();
 
 }
-
-// Vérification à chaque saisie
 
 fields.forEach(field => {
 
    field.addEventListener("input", updateSubmitButton);
 
 });
-
-// Vérification au chargement
 
 updateSubmitButton();
 
@@ -188,6 +184,7 @@ function closeModal() {
 //    }, 
    
 //    1000);
+
 // }
 
 form.addEventListener("submit", async (e) => {
