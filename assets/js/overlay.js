@@ -156,7 +156,6 @@ function updateModal(state) {
 
 }
 
-
 function closeModal() {
  
    document.documentElement.style.setProperty('--scrollbar-width', `0px`);
@@ -207,7 +206,7 @@ function closeModal() {
 
 // }
 
-function debugResponse(response, responseTime) {
+async function debugResponse(response, responseTime) {
 
    console.group("HTTP Response");
 
@@ -229,6 +228,14 @@ function debugResponse(response, responseTime) {
    
    }
 
+   if ("json" in response) {
+
+      const data = await response.json();
+   
+      console.log("Response Body :", data);
+
+   }
+
    if (response.ok) {
 
       console.info("✔ Request succeeded");
@@ -242,26 +249,36 @@ function debugResponse(response, responseTime) {
    switch (response.status) {
 
       case 400:
+
          console.error("Bad Request");
+
       break;
 
       case 404:
+
          console.error("Not Found");
+
       break;
 
       case 429:
+
          console.warn("Too Many Requests");
+
          alert(
             "You have sent too many requests in a short period of time.\n\n" +
             "Please wait a few minutes before trying again."
          );
+
       break;
 
       case 500:
+
          console.error("Internal Server Error");
+
       break;
 
       default:
+         
          console.error(`HTTP ${response.status} - ${response.statusText}`);
    
    }
@@ -275,6 +292,8 @@ function debugResponse(response, responseTime) {
 form.addEventListener("submit", async (e) => {
 
    e.preventDefault();
+
+   const formData = new FormData(form);
 
    submitBtn.textContent = "Sending...";
 
@@ -310,13 +329,33 @@ form.addEventListener("submit", async (e) => {
 
          headers: {Accept: "application/json"},
 
+         json: async () => ({
+      
+            success: true,
+      
+            responseMessage: "Message sent successfully.",
+      
+            data: {
+      
+               name: formData.get("name"),
+      
+               email: formData.get("email"),
+
+               message: formData.get("message"),
+
+               submittedAt: new Date().toISOString()
+
+            }
+   
+         })
+
       };
 
       const end = performance.now();
 
       const responseTime = end - start;
 
-      debugResponse(response, responseTime);
+      await debugResponse(response, responseTime);
 
    } 
    
