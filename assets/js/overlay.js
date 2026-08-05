@@ -141,10 +141,6 @@ function closeModal() {
 
    document.body.classList.remove("modal-open");
 
-   console.log(document.body.className);
-
-   submitBtn.disabled = false;
-
    overlay.classList.remove("show");
 
    modal.classList.remove("show");
@@ -187,23 +183,23 @@ function closeModal() {
 
 // }
 
-// function debugResponse(response) {
+function debugResponse(response) {
 
-//    console.group("HTTP");
+   console.group("HTTP");
 
-//    console.log("Status :", response.status);
+   console.log("Status :", response.status);
    
-//    console.log("Status Text :", response.statusText);
+   console.log("Status Text :", response.statusText);
    
-//    console.log("OK :", response.ok);
+   console.log("OK :", response.ok);
    
-//    console.log("Redirected :", response.redirected);
+   console.log("Redirected :", response.redirected);
    
-//    console.log("URL :", response.url);
+   console.log("URL :", response.url);
 
-//    console.groupEnd();
+   console.groupEnd();
 
-// }
+}
 
 form.addEventListener("submit", async (e) => {
 
@@ -221,13 +217,17 @@ form.addEventListener("submit", async (e) => {
 
       await new Promise(resolve => setTimeout(resolve, 1500));
 
+      // Test du catch
+
+      // throw new Error("Network Error");
+
       // Fausse réponse HTTP
    
       const response = {
    
-         ok: false,
+         ok: true,
    
-         status: 111,
+         status: 200,
    
          // json: async () => ({
    
@@ -237,7 +237,7 @@ form.addEventListener("submit", async (e) => {
    
       };
 
-      // await debugResponse(response);
+      await debugResponse(response);
 
       if (response.ok) {
 
@@ -247,26 +247,22 @@ form.addEventListener("submit", async (e) => {
 
       }
 
-      // else if (response.status === 429) {
+      else if (response.status === 429) {
  
-      //    console.warn("Error 429 - Too Many Requests");
+         console.warn("Error 429 - Too Many Requests");
 
-      //    alert (
-      //       "You have sent too many requests in a short period of time.\n\n" +
-      //       "Please wait a few minutes before trying again."
-      //    );
+         alert (
+            "You have sent too many requests in a short period of time.\n\n" +
+            "Please wait a few minutes before trying again."
+         );
 
-      //    updateModal("error");
+         updateModal("error");
       
-      // }
+      }
 
       else {
 
-         console.info(`Erreur HTTP ${response.status}\n\n${response.statusText}`);
-
-         // alert (
-         //    `Erreur HTTP ${response.status}\n\n${response.statusText}`
-         // );
+         console.error(`Erreur HTTP ${response.status}`);
 
          updateModal("error");
 
@@ -291,6 +287,8 @@ form.addEventListener("submit", async (e) => {
       closeModal();
 
       submitBtn.textContent = "Send message"; 
+
+      submitBtn.disabled = false;
 
       // form.reset();
 

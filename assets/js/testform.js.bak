@@ -2,15 +2,7 @@
    FORM SUBMIT FEEDBACK
    ========================= */
 
-const overlay = document.getElementById("modal-overlay");
-const modal = document.getElementById("form-modal");
-const icon = document.getElementById("modal-icon");
-const title = document.getElementById("modal-title");
-const message = document.getElementById("modal-message");
 const countdown = document.getElementById("modal-countdown");
-// const closeBtn = document.getElementById("modal-close");
-// let redirectTimer;
-
 
 
 form.addEventListener("submit", async (e) => {
@@ -66,24 +58,3 @@ form.addEventListener("submit", async (e) => {
    DISPLAY_TIME);
 
 });
-
-
-
-
-
-
-
-
-// function debugResponse(response) {
-
-//    console.group("HTTP");
-
-//    console.log("Status :", response.status);
-//    console.log("Status Text :", response.statusText);
-//    console.log("OK :", response.ok);
-//    console.log("Redirected :", response.redirected);
-//    console.log("URL :", response.url);
-
-//    console.groupEnd();
-
-// }
