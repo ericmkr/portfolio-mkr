@@ -220,14 +220,13 @@ function debugResponse(response) {
       break;
 
       case 500:
-         console.error("🔥 Internal Server Error");
+         console.error("Internal Server Error");
       break;
 
       default:
          console.log(`HTTP ${response.status}`);
    
    }
-
 
    console.groupEnd();
 
@@ -275,7 +274,7 @@ form.addEventListener("submit", async (e) => {
 
       if (response.ok) {
 
-         console.info("Message sent successfully.");
+         // console.info("Message sent successfully.");
 
          updateModal("success");
 
@@ -283,7 +282,7 @@ form.addEventListener("submit", async (e) => {
 
       else if (response.status === 429) {
  
-         console.warn("Error 429 - Too Many Requests");
+         // console.warn("Error 429 - Too Many Requests");
 
          alert (
             "You have sent too many requests in a short period of time.\n\n" +
