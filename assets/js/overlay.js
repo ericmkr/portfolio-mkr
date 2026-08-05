@@ -207,7 +207,7 @@ function closeModal() {
 
 // }
 
-function debugResponse(response) {
+function debugResponse(response, responseTime) {
 
    console.group("HTTP Response");
 
@@ -220,6 +220,8 @@ function debugResponse(response) {
    console.log("Redirected :", response.redirected);
    
    console.log("URL :", response.url);
+
+   console.log(`Response Time : ${responseTime.toFixed(2)} ms`);
 
    if ("headers" in response) {
    
@@ -281,6 +283,8 @@ form.addEventListener("submit", async (e) => {
    updateModal("loading");
 
    try {
+
+      const start = performance.now();
  
       // Simule une attente réseau
 
@@ -308,7 +312,11 @@ form.addEventListener("submit", async (e) => {
 
       };
 
-      await debugResponse(response);
+      const end = performance.now();
+
+      const responseTime = end - start;
+
+      debugResponse(response, responseTime);
 
    } 
    
@@ -353,6 +361,3 @@ document.addEventListener("keydown",(e) => {
    }
 
 });
-
-
-
