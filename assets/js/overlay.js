@@ -15,6 +15,32 @@ if (isDev) {
 }
 
 /* =========================
+   SUBMIT AUTOMATION
+========================= */
+
+const AUTO_TEST = false;
+
+const AUTO_TEST_DELAY = 11000;
+
+if (AUTO_TEST) {
+
+   setInterval(() => {
+
+      if (!submitBtn.disabled) {
+
+         console.info("⚙️ Auto submit 🤖");
+
+         form.requestSubmit();
+
+      }
+
+   }, 
+   
+   AUTO_TEST_DELAY);
+
+}
+
+/* =========================
    FORM SUBMIT VALIDATION
 ========================= */
 
@@ -201,22 +227,32 @@ function debugResponse(response) {
    
    }
 
+   if (response.ok) {
+
+      console.info("✔ Request succeeded");
+
+      updateModal("success");
+
+   return;
+
+   }
+
    switch (response.status) {
 
-      case 200:
-         console.info("✔ Request succeeded");
-      break;
-
       case 400:
-         console.warn("❌ Bad Request");
+         console.error("Bad Request");
       break;
 
       case 404:
-         console.warn("❌ Not Found");
+         console.error("Not Found");
       break;
 
       case 429:
-         console.warn("⚠ Too Many Requests");
+         console.warn("Too Many Requests");
+         alert(
+            "You have sent too many requests in a short period of time.\n\n" +
+            "Please wait a few minutes before trying again."
+         );
       break;
 
       case 500:
@@ -224,9 +260,11 @@ function debugResponse(response) {
       break;
 
       default:
-         console.log(`HTTP ${response.status}`);
+         console.error(`HTTP ${response.status} - ${response.statusText}`);
    
    }
+
+   updateModal("error");
 
    console.groupEnd();
 
@@ -258,7 +296,7 @@ form.addEventListener("submit", async (e) => {
 
          ok: true,
    
-         status: 400,
+         status: 200,
 
          statusText: "OK",
    
@@ -271,31 +309,6 @@ form.addEventListener("submit", async (e) => {
       };
 
       await debugResponse(response);
-
-      if (response.ok) {
-
-         updateModal("success");
-
-      }
-
-      else if (response.status === 429) {
-
-         alert (
-            "You have sent too many requests in a short period of time.\n\n" +
-            "Please wait a few minutes before trying again."
-         );
-
-         updateModal("error");
-      
-      }
-
-      else {
-
-         console.error(`HTTP fetch error. Status: ${response.status}`);
-
-         updateModal("error");
-
-      }
 
    } 
    
@@ -341,21 +354,5 @@ document.addEventListener("keydown",(e) => {
 
 });
 
-const AUTO_TEST = false;
-const AUTO_TEST_DELAY = 11000;
 
-if (AUTO_TEST) {
 
-   setInterval(() => {
-
-      if (!submitBtn.disabled) {
-
-         console.info("🧪 Auto submit");
-
-         form.requestSubmit();
-
-      }
-
-   }, AUTO_TEST_DELAY);
-
-}
