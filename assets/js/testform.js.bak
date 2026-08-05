@@ -41,16 +41,6 @@ form.addEventListener("submit", async (e) => {
       
       } 
 
-      else if (response.status === 429) {
-
-         alert (
-            "⚠️ Error 429 - Too Many Requests\n\n" +
-            "You have sent too many requests in a short period of time.\n\n" +
-            "Please wait a few minutes before trying again."
-         )
-      
-      }
-
       else {
 
          // alert (
@@ -65,12 +55,6 @@ form.addEventListener("submit", async (e) => {
 
       console.error(error);
 
-      // alert (
-      //    "Une erreur réseau est survenue.\n\n" + error.message
-      // );
-
-      // updateModal("error");
-
    }
 
    setTimeout(() => {
@@ -82,19 +66,6 @@ form.addEventListener("submit", async (e) => {
    DISPLAY_TIME);
 
 });
-
-
-
-
-
-
-
-// document.addEventListener("keydown",(e)=>{
-//    if(e.key==="Escape" && modal.classList.contains("show")){
-//       clearTimeout(redirectTimer);
-//       closeModal();
-//    }
-// });
 
 
 

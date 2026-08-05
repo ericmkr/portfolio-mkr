@@ -64,9 +64,9 @@ const message = document.getElementById("modal-message");
 
 const closeBtn = document.getElementById("modal-close");
 
-const countdown = document.getElementById("modal-countdown");
+// const countdown = document.getElementById("modal-countdown");
 
-const DISPLAY_TIME = 3000;
+const DISPLAY_TIME = 11000;
 
 function getScrollbarWidth() {
  
@@ -149,7 +149,7 @@ function closeModal() {
 
    modal.classList.remove("show");
 
-   submitBtn.textContent = "Send message";
+   // submitBtn.textContent = "Send message";
 
 }
 
@@ -187,6 +187,24 @@ function closeModal() {
 
 // }
 
+// function debugResponse(response) {
+
+//    console.group("HTTP");
+
+//    console.log("Status :", response.status);
+   
+//    console.log("Status Text :", response.statusText);
+   
+//    console.log("OK :", response.ok);
+   
+//    console.log("Redirected :", response.redirected);
+   
+//    console.log("URL :", response.url);
+
+//    console.groupEnd();
+
+// }
+
 form.addEventListener("submit", async (e) => {
 
    e.preventDefault();
@@ -195,16 +213,84 @@ form.addEventListener("submit", async (e) => {
 
    openModal();
 
-   // updateModal("loading");
+   updateModal("loading");
 
+   try {
+ 
+      // Simule une attente réseau
 
-   // countdown();
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // Fausse réponse HTTP
+   
+      const response = {
+   
+         ok: false,
+   
+         status: 111,
+   
+         // json: async () => ({
+   
+         //    message: "Message sent successfully."
+   
+         // })
+   
+      };
+
+      // await debugResponse(response);
+
+      if (response.ok) {
+
+         console.info("Message sent successfully.");
+
+         updateModal("success");
+
+      }
+
+      // else if (response.status === 429) {
+ 
+      //    console.warn("Error 429 - Too Many Requests");
+
+      //    alert (
+      //       "You have sent too many requests in a short period of time.\n\n" +
+      //       "Please wait a few minutes before trying again."
+      //    );
+
+      //    updateModal("error");
+      
+      // }
+
+      else {
+
+         console.info(`Erreur HTTP ${response.status}\n\n${response.statusText}`);
+
+         // alert (
+         //    `Erreur HTTP ${response.status}\n\n${response.statusText}`
+         // );
+
+         updateModal("error");
+
+      }
+
+   } 
+   
+   catch (error) {
+
+      console.error(error);
+
+      updateModal("error");
+
+   }
+  
+      // countdown();
       
    setTimeout(() => {
 
       // window.location.reload();
 
       closeModal();
+
+      submitBtn.textContent = "Send message"; 
 
       // form.reset();
 
