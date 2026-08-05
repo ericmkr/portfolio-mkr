@@ -5,15 +5,6 @@
 const countdown = document.getElementById("modal-countdown");
 
 
-form.addEventListener("submit", async (e) => {
-
-   e.preventDefault();
-
-   openModal();
-
-   updateModal("loading");
-
-   try {
 
       const response = await fetch(form.action, {
 
@@ -25,36 +16,3 @@ form.addEventListener("submit", async (e) => {
          
       });
 
-      await debugResponse(response);
-
-      if (response.ok) {
-
-         updateModal("success");
-      
-      } 
-
-      else {
-
-         // alert (
-         //    `Erreur HTTP ${response.status}\n\n${response.statusText}`
-         // );
-
-         updateModal("error");
-      }
-   }
-
-   catch(error) {
-
-      console.error(error);
-
-   }
-
-   setTimeout(() => {
-
-      window.location.reload();
-
-   }, 
-
-   DISPLAY_TIME);
-
-});

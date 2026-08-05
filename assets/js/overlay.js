@@ -145,8 +145,6 @@ function closeModal() {
 
    modal.classList.remove("show");
 
-   // submitBtn.textContent = "Send message";
-
 }
 
 // function startCountdown(seconds) {
@@ -185,7 +183,7 @@ function closeModal() {
 
 function debugResponse(response) {
 
-   console.group("HTTP");
+   console.group("HTTP Response");
 
    console.log("Status :", response.status);
    
@@ -196,6 +194,40 @@ function debugResponse(response) {
    console.log("Redirected :", response.redirected);
    
    console.log("URL :", response.url);
+
+   if ("headers" in response) {
+   
+      console.log("headers :", response.headers);
+   
+   }
+
+   switch (response.status) {
+
+      case 200:
+         console.info("✔ Request succeeded");
+      break;
+
+      case 400:
+         console.warn("❌ Bad Request");
+      break;
+
+      case 404:
+         console.warn("❌ Not Found");
+      break;
+
+      case 429:
+         console.warn("⚠ Too Many Requests");
+      break;
+
+      case 500:
+         console.error("🔥 Internal Server Error");
+      break;
+
+      default:
+         console.log(`HTTP ${response.status}`);
+   
+   }
+
 
    console.groupEnd();
 
@@ -224,17 +256,19 @@ form.addEventListener("submit", async (e) => {
       // Fausse réponse HTTP
    
       const response = {
-   
+
          ok: true,
    
          status: 200,
+
+         statusText: "OK",
    
-         // json: async () => ({
+         redirected: false,
    
-         //    message: "Message sent successfully."
-   
-         // })
-   
+         url: "https://formsubmit.co/victorericmoukouri@outlook.com", // form.action
+
+         headers: {Accept: "application/json"},
+
       };
 
       await debugResponse(response);
