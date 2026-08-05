@@ -66,7 +66,7 @@ const closeBtn = document.getElementById("modal-close");
 
 // const countdown = document.getElementById("modal-countdown");
 
-const DISPLAY_TIME = 11000;
+const DISPLAY_TIME = 3000;
 
 function getScrollbarWidth() {
  
@@ -256,7 +256,7 @@ form.addEventListener("submit", async (e) => {
    
       const response = {
 
-         ok: true,
+         ok: false,
    
          status: 200,
 
@@ -274,15 +274,12 @@ form.addEventListener("submit", async (e) => {
 
       if (response.ok) {
 
-         // console.info("Message sent successfully.");
-
          updateModal("success");
 
       }
 
       else if (response.status === 429) {
- 
-         // console.warn("Error 429 - Too Many Requests");
+
 
          alert (
             "You have sent too many requests in a short period of time.\n\n" +
@@ -344,3 +341,22 @@ document.addEventListener("keydown",(e) => {
    }
 
 });
+
+const AUTO_TEST = false;
+const AUTO_TEST_DELAY = 11000;
+
+if (AUTO_TEST) {
+
+   setInterval(() => {
+
+      if (!submitBtn.disabled) {
+
+         console.info("🧪 Auto submit");
+
+         form.requestSubmit();
+
+      }
+
+   }, AUTO_TEST_DELAY);
+
+}
