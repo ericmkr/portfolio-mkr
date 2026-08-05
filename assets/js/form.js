@@ -106,8 +106,6 @@ function openModal() {
  
    document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
 
-   // document.documentElement.classList.add("modal-open");
-
    document.body.classList.add('no-scroll');
    
    document.body.classList.add("modal-open");
@@ -159,8 +157,6 @@ function updateModal(state) {
 function closeModal() {
  
    document.documentElement.style.setProperty('--scrollbar-width', `0px`);
-
-   // document.documentElement.classList.remove("modal-open");
    
    document.body.classList.remove('no-scroll');
 
@@ -210,31 +206,31 @@ async function debugResponse(response, responseTime) {
 
    console.group("HTTP Response");
 
-   console.log("Status :", response.status);
+   console.info("Status :", response.status);
    
-   console.log("Status Text :", response.statusText);
+   console.info("Status Text :", response.statusText);
    
-   console.log("OK :", response.ok);
+   console.info("OK :", response.ok);
    
-   console.log("Redirected :", response.redirected);
+   console.info("Redirected :", response.redirected);
    
-   console.log("URL :", response.url);
+   console.info("URL :", response.url);
 
-   console.log(`Response Time : ${responseTime.toFixed(2)} ms`);
+   console.info(`Response Time : ${responseTime.toFixed(2)} ms`);
 
    if ("headers" in response) {
    
-      console.log("headers :", response.headers);
+      console.info("headers :", response.headers);
    
    }
 
-   if ("json" in response) {
+   // if ("json" in response) {
 
-      const data = await response.json();
+   //    const data = await response.json();
    
-      console.log("Response Body :", data);
+   //    console.info("Response Body :", data);
 
-   }
+   // }
 
    if (response.ok) {
 
@@ -278,7 +274,7 @@ async function debugResponse(response, responseTime) {
       break;
 
       default:
-         
+
          console.error(`HTTP ${response.status} - ${response.statusText}`);
    
    }
@@ -293,7 +289,7 @@ form.addEventListener("submit", async (e) => {
 
    e.preventDefault();
 
-   const formData = new FormData(form);
+   // const formData = new FormData(form);
 
    submitBtn.textContent = "Sending...";
 
@@ -305,15 +301,15 @@ form.addEventListener("submit", async (e) => {
 
       const start = performance.now();
  
-      // Simule une attente réseau
+      // Simule une attente réseau (dev)
 
       await new Promise(resolve => setTimeout(resolve, 1500));
 
-      // Test du catch
+      // Test du catch (dev)
 
       // throw new Error("Network Error");
 
-      // Fausse réponse HTTP
+      // Fausse réponse HTTP (dev)
    
       const response = {
 
@@ -325,31 +321,63 @@ form.addEventListener("submit", async (e) => {
    
          redirected: false,
    
-         url: "https://formsubmit.co/victorericmoukouri@outlook.com", // form.action
+         url: "https://formsubmit.co/victorericmoukouri@outlook.com",
 
          headers: {Accept: "application/json"},
 
-         json: async () => ({
+         // json: async () => ({
       
-            success: true,
+         //    success: true,
       
-            responseMessage: "Message sent successfully.",
+         //    responseMessage: "Message sent successfully.",
       
-            data: {
+         //    data: {
       
-               name: formData.get("name"),
+         //       name: formData.get("name"),
       
-               email: formData.get("email"),
+         //       email: formData.get("email"),
 
-               message: formData.get("message"),
+         //       message: formData.get("message"),
 
-               submittedAt: new Date().toISOString()
+         //       submittedAt: new Date().toISOString()
 
-            }
+         //    }
    
-         })
+         // })
 
       };
+
+      // const response = await fetch(form.action, {
+
+      //    method:"POST",
+
+      //    headers: {Accept: "application/json"},
+         
+      //    body:new FormData(form),
+
+      //    url: form.action,
+
+      //    json: async () => ({
+      
+      //       // success: true,
+      
+      //       // responseMessage: "Message sent successfully.",
+      
+      //       data: {
+      
+      //          name: formData.get("name"),
+      
+      //          email: formData.get("email"),
+
+      //          message: formData.get("message"),
+
+      //          submittedAt: new Date().toISOString()
+
+      //       }
+   
+      //    })
+         
+      // });
 
       const end = performance.now();
 

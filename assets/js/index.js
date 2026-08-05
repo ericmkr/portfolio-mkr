@@ -1,3 +1,5 @@
+
+
 /* =========================
    HERO TYPING SECTION
    ========================= */
@@ -137,17 +139,6 @@ if (projectsGrid) {
    ========================= */
 
 
-/* =========================
-   PREFILLED FORM
-   ========================= */
-
-const isDev = false;
-
-if (isDev) {
-   document.getElementById("name").value = "Tester";
-   document.getElementById("email").value = "tester@tests.test";
-   document.getElementById("message").value = "Hello, this is a test message sent automatically to verify that the form is working correctly.";
-}
 
 /* =========================
    BACK TO TOP BTN
