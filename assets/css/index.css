@@ -391,7 +391,7 @@ strong {
 
 .progress {
    height: 100%;
-   border-radius: 50px;
+   border-radius: inherit;
    background: linear-gradient(90deg, #ff6a32, #f2a57e);
    /* transition: width .6s ease; */
 }
