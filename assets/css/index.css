@@ -119,56 +119,18 @@ header {
    color: var(--primary);
 }
 
-
-
-/* .theme-toggle {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 0.65rem 0.95rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: var(--shadow);
-} */
-
-/* .btn {
-  border: 0;
-  border-radius: 999px;
-  padding: 0.9rem 1.3rem;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.45rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-} */
-
-/* .btn:hover {
-  transform: translateY(-2px);
-} */
-
-/* .btn--primary {
-  background: var(--accent);
-  color: var(--text);
-  box-shadow: var(--shadow);
-} */
-
-/* .btn--secondary {
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--border);
-} */
-
-/* .avatar-wrap {
-  overflow: hidden;
-  border-radius: 50%;
-  border: 4px solid var(--accent);
-  width: min(100%, 300px);
-  margin: 0 auto 1rem;
-}  */
+.theme-toggle {
+   border: solid .1875rem var(--border);
+   background: var(--surface);
+   color: var(--text);
+   border-radius: 999px;
+   padding: 0.65rem 0.95rem;
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem;
+   box-shadow: var(--shadow);
+   transition: all .3s ease
+}
 
 .hero {
    background-color: #717182;
@@ -183,8 +145,9 @@ header {
 
 .avatar-img {
    display: block;
-   border-radius: 300px;
+   border-radius: 18.75rem;
    margin-right: 1.875rem;
+   /* overflow: hidden; */
 }
         
 .hero-content {
@@ -255,9 +218,11 @@ strong {
 
 
 
+
 .btn-primary:hover {
    background-color: var(--foreground);
    color: var(--accent);
+   /* box-shadow: var(--shadow); */
 }
 
 .btn-primary:active {
