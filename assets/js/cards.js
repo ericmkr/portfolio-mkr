@@ -55,14 +55,23 @@
       cardLink.innerHTML = 
       `
       <article class="project-card" data-project="${project.id}">
+
          <div class="project-image">
+
             <img src="${project.image}" alt="${project.imageAlt}"/>
+
             <div class="project-overlay">
+
                <span class="project-category">${project.category}</span>
+
             </div>
+
          </div>
+
          <h3>${project.title}</h3>
+
          <p>${project.description}</p>
+
       </article>
       `;
 
@@ -139,16 +148,27 @@
       skillItem.innerHTML = 
       `
       <div class="skill-header">
+
          <div class="skill-left">
+
             <div class="icon-box">
+
                <i class="${skill.icon}" aria-hidden="true"></i>
+
             </div>
+
             <span>${skill.title}</span>
+
          </div>
+
          <span class="percent">${skill.level}%</span>
+
       </div>
+
       <div class="progress-bar">
+
          <div class="progress" style="width: ${skill.level}%" aria-hidden="true"></div>
+
       </div>
       `;
    
@@ -205,7 +225,9 @@
       experienceItem.innerHTML = 
       `
       <h4>${experience.title}</h4>
+
       <p>${experience.description}</p>
+
       <p>${experience.period}</p>
       `;
 
@@ -282,7 +304,9 @@
       serviceCard.innerHTML = 
       `
       <span class="service-number">${String(index + 1).padStart(2, "0")}</span>
+
       <h3>${service.title}</h3>
+
       <p>${service.description}</p>
       `;
 
@@ -371,12 +395,19 @@
       testimonialCard.innerHTML = 
       `
       <div class="testimonial-profile">
+
          <div class="testimonial-avatar" aria-hidden="true">${getInitials(testimonial.name)}</div>
+
          <div>
+
             <h3>${testimonial.name}</h3>
+
             <p>${testimonial.role}</p>   
+
          </div>
+
       </div>
+
       <p class="testimonial-message">
          ${testimonial.message}
       </p>
@@ -470,14 +501,19 @@
       rateCard.innerHTML = 
       `
       <h3>${rate.title}</h3>
+
       <p class="rate-price">${rate.price}</p>
       
       <ul>
+
          ${rate.features 
+
             .map(feature => 
+
                `<li>${feature}</li>`)
 
-               .join("")}      
+               .join("")}   
+
       </ul>
 
       <p class="rate-note">${rate.note}</p>
@@ -497,3 +533,4 @@
       });
 
    }
+   
