@@ -1,6 +1,6 @@
 /* =========================
    PROJECTS SHOWCASE
-   ========================= */
+========================= */
 
 const projectCards = [
    {
@@ -41,12 +41,13 @@ function createProjectCard(project) {
                <span class="project-category">${project.category}</span>
             </div>
          </div>
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
+         <h3>${project.title}</h3>
+         <p>${project.description}</p>
       </article>
    `;
 
    return cardLink;
+   
 }
 
 if (projectsGrid) {
@@ -57,8 +58,68 @@ if (projectsGrid) {
 
 /* =========================
    SKILLS SHOWCASE
-   ========================= */
+========================= */
 
+const skills = [
+   {
+      title: "Front-End Development",
+      icon: "fa-solid fa-code",
+      level: 90
+   },
+
+   {
+      title: "JavaScript",
+      icon: "fa-brands fa-js",
+      level: 75
+   },
+
+   {
+      title: "Accessibility (WCAG)",
+      icon: "fa-solid fa-universal-access",
+      level: 85
+   },
+
+   {
+      title: "Git & GitHub",
+      icon: "fa-brands fa-github",
+      level: 80
+   }
+];
+
+const skillsContainer = document.querySelector(".skills-container");
+
+function createSkillItem(skill) {
+
+   const skillItem = document.createElement("div");
+   skillItem.className = "skill-item";
+
+   skillItem.innerHTML = 
+   `
+      <div class="skill-header">
+         <div class="skill-left">
+            <div class="icon-box">
+               <i class="${skill.icon}" aria-hidden="true"></i>
+            </div>
+            <span>${skill.title}</span>
+         </div>
+         <span class="percent">${skill.level}%</span>
+      </div>
+      <div class="progress-bar">
+         <div class="progress" style="width: ${skill.level}%" aria-hidden="true"></div>
+      </div>
+   `;
+
+   return skillItem;
+
+}
+
+if (skillsContainer) {
+
+   skills.forEach(skill => {
+      skillsContainer.appendChild(createSkillItem(skill));
+   });
+
+}
 
 /* =========================
    TOOLS SHOWCASE
