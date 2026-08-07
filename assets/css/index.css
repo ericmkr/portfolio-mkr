@@ -52,7 +52,7 @@
    --input-bg: #343436;
   
    --border: rgba(248, 244, 235, .11);
-   --shadow: 0 180px 60px rgba(0, 0, 0, .35);
+   --shadow: 0 20px 60px rgba(173, 150, 91, 0.35);
    --radius: .6875rem;
 
    --max-width: 1180px;
@@ -139,7 +139,7 @@ header {
    align-items: center;
    gap: .5rem;
    box-shadow: var(--shadow);
-   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .2s ease;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .theme-toggle:hover {
@@ -150,7 +150,7 @@ header {
    display: inline-block;
    opacity: 1;
    transform: rotate(0deg);
-   transition: transform .35s cubic-bezier(.4, 0, .2, 1), opacity .2s ease;
+   transition: transform .3s cubic-bezier(.4, 0, .2, 1), opacity .3s ease;
 }
 
 #theme-icon.is-changing {
@@ -160,7 +160,7 @@ header {
 
 #theme-label {
    display: inline-block;
-   transition: opacity .15s ease, transform .2s ease;
+   transition: opacity .15s ease, transform .3s ease;
 }
 
 #theme-label.is-changing {
@@ -263,7 +263,6 @@ strong {
    background-color: var(--primary-hover);
    color: var(--primary-color);
    box-shadow: var(--shadow);
-   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .btn-primary:active {
@@ -285,7 +284,6 @@ strong {
 
 .btn-secondary:hover {
    background-color: var(--accent);
-   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .btn-secondary:active {
@@ -346,7 +344,7 @@ strong {
    border-radius: 1.5rem;
    overflow: hidden;
    background-color: var(--bg);
-   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
+   transition: transform .3s ease, background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .project-card:hover {
@@ -628,7 +626,7 @@ strong {
    font-weight: 600;
    text-align: center;
    box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .05);
-   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
+   transition: transform .3s ease, background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 @keyframes scrollPartners {
@@ -822,7 +820,6 @@ strong {
 
 .contact-link:hover {
    background-color: var(--accent);
-   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .contact-icon {
@@ -838,7 +835,7 @@ strong {
 
 .contact-link:hover .contact-icon {
    background-color: var(--primary);
-   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
+
 }
 
 .contact-link:hover .contact-icon svg {
@@ -891,6 +888,7 @@ textarea {
 
 #submit-btn {
    width: 100%;
+   transition: transform .3s ease, background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 
    /* display:flex;
    align-items:center;
@@ -949,13 +947,18 @@ footer {
    transform: translateY(12px);
    z-index: 1400;
    font-size: 2rem;
-   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
+   transition: transform .3s ease, background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .back-to-top.show {
    opacity: 1;
    transform: translateY(0);
    pointer-events: auto;
+}
+
+.back-to-top:hover {
+   background-color: var(--txt);
+   color: var(--bg);
 }
 
 .back-to-top:focus-visible {
@@ -1029,7 +1032,7 @@ body.no-scroll .navbar, body.no-scroll .form-modal {
    box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
    opacity: 0;
    visibility: hidden;
-   transition: .3s;
+   transition: all .3s ease;
    z-index: 1002;
 }
 
@@ -1210,6 +1213,7 @@ button:hover {
    border-top-color: #fff;
    border-radius: 50%;
    animation: spin .8s linear infinite;
+   transition: transform .3s ease;
    /* display: none; */
 }
 

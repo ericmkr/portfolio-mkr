@@ -99,8 +99,9 @@ if (backTopBtn) {
 
 
 
-
-
+/* =========================
+   THEME DISPLAY
+   ========================= */
 
 function initTheme() {
   
@@ -193,14 +194,14 @@ initTheme();
 
 
 /* =========================
-   DEV MODE — KEEP ANCHOR
+   ANCHOR
 ========================= */
 
 const isDev = true;
 
 if (isDev) {
 
-   const devAnchor = "#about";
+   const devAnchor = "#projects";
 
    window.addEventListener("load", () => {
 
