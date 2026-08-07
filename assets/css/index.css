@@ -64,10 +64,12 @@ html {
 }
 
 body {
+   background-color: var(--bg);
+   color: var(--txt);
    min-height: 100vh;
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
    line-height: 1.5;
-   color: var(--txt);
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 a:focus-visible, #submit-btn:focus-visible {
@@ -85,6 +87,7 @@ header {
    background-color: var(--header);
    backdrop-filter: blur(11px);
    border-bottom: solid 1px var(--border);
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .header-content {
@@ -107,7 +110,7 @@ header {
 }
 
 .navbar-nav {
-   background-color: plum;
+   /* background-color: plum; */
    display: flex;
    gap: 3rem;
    list-style: none;
@@ -118,7 +121,7 @@ header {
    color: var(--txt);
    text-decoration: none;
    font-weight: 500;
-
+   padding: .5rem;
    transition: color .3s;
 }
 
@@ -136,7 +139,33 @@ header {
    align-items: center;
    gap: .5rem;
    box-shadow: var(--shadow);
-   transition: all .3s ease
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .2s ease;
+}
+
+.theme-toggle:hover {
+   opacity: .7;
+}
+
+#theme-icon {
+   display: inline-block;
+   opacity: 1;
+   transform: rotate(0deg);
+   transition: transform .35s cubic-bezier(.4, 0, .2, 1), opacity .2s ease;
+}
+
+#theme-icon.is-changing {
+   transform: rotate(180deg) scale(.7);
+   opacity: 0;
+}
+
+#theme-label {
+   display: inline-block;
+   transition: opacity .15s ease, transform .2s ease;
+}
+
+#theme-label.is-changing {
+   opacity: 0;
+   transform: translateY(-6px);
 }
 
 .hero {
@@ -192,6 +221,13 @@ strong {
 }
 
 @media (prefers-reduced-motion: reduce) {
+   *, *::before, *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+   }
+
    .cursor, .typing {
       animation: none;
    }
@@ -213,20 +249,21 @@ strong {
 .btn-primary {
    padding: .875rem 1.5rem;
    background-color: var(--primary);
-   color: var(--txt);
+   color: #000000;
    border: none;
    border-radius: .5rem;
    font-size: 1rem;
    font-weight: 500;
    text-decoration: none;
    display: inline-block;
-   transition: all .3s ease;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .btn-primary:hover {
    background-color: var(--primary-hover);
    color: var(--primary-color);
    box-shadow: var(--shadow);
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .btn-primary:active {
@@ -243,11 +280,12 @@ strong {
    font-weight: 500;
    text-decoration: none;
    display: inline-block;
-   transition: background-color .3s;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .btn-secondary:hover {
    background-color: var(--accent);
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .btn-secondary:active {
@@ -261,7 +299,7 @@ strong {
 }
 
 .projects-content {
-   background-color: green;
+   /* background-color: green; */
    display: flex;
    flex-direction: column;
    flex: 1;
@@ -276,12 +314,12 @@ strong {
 }
 
 .section-header {
-   background-color: orange;
+   /* background-color: orange; */
    margin-bottom: 1.5rem;
 }
 
 #projects-title, #about-title, #services-title, #partners-title, #testimonials-title, #rates-title {
-   background-color: orange;
+   /* background-color: orange; */
    font-size: 2.5rem;
    font-weight: 500;
    margin-bottom: 1rem;
@@ -308,7 +346,7 @@ strong {
    border-radius: 1.5rem;
    overflow: hidden;
    background-color: var(--bg);
-   transition: all .3s ease;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .project-card:hover {
@@ -326,6 +364,7 @@ strong {
    background-color: var(--muted);
    margin-bottom: 1rem;
    position: relative;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .project-image img {
@@ -373,10 +412,11 @@ strong {
    padding: 3rem;
    border-bottom: solid 3px red;
    background-color: var(--surface);
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .about-content {
-   background-color: green;
+   /* background-color: green; */
    display: flex;
    flex-direction: column;
    flex: 1;
@@ -448,15 +488,16 @@ strong {
 .progress-bar {
    width: 100%;
    height: .6875rem;
-   border-radius: 3.125rem;
-         background: #edd8ca;
+   border-radius: 3.125rem;      
+   background: #edd8ca;
+   border: solid 1px var(--muted);
    overflow: hidden;
 }
 
 .progress {
    height: 100%;
    border-radius: inherit;
-   background: linear-gradient(90deg, #ff6a32, #f2a57e);
+   background: linear-gradient(90deg, #32140a, #d37140);
    /* transition: width .6s ease; */
 }
 
@@ -466,9 +507,9 @@ strong {
    width: 70%;
 } */
 
-/* .fill-80 {
+.fill-80 {
    width: 80%;
-} */
+}
 
 /* .fill-90 {
    width: 90%;
@@ -485,6 +526,7 @@ strong {
    border: solid 1px var(--border);
    border-radius: .5rem;
    margin-bottom: 1.5rem;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .experience-item h4 {
@@ -505,7 +547,7 @@ strong {
 }
 
 .services-content {
-   background-color: blueviolet;
+   /* background-color: blueviolet; */
    display: flex;
    flex-direction: column;
    flex: 1;
@@ -525,6 +567,7 @@ strong {
    border: solid 1px var(--border);
    border-radius: .9rem;
    transition: all .3s ease;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .service-number {
@@ -538,6 +581,7 @@ strong {
    background-color: var(--accent);
    color: var(--primary);
    font-weight: 700;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .service-card h3, .testimonial-card h3, .rate-card h3 {
@@ -547,7 +591,7 @@ strong {
 }
 
 .partners {
-   background-color: green;
+   /* background-color: green; */
    /* min-height: 100vh; */
    padding: 3rem;
    border-bottom: solid 3px red;
@@ -584,6 +628,7 @@ strong {
    font-weight: 600;
    text-align: center;
    box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .05);
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 @keyframes scrollPartners {
@@ -602,7 +647,7 @@ strong {
 }
 
 .testimonials-content {
-   background-color: blueviolet;
+   /* background-color: blueviolet; */
    display: flex;
    flex-direction: column;
    flex: 1;
@@ -621,7 +666,7 @@ strong {
    background-color: var(--bg);
    border: solid 1px var(--border);
    border-radius: .9rem;
-   transition: all .3s ease;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .testimonial-profile {
@@ -668,12 +713,13 @@ strong {
 }
 
 .rates {
+   background-color: var(--surface);
    padding: 3rem;
    border-bottom: solid 3px red;
 }
 
 .rates-content {
-   background-color: blueviolet;
+   /* background-color: blueviolet; */
    display: flex;
    flex-direction: column;
    flex: 1;
@@ -692,7 +738,7 @@ strong {
    background-color: var(--bg);
    border: solid 1px var(--border);
    border-radius: .9rem;
-   transition: all .3s ease;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .featured-rate {
@@ -732,7 +778,7 @@ strong {
 }
 
 #contact-title {
-   background-color: orange;
+   /* background-color: orange; */
    text-align: center;
    font-size: 2.5rem;
    font-weight: 500;
@@ -769,19 +815,20 @@ strong {
    border-radius: .5rem;
    text-decoration: none;
    color: var(--txt);
-   transition: background-color .3s;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
    margin-bottom: 1rem;
    width: 26rem;
 }
 
 .contact-link:hover {
    background-color: var(--accent);
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .contact-icon {
    width: 3.125rem;
    height: 3.125rem;
-   background-color: rgba(234, 120, 73, .1);
+   background-color: var(--accent);
    border-radius: .5rem;
    display: flex;
    align-items: center;
@@ -791,6 +838,7 @@ strong {
 
 .contact-link:hover .contact-icon {
    background-color: var(--primary);
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .contact-link:hover .contact-icon svg {
@@ -826,7 +874,7 @@ input, textarea {
    border-radius: .5rem;
    font-size: 1rem;
    font-family: inherit;
-   transition: all .3s;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 input:focus, textarea:focus {
@@ -901,6 +949,7 @@ footer {
    transform: translateY(12px);
    z-index: 1400;
    font-size: 2rem;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .back-to-top.show {
@@ -1003,11 +1052,11 @@ body.no-scroll .navbar, body.no-scroll .form-modal {
    line-height: 1.5;
 }
 
-.modal-countdown {
+/* .modal-countdown {
    margin-top: 1rem;
    font-size: .9rem;
    color: #6b7280;
-}
+} */
 
 .modal-close {
    position: absolute;
@@ -1030,7 +1079,7 @@ body.no-scroll .navbar, body.no-scroll .form-modal {
 
 .modal-close:hover {
    background: red;
-   color: var(--background);
+   color: var(--bg);
 }
 
 .modal-close:active {
@@ -1038,7 +1087,7 @@ body.no-scroll .navbar, body.no-scroll .form-modal {
 }
 
 .modal-close:focus-visible {
-   outline: solid 3px var(--foreground);
+   outline: solid 3px var(--txt);
    outline-offset: 3px;
 }
 
@@ -1151,10 +1200,8 @@ button:hover {
    font-size: 1.1rem;
    color: var(--background);
    background-color: rgb(232, 0, 0);
+   transition: all .3s ease;
 }
-
-
-
 
 .spinner {
    width: 1.125rem;

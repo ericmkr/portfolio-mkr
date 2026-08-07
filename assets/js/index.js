@@ -107,6 +107,8 @@ function initTheme() {
    const storageKey = 'portfolio-theme-preference';
   
    const themeToggle = document.getElementById('theme-toggle');
+
+   const themeIcon = document.getElementById('theme-icon');
   
    const themeLabel = document.getElementById('theme-label');
   
@@ -127,8 +129,12 @@ function initTheme() {
       const activeTheme = selectedMode === 'auto' ? getSystemTheme() : selectedMode;
     
       document.documentElement.setAttribute('data-theme', activeTheme);
+
+      themeIcon.textContent = selectedMode === 'auto' ? '🌓' : selectedMode === 'light' ? '☀️' : '🌙';
     
-      themeLabel.textContent = selectedMode === 'auto' ? 'Auto' : selectedMode === 'light' ? 'Clair' : 'Sombre';
+      themeLabel.textContent = selectedMode === 'auto' ? 'Auto' : selectedMode === 'light' ? 'Light' : 'Dark';
+
+      themeToggle.setAttribute('aria-label', selectedMode === 'auto' ? 'Theme: Auto' : selectedMode === 'light' ? 'Theme: Light' : 'Theme: Dark');
   
    }
   
@@ -145,8 +151,22 @@ function initTheme() {
       mode = modes[(currentIndex + 1) % modes.length];
     
       localStorage.setItem(storageKey, mode);
+
+      themeIcon.classList.add('is-changing');
+
+      themeLabel.classList.add('is-changing');
     
-      applyTheme(mode);
+      setTimeout(() => {
+
+         applyTheme(mode);
+
+         themeIcon.classList.remove('is-changing');
+
+         themeLabel.classList.remove('is-changing');
+
+      }, 
+
+      150);
   
    });
   
@@ -180,7 +200,7 @@ const isDev = true;
 
 if (isDev) {
 
-   const devAnchor = "#rates";
+   const devAnchor = "#about";
 
    window.addEventListener("load", () => {
 
