@@ -103,40 +103,98 @@ if (backTopBtn) {
 
 
 function initTheme() {
-  const storageKey = 'portfolio-theme-preference';
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeLabel = document.getElementById('theme-label');
-  const modes = ['auto', 'light', 'dark'];
-  let mode = localStorage.getItem(storageKey) || 'auto';
+  
+   const storageKey = 'portfolio-theme-preference';
+  
+   const themeToggle = document.getElementById('theme-toggle');
+  
+   const themeLabel = document.getElementById('theme-label');
+  
+   const modes = ['auto', 'light', 'dark'];
+  
+   let mode = localStorage.getItem(storageKey) || 'auto';
 
-  function getSystemTheme() {
-    const hour = new Date().getHours();
-    return hour >= 6 && hour < 18 ? 'light' : 'dark';
-  }
+   function getSystemTheme() {
+    
+      const hour = new Date().getHours();
+    
+      return hour >= 6 && hour < 18 ? 'light' : 'dark';
+  
+   }
 
-  function applyTheme(selectedMode) {
-    const activeTheme = selectedMode === 'auto' ? getSystemTheme() : selectedMode;
-    document.documentElement.setAttribute('data-theme', activeTheme);
-    themeLabel.textContent = selectedMode === 'auto' ? 'Auto' : selectedMode === 'light' ? 'Clair' : 'Sombre';
-  }
+   function applyTheme(selectedMode) {
+    
+      const activeTheme = selectedMode === 'auto' ? getSystemTheme() : selectedMode;
+    
+      document.documentElement.setAttribute('data-theme', activeTheme);
+    
+      themeLabel.textContent = selectedMode === 'auto' ? 'Auto' : selectedMode === 'light' ? 'Clair' : 'Sombre';
+  
+   }
+  
+   function syncTheme() {
+    
+      applyTheme(mode);
+  
+   }
 
-  function syncTheme() {
-    applyTheme(mode);
-  }
+   themeToggle.addEventListener('click', () => {
+    
+      const currentIndex = modes.indexOf(mode);
+    
+      mode = modes[(currentIndex + 1) % modes.length];
+    
+      localStorage.setItem(storageKey, mode);
+    
+      applyTheme(mode);
+  
+   });
+  
+   syncTheme();
+  
+   setInterval(() => {
+    
+      if (mode === 'auto') {
+      
+         applyTheme('auto');
+    
+      }
+  
+   }, 
+   
+   60000);
 
-  themeToggle.addEventListener('click', () => {
-    const currentIndex = modes.indexOf(mode);
-    mode = modes[(currentIndex + 1) % modes.length];
-    localStorage.setItem(storageKey, mode);
-    applyTheme(mode);
-  });
-
-  syncTheme();
-  setInterval(() => {
-    if (mode === 'auto') {
-      applyTheme('auto');
-    }
-  }, 60000);
 }
 
 initTheme();
+
+
+
+
+
+/* =========================
+   DEV MODE — KEEP ANCHOR
+========================= */
+
+const isDev = true;
+
+if (isDev) {
+
+   const devAnchor = "#rates";
+
+   window.addEventListener("load", () => {
+
+      const target = document.querySelector(devAnchor);
+
+      if (!target) return;
+
+      requestAnimationFrame(() => {
+         target.scrollIntoView({
+            behavior: "instant",
+            block: "start"
+         });
+      });
+
+   });
+
+}
