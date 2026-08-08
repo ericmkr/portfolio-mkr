@@ -201,7 +201,7 @@ const isDev = true;
 
 if (isDev) {
 
-   const devAnchor = "#projects";
+   const devAnchor = "#contact";
 
    window.addEventListener("load", () => {
 

@@ -1,3 +1,29 @@
+console.info("form.js loaded");
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+const form = document.getElementById("contact-form");
+
+const submitBtn = document.getElementById("submit-btn");
+
+const nameInput = document.getElementById("name");
+
+const emailInput = document.getElementById("email");
+
+const messageInput = document.getElementById("message");
+
+const fields = [
+
+   nameInput,
+
+   emailInput,
+
+   messageInput
+
+];
+
 /* =========================
    PREFILLED FORM DATA
 ========================= */
@@ -6,11 +32,11 @@ const isDev = true;
 
 if (isDev) {
 
-   document.getElementById("name").value = "Tester";
+   nameInput.value = "Tester";
 
-   document.getElementById("email").value = "tester@tests.test";
+   emailInput.value = "tester@tests.test";
 
-   document.getElementById("message").value = "Hello, this is a test message sent automatically to verify that the form is working correctly.";
+   messageInput.value = "Hello, this is a test message sent automatically to verify that the form is working correctly.";
 
 }
 
@@ -18,11 +44,11 @@ if (isDev) {
    SUBMIT AUTOMATION
 ========================= */
 
-const AUTO_TEST = false;
+const autoTest = false;
 
-const AUTO_TEST_DELAY = 11000;
+const autoTestDelay = 11000;
 
-if (AUTO_TEST) {
+if (autoTest) {
 
    setInterval(() => {
 
@@ -36,7 +62,7 @@ if (AUTO_TEST) {
 
    }, 
    
-   AUTO_TEST_DELAY);
+   autoTestDelay);
 
 }
 
@@ -44,23 +70,9 @@ if (AUTO_TEST) {
    FORM SUBMIT VALIDATION
 ========================= */
 
-const form = document.getElementById("contact-form");
-
-const submitBtn = document.getElementById("submit-btn");
-
-const fields = [
-
-   document.getElementById("name"),
-
-   document.getElementById("email"),
-
-   document.getElementById("message")
-
-];
-
 function updateSubmitButton() {
 
-   console.log(form.checkValidity());
+   console.info(form.checkValidity());
 
    submitBtn.disabled = !form.checkValidity();
 
@@ -92,7 +104,7 @@ const closeBtn = document.getElementById("modal-close");
 
 // const countdown = document.getElementById("modal-countdown");
 
-const DISPLAY_TIME = 3000;
+const displayTime = 3000;
 
 function getScrollbarWidth() {
  
@@ -394,7 +406,7 @@ form.addEventListener("submit", async (e) => {
       updateModal("error");
 
    }
-  
+
       // countdown();
       
    setTimeout(() => {
@@ -411,7 +423,7 @@ form.addEventListener("submit", async (e) => {
 
    }, 
 
-   DISPLAY_TIME);
+   displayTime);
    
 });
 
