@@ -1,10 +1,12 @@
+console.info("config.js ok.");
+
 export const devConfig = {
 
    enabled: true,
 
-   prefillForm: true,
+   prefillForm: false,
 
-   scrollToSection: true,
+   scrollToSection: false,
 
    formData: {
 

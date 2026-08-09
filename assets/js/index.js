@@ -1,8 +1,7 @@
-import "./form";
-
+import "./form.js";
 import { devConfig } from "./config.js";
 
-
+console.info("index.js ok.");
 
 
 
@@ -22,10 +21,15 @@ if (devConfig.enabled && devConfig.scrollToSection) {
       if (!target) return;
 
       requestAnimationFrame(() => {
+
          target.scrollIntoView({
+         
             behavior: "instant",
+         
             block: "start"
+         
          });
+      
       });
 
    });

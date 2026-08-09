@@ -1,7 +1,7 @@
 import { devConfig, formConfig } from "./config.js";
-import { openModal, updateModal, closeModal, autoCloseModal } from "./modal.js";
+import { openModal, updateModal, autoCloseModal } from "./modal.js";
 
-console.info("form.js loaded");
+console.info("form.js ok.");
 
 /* =========================
    FORM ELEMENTS
@@ -67,43 +67,21 @@ if (devConfig.enabled && formConfig.autoTest) {
    FORM SUBMIT VALIDATION
 ========================= */
 
-// function updateSubmitButton() {
-
-//    console.info("Form valid :", form.checkValidity());
-
-//    submitBtn.disabled = !form.checkValidity();
-
-// }
-
-// fields.forEach(field => {
-
-//    field.addEventListener("input", updateSubmitButton);
-
-// });
-
-// updateSubmitButton();
-
 function updateSubmitButton() {
 
    console.info("Form valid :", form.checkValidity());
 
-   fields.forEach(field => {
-
-      console.info(
-         field.name,
-         "valid :",
-         field.checkValidity(),
-         "value :",
-         field.value,
-         "validation :",
-         field.validationMessage
-      );
-
-   });
-
    submitBtn.disabled = !form.checkValidity();
 
 }
+
+fields.forEach(field => {
+
+   field.addEventListener("input", updateSubmitButton);
+
+});
+
+updateSubmitButton();
 
 /* =========================
    FORM SUBMIT FEEDBACK

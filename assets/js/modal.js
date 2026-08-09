@@ -1,6 +1,6 @@
 import { modalConfig } from "./config.js";
 
-console.info("modal.js loaded");
+console.info("modal.js ok.");
 
 /* =========================
    MODAL ELEMENTS
@@ -103,10 +103,39 @@ export function updateModal(state) {
 }
 
 /* =========================
+   AUTO CLOSE RESOLVE
+========================= */
+
+let autoCloseTimer = null;
+
+let autoCloseResolve = null;
+
+function resolveAutoClose() {
+
+   if (!autoCloseResolve) return;
+
+   autoCloseResolve();
+
+   autoCloseResolve = null;
+
+}
+
+
+/* =========================
    CLOSE MODAL
 ========================= */
 
 export function closeModal() {
+
+   if (autoCloseTimer) {
+
+      clearTimeout(autoCloseTimer);
+
+      autoCloseTimer = null;
+
+   }
+ 
+   resolveAutoClose();
  
    document.documentElement.style.setProperty('--scrollbar-width', `0px`);
    
@@ -127,12 +156,20 @@ export function closeModal() {
 export function autoCloseModal() {
 
    return new Promise(resolve => {
+ 
+      if (autoCloseTimer) {
+      
+         clearTimeout(autoCloseTimer);
+      
+      }
 
-      setTimeout(() => {
+      autoCloseResolve = resolve;
+
+      autoCloseTimer = setTimeout(() => {
+
+         autoCloseTimer = null;
 
          closeModal();
-
-         resolve();
 
       }, 
       
