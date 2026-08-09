@@ -1083,7 +1083,7 @@ body.no-scroll .navbar, body.no-scroll .form-modal {
 
 .modal-close:hover {
    background: red;
-   color: var(--bg);
+   color: whitesmoke;
 }
 
 .modal-close:active {
