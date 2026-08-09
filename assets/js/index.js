@@ -3,16 +3,13 @@ import { devConfig } from "./config.js";
 
 console.info("index.js ok.");
 
-
-
-
 /* =========================
    ANCHOR
 ========================= */
 
 if (devConfig.enabled && devConfig.scrollToSection) {
 
-   const devAnchor = "#contact";
+   const devAnchor = "#hero";
 
    window.addEventListener("load", () => {
 
