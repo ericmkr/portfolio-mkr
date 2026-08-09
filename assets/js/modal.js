@@ -44,7 +44,7 @@ export function openModal() {
    
    document.body.classList.add("modal-open");
  
-   console.log(document.body.className);
+   console.info(document.body.className);
     
    overlay.hidden = false;
 
@@ -146,6 +146,10 @@ export function closeModal() {
    overlay.classList.remove("show");
 
    modal.classList.remove("show");
+
+   // overlay.hidden = true;
+
+   // modal.hidden = true;
 
 }
 
