@@ -165,7 +165,6 @@ function debugResponse(response, responseTime) {
 
             console.error(`HTTP ${response.status} - ${response.statusText}`);
    
-   
       }
 
       updateModal("error");
@@ -175,6 +174,10 @@ function debugResponse(response, responseTime) {
    console.groupEnd();
 
 }
+
+/* =========================
+   FORM SUBMISSION
+========================= */
 
 form.addEventListener("submit", async (e) => {
 
