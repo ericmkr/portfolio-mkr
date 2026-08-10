@@ -4,100 +4,184 @@ console.info("theme.js ok.");
 
 /* =========================
    THEME DISPLAY
-   ========================= */
+========================= */
 
 function initTheme() {
-  
-   const storageKey = 'portfolio-theme-preference';
-  
-   const themeToggle = document.getElementById('theme-toggle');
+ 
+   const themeToggle = document.getElementById("theme-toggle");
+   
+   const themeIcon = document.getElementById("theme-icon");
+   
+   const themeLabel = document.getElementById("theme-label");
 
-   const themeIcon = document.getElementById('theme-icon');
-  
-   const themeLabel = document.getElementById('theme-label');
-  
-   const modes = ['auto', 'light', 'dark'];
-  
-   let mode = localStorage.getItem(storageKey) || 'auto';
+   if (!themeToggle || !themeIcon || !themeLabel) return;
 
-   function getSystemTheme() {
-    
-      const hour = new Date().getHours();
-    
-      return hour >= 6 && hour < 18 ? 'light' : 'dark';
-  
+   const {defaultTheme, storageKey, modes, transitionDuration} = themeConfig;
+
+   let mode = localStorage.getItem(storageKey);
+   
+   if (!modes.includes(mode)) {
+   
+      mode = defaultTheme;
+   
    }
+   
+   /* =========================
+   SYSTEM THEME
+   ========================= */
+   
+   function getSystemTheme() {
+      
+      const hour = new Date().getHours();
+      
+      return hour >= 6 && hour < 18
+      
+      ? "light"
+      
+      : "dark";
+    
+   }
+   
+   /* =========================
+   THEME UI DATA
+   ========================= */
 
+   const themeData = {
+   
+      auto: {
+   
+         label: "Auto",
+   
+         icon: "🌓"
+   
+      },
+   
+      light: {
+   
+         label: "Light",
+   
+         icon: "☀️"
+   
+      },
+
+      dark: {
+   
+         label: "Dark",
+   
+         icon: "🌙"
+   
+      }
+   
+   };
+
+   /* =========================   
+   UPDATE THEME UI
+   ========================= */
+   
    function updateThemeUI(currentTheme) {
 
-      themeLabel.textContent = currentTheme;
+      const data = themeData[currentTheme];
+   
+      if (!data) return;
+      
+      themeIcon.textContent = data.icon;
+
+      themeLabel.textContent = data.label;
    
       themeToggle.setAttribute(
    
          "aria-label",
    
-         `Current theme: ${currentTheme}. Activate to change theme.`
+         `Current theme: ${data.label}. Activate to change theme.`
    
       );
-
+   
    }
+
+   /* =========================   
+   APPLY THEME
+   ========================= */
 
    function applyTheme(selectedMode) {
-    
-      const activeTheme = selectedMode === 'auto' ? getSystemTheme() : selectedMode;
-    
-      document.documentElement.setAttribute('data-theme', activeTheme);
+      
+      const activeTheme =
+      
+      selectedMode === "auto"
+      
+      ? getSystemTheme()
+      
+      : selectedMode;
+      
+      document.documentElement.setAttribute(
+         
+         "data-theme",
+         
+         activeTheme
+         
+      );
 
-      themeIcon.textContent = selectedMode === 'auto' ? '🌓' : selectedMode === 'light' ? '☀️' : '🌙';
+      updateThemeUI(selectedMode);
     
-      themeLabel.textContent = selectedMode === 'auto' ? 'Auto' : selectedMode === 'light' ? 'Light' : 'Dark';
-
-      themeToggle.setAttribute('aria-label', selectedMode === 'auto' ? 'Theme: Auto' : selectedMode === 'light' ? 'Theme: Light' : 'Theme: Dark');
-  
    }
-  
-   function syncTheme() {
-    
-      applyTheme(mode);
-  
-   }
+   
+   /* =========================   
+   CHANGE THEME
+   ========================= */
 
-   themeToggle.addEventListener('click', () => {
-    
+   themeToggle.addEventListener("click", () => {
+   
       const currentIndex = modes.indexOf(mode);
-    
-      mode = modes[(currentIndex + 1) % modes.length];
-    
-      localStorage.setItem(storageKey, mode);
+   
+      const nextIndex =
+   
+      (currentIndex + 1) % modes.length;
+      
+      mode = modes[nextIndex];
 
-      themeIcon.classList.add('is-changing');
-
-      themeLabel.classList.add('is-changing');
-    
+      localStorage.setItem(
+      
+         storageKey,
+      
+         mode
+      
+      );
+      
+      themeIcon.classList.add("is-changing");
+        
+      themeLabel.classList.add("is-changing");
+      
       setTimeout(() => {
 
          applyTheme(mode);
-
-         themeIcon.classList.remove('is-changing');
-
-         themeLabel.classList.remove('is-changing');
-
-      }, 
-
-      150);
-  
-   });
-  
-   syncTheme();
-  
-   setInterval(() => {
-    
-      if (mode === 'auto') {
       
-         applyTheme('auto');
+         themeIcon.classList.remove("is-changing");
+      
+         themeLabel.classList.remove("is-changing");
+      
+      }, 
+      
+      transitionDuration);
     
+   });
+   
+   /* =========================
+   INITIALIZE THEME
+   ========================= */
+   
+   applyTheme(mode);
+
+   /* =========================   
+   AUTO THEME SYNC
+   ========================= */
+   
+   setInterval(() => {
+
+      if (mode === "auto") {
+   
+         applyTheme("auto");
+   
       }
-  
+   
    }, 
    
    60000);
