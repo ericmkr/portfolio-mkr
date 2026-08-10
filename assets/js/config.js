@@ -6,7 +6,7 @@ export const devConfig = {
 
    prefillForm: false,
 
-   scrollToSection: false,
+   scrollToSection: true,
 
    formData: {
 

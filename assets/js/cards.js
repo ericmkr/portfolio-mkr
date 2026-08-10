@@ -329,7 +329,7 @@ console.info("cards.js ok.");
    }
 
 /* =========================
-   TOOLS
+   TOOLS / PARTNERS
    ========================= */
 
 // const track = document.querySelector(".tools-track");
@@ -414,7 +414,13 @@ console.info("cards.js ok.");
          ${testimonial.message}
       </p>
 
-      <p class="testimonial-rating" aria-label="${testimonial.rating} out of 5 stars">${"★".repeat(Math.floor(testimonial.rating))}<span>${testimonial.rating.toFixed(1)}</span></p>
+      <p class="testimonial-rating">
+
+      <span aria-hidden="true"> ${"★".repeat(Math.floor(testimonial.rating))} </span> 
+
+      <span> ${testimonial.rating.toFixed(1)} out of 5 </span>
+      
+      </p>
       `;
 
       return testimonialCard;

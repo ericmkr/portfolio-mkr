@@ -1,12 +1,12 @@
 import "./theme.js";
-// import "cards.js";
+import "./cards.js";
 import "./form.js";
 import { devConfig } from "./config.js";
 
 console.info("index.js ok.");
 
 /* =========================
-   SCROLL BEHAVIOR
+   SCROLL NAVIGATION BEHAVIOR
 ========================= */
 
 history.scrollRestoration = "manual";
@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
  
    if (devConfig.enabled && devConfig.scrollToSection) {
 
-      const devAnchor = "#contact";
+      const devAnchor = "#projects";
 
       const target = document.querySelector(devAnchor);
 

@@ -28,6 +28,20 @@ function initTheme() {
   
    }
 
+   function updateThemeUI(currentTheme) {
+
+      themeLabel.textContent = currentTheme;
+   
+      themeToggle.setAttribute(
+   
+         "aria-label",
+   
+         `Current theme: ${currentTheme}. Activate to change theme.`
+   
+      );
+
+   }
+
    function applyTheme(selectedMode) {
     
       const activeTheme = selectedMode === 'auto' ? getSystemTheme() : selectedMode;

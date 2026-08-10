@@ -103,7 +103,7 @@ export function updateModal(state) {
 }
 
 /* =========================
-   RESOLVE AUTO CLOSE
+   RESOLVE AUTO CLOSE PROMISE
 ========================= */
 
 let autoCloseTimer = null;
