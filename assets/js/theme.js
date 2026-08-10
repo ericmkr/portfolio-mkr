@@ -1,5 +1,7 @@
 import { themeConfig } from "./config.js";
 
+console.info("theme.js ok.");
+
 /* =========================
    THEME DISPLAY
    ========================= */
