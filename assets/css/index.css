@@ -78,6 +78,15 @@ a:focus-visible, #submit-btn:focus-visible {
    border-radius: .6875rem;
 }
 
+.skip-link { 
+   position: absolute;
+   transform: translateY(-200%);
+}
+
+.skip-link:focus-visible { 
+   transform: translateY(0);
+}
+
 header {
    position: fixed;
    top: 0;
@@ -1091,7 +1100,7 @@ body.no-scroll .navbar, body.no-scroll .form-modal {
 }
 
 .modal-close:focus-visible {
-   outline: solid 3px var(--txt);
+   outline: solid 1px var(--txt);
    outline-offset: 3px;
 }
 
