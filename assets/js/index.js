@@ -135,17 +135,7 @@ function updateBackToTopVisibility() {
 
    const shouldShow = window.scrollY > 240;
    
-   if (shouldShow) {
-
-      backTopBtn.classList.add("show");
-      
-   } 
-   
-   else {
-   
-      backTopBtn.classList.remove("show");
-   
-   }
+   backTopBtn.classList.toggle("show", shouldShow);
 
 }
   
