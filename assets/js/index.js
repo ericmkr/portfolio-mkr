@@ -1,86 +1,86 @@
+import "./theme.js";
+import "./cards.js";
 import "./form.js";
 import { devConfig } from "./config.js";
 
 console.info("index.js ok.");
 
 /* =========================
-   ANCHOR
+   SCROLL NAVIGATION BEHAVIOR
 ========================= */
 
-if (devConfig.enabled && devConfig.scrollToSection) {
+history.scrollRestoration = "manual";
 
+<<<<<<< HEAD
    const devAnchor = "#hero";
+=======
+window.addEventListener("load", () => {
+ 
+   if (devConfig.enabled && devConfig.scrollToSection) {
+>>>>>>> sb2
 
-   window.addEventListener("load", () => {
+      const devAnchor = "#projects";
 
       const target = document.querySelector(devAnchor);
 
-      if (!target) return;
+      if (target) {
 
-      requestAnimationFrame(() => {
+         requestAnimationFrame(() => {
 
-         target.scrollIntoView({
-         
-            behavior: "instant",
-         
-            block: "start"
-         
+            target.scrollIntoView({
+
+               behavior: "instant",
+
+               block: "start"
+   
+            });
+   
          });
-      
-      });
+
+         return;
+
+      }
+
+   }
+
+   window.scrollTo({
+
+      top: 0,
+   
+      left: 0,
+
+      behavior: "instant"   
 
    });
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 /* =========================
    HERO TYPING SECTION
    ========================= */
 
 const roles = [ 
+
    "Front-End Developer",
+
    "UX/UI Designer",
+
    // "Product Designer",
+
    // "Web Designer",
+
    // "Graphic Designer",
+
    // "QA Analyst"
+
 ];
 
 const typingText = document.getElementById("typing-text");
 
 let roleIndex = 0;
+
 let charIndex = 0;
+
 let isDeleting = false;
 
 function typeEffect() {
@@ -90,6 +90,7 @@ function typeEffect() {
    if (!isDeleting) {
 
       typingText.textContent = currentRole.substring(0, charIndex + 1);
+
       charIndex++;
 
       if (charIndex === currentRole.length) {
@@ -107,6 +108,7 @@ function typeEffect() {
    else {
 
       typingText.textContent = currentRole.substring(0, charIndex - 1);
+
       charIndex--;
 
       if (charIndex === 0) {
@@ -129,40 +131,36 @@ typeEffect();
    BACK TO TOP BTN
    ========================= */
 
-var backTopBtn = document.getElementById('back-to-top');
+const backTopBtn = document.getElementById('back-to-top');
 
 function updateBackToTopVisibility() {
 
    if (!backTopBtn) return;
 
-   var shouldShow = window.scrollY > 240;
+   const shouldShow = window.scrollY > 240;
    
-   if (shouldShow) backTopBtn.classList.add('show'); 
-
-   else backTopBtn.classList.remove('show');   
+   backTopBtn.classList.toggle("show", shouldShow);
 
 }
   
 if (backTopBtn) {
 
-   backTopBtn.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' }); 
+   backTopBtn.addEventListener('click', () => {
+
+      window.scrollTo({ 
+      
+         top: 0, 
+      
+         behavior: 'smooth' 
+      
+      }); 
+
    });
 
    window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+
    window.addEventListener('resize', updateBackToTopVisibility);
 
    updateBackToTopVisibility();  
 
 };
-
-
-
-
-
-
-
-
-
-
-
