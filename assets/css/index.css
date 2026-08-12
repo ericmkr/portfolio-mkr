@@ -1173,19 +1173,24 @@ button:hover {
 }
 
 .project-details {
-   /* background-color: #000; */
+   background-color: violet;
    grid-column: 1 / -1;
+   display: grid;
+   grid-template-rows: 0fr;
    width: 100%;
    padding: 3rem;
    /* overflow: hidden; */
    /* opacity: 0; */
-   transition: grid-template-rows 400ms ease,
-      
-   opacity 250ms ease;
+   transition: grid-template-rows 400ms ease, opacity 250ms ease;
 }
 
 .project-details > * {
+   /* min-height: 0; */
+}
+
+.project-details-content {
    min-height: 0;
+   overflow: hidden;
 }
 
 .project-details.is-open {
