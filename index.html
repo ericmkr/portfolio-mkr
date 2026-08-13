@@ -458,6 +458,29 @@
 
                      </a>
                      
+                     <!-- CODEX C2 ADDITION: CV download card -->
+                     <a class="contact-link cv-download-link" href="assets/docs/victor-eric-moukouri-cv.pdf" download="Victor-Eric-Moukouri-CV.pdf" aria-label="Download Victor Eric Moukouri CV as PDF">
+
+                        <div class="contact-icon">
+
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ea7849" stroke-width="2" aria-hidden="true">
+                              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                              <path d="M7 10l5 5 5-5"/>
+                              <path d="M12 15V3"/>
+                           </svg>
+
+                        </div>
+
+                        <div class="contact-details">
+
+                           <p>Curriculum Vitae</p>
+
+                           <p>Download my CV in PDF</p>
+
+                        </div>
+
+                     </a>
+
                      <!-- <a href="https://linkedin.com" target="_blank" class="contact-link">
 
                         <div class="contact-icon">   
@@ -496,7 +519,8 @@
 
                         <input type="hidden" name="_subject" value="New Portfolio Contact">
                               
-                        <!-- <input type="hidden" name="_next" value="https://ton-domaine.com/merci.html"> -->
+                        <!-- CODEX C2 ADDITION: thank-you page after real FormSubmit submissions -->
+                        <input type="hidden" name="_next" value="merci.html">
 
                         <div class="form-group">
 
@@ -562,8 +586,17 @@
          
          <p id="modal-message">Please wait while your message is being sent.</p>
          
-         <!-- <p id="modal-countdown" class="modal-countdown" aria-live="polite"></p> -->
+         <!-- CODEX C2 ADDITION: modal countdown display -->
+         <p id="modal-countdown" class="modal-countdown" aria-live="polite"></p>
 
+      </div>
+
+      <!-- CODEX C2 ADDITION: global loading transition -->
+      <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading" hidden>
+         <div class="page-loader-content">
+            <span class="page-loader-spinner" aria-hidden="true"></span>
+            <span class="page-loader-text">Loading...</span>
+         </div>
       </div>
 
    </body>

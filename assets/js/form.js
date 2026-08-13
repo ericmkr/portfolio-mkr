@@ -1,5 +1,6 @@
 import { devConfig, formConfig } from "./config.js";
 import { openModal, updateModal, autoCloseModal } from "./modal.js";
+import { hidePageLoader, showPageLoader } from "./loader.js";
 
 console.info("form.js ok.");
 
@@ -173,6 +174,8 @@ function debugResponse(response, responseTime) {
 
    console.groupEnd();
 
+   return response.ok;
+
 }
 
 /* =========================
@@ -187,9 +190,17 @@ form.addEventListener("submit", async (e) => {
 
    submitBtn.textContent = "Sending...";
 
+   showPageLoader("Preparing secure feedback...");
+
+   await new Promise(resolve => setTimeout(resolve, 650));
+
+   hidePageLoader();
+
    openModal();
 
    updateModal("loading");
+
+   let submissionSucceeded = false;
 
    try {
 
@@ -277,7 +288,7 @@ form.addEventListener("submit", async (e) => {
 
       const responseTime = end - start;
 
-      debugResponse(response, responseTime);
+      submissionSucceeded = debugResponse(response, responseTime);
 
    } 
    
@@ -298,6 +309,12 @@ form.addEventListener("submit", async (e) => {
    submitBtn.textContent = "Send message"; 
   
    submitBtn.disabled = false;
+
+   if (submissionSucceeded) {
+
+      window.location.href = "merci.html";
+
+   }
 
    // form.reset();
    

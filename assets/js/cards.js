@@ -30,7 +30,7 @@ console.info("cards.js ok.");
 
          description: "UX/UI design of a mobile healthcare app for cancer patient monitoring and medical follow-up.",
 
-         image: "assets/img/ONCOLINK-splash-logo.png",
+         image: "assets/img/OncoLink-splash-logo.png",
 
          imageAlt: "ONCOLINK logo",
 

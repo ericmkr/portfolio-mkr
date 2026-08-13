@@ -18,7 +18,7 @@ const message = document.getElementById("modal-message");
 
 const closeBtn = document.getElementById("modal-close");
 
-// const countdown = document.getElementById("modal-countdown");
+const countdown = document.getElementById("modal-countdown");
 
 /* =========================
    SCROLLBAR
@@ -110,6 +110,54 @@ let autoCloseTimer = null;
 
 let autoCloseResolve = null;
 
+let countdownTimer = null;
+
+/* =========================
+   CODEX C2 ADDITION: MODAL COUNTDOWN
+   ========================= */
+
+function stopCountdown() {
+
+   if (countdownTimer) {
+
+      clearInterval(countdownTimer);
+
+      countdownTimer = null;
+
+   }
+
+   if (countdown) countdown.textContent = "";
+
+}
+
+function startCountdown(duration) {
+
+   if (!countdown) return;
+
+   stopCountdown();
+
+   let remainingSeconds = Math.ceil(duration / 1000);
+
+   countdown.textContent = `Closing in ${remainingSeconds} seconds.`;
+
+   countdownTimer = setInterval(() => {
+
+      remainingSeconds--;
+
+      if (remainingSeconds <= 0) {
+
+         stopCountdown();
+
+         return;
+
+      }
+
+      countdown.textContent = `Closing in ${remainingSeconds} seconds.`;
+
+   }, 1000);
+
+}
+
 function resolveAutoClose() {
 
    if (!autoCloseResolve) return;
@@ -147,9 +195,15 @@ export function closeModal() {
 
    modal.classList.remove("show");
 
-   // overlay.hidden = true;
+   stopCountdown();
 
-   // modal.hidden = true;
+   setTimeout(() => {
+
+      overlay.hidden = true;
+
+      modal.hidden = true;
+
+   }, 300);
 
 }
 
@@ -168,6 +222,8 @@ export function autoCloseModal() {
       }
 
       autoCloseResolve = resolve;
+
+      startCountdown(modalConfig.displayTime);
 
       autoCloseTimer = setTimeout(() => {
 
