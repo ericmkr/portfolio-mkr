@@ -5,7 +5,7 @@ console.info("form.js ok.");
 
 /* =========================
    FORM ELEMENTS
-========================= */
+   ========================= */
 
 const form = document.getElementById("contact-form");
 
@@ -29,7 +29,7 @@ const fields = [
 
 /* =========================
    PREFILLED FORM DATA
-========================= */
+   ========================= */
 
 if (devConfig.enabled && devConfig.prefillForm) {
 
@@ -43,7 +43,7 @@ if (devConfig.enabled && devConfig.prefillForm) {
 
 /* =========================
    SUBMIT AUTOMATION
-========================= */
+   ========================= */
 
 if (devConfig.enabled && formConfig.autoTest) {
 
@@ -65,7 +65,7 @@ if (devConfig.enabled && formConfig.autoTest) {
 
 /* =========================
    FORM SUBMIT VALIDATION
-========================= */
+   ========================= */
 
 function updateSubmitButton() {
 
@@ -85,7 +85,7 @@ updateSubmitButton();
 
 /* =========================
    FORM SUBMIT FEEDBACK
-========================= */
+   ========================= */
 
 
 function debugResponse(response, responseTime) {
@@ -177,7 +177,7 @@ function debugResponse(response, responseTime) {
 
 /* =========================
    FORM SUBMISSION
-========================= */
+   ========================= */
 
 form.addEventListener("submit", async (e) => {
 

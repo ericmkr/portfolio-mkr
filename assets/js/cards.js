@@ -427,7 +427,6 @@ console.info("cards.js ok.");
 
    }
 
-
    if (testimonialsGrid) {
 
       testimonials.forEach(testimonial => {
@@ -443,8 +442,8 @@ console.info("cards.js ok.");
    }
 
    /* =========================
-   RATES
-   ========================= */
+      RATES
+      ========================= */
 
    const rates = [
    
@@ -530,7 +529,6 @@ console.info("cards.js ok.");
       return rateCard;
 
    }
-
 
    if (ratesGrid) {
 
