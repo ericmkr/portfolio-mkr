@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Merci - Portfolio Victor Eric MOUKOURI</title>
+      <link rel="stylesheet" href="assets/css/index.css">
+      <script type="module" src="assets/js/thank-you.js"></script>
+   </head>
+
+   <body>
+
+      <!-- CODEX C2 ADDITION: thank-you page with countdown -->
+      <main class="status-page" aria-labelledby="status-title">
+
+         <section class="status-content">
+
+            <p class="status-kicker">Message envoye</p>
+
+            <h1 id="status-title">Merci pour votre message</h1>
+
+            <p class="status-message">
+               Votre demande a bien ete prise en compte. Vous serez redirige automatiquement vers le portfolio.
+            </p>
+
+            <p class="redirect-message" aria-live="polite">
+               Redirection dans <strong id="countdown">5</strong> secondes...
+            </p>
+
+            <div class="progress-container" aria-hidden="true">
+               <div id="progress-bar" class="status-progress"></div>
+            </div>
+
+            <a class="home-btn" href="portfolio.html">Voir le portfolio</a>
+
+         </section>
+
+      </main>
+
+      <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading" hidden>
+         <div class="page-loader-content">
+            <span class="page-loader-spinner" aria-hidden="true"></span>
+            <span class="page-loader-text">Loading...</span>
+         </div>
+      </div>
+
+   </body>
+
+</html>

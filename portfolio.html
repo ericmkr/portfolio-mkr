@@ -138,35 +138,50 @@
                         <div class="gallery">
                   
                      
-                           <img class="screen" src="assets/img/FlowTrack - HF Mockup.png" alt="">
+                           <img class="screen" src="assets/img/FlowTrack - HF Mockup.png" alt="FlowTrack high fidelity mockup">
                   
                      
-                           <img class="screen" src="assets/img/FlowTrack - HF Mockup.png" alt="">
+                           <img class="screen" src="assets/img/FlowTrack - Dashboard.png" alt="FlowTrack dashboard screen">
                   
                      
-                           <img class="screen" src="assets/img/FlowTrack - HF Mockup.png" alt="">
+                           <img class="screen" src="assets/img/FlowTrack - Home.png" alt="FlowTrack home screen">
                   
                      
-                           <img class="screen" src="assets/img/FlowTrack - HF Mockup.png" alt="">
+                           <img class="screen" src="assets/img/FlowTrack - Signup.png" alt="FlowTrack signup screen">
                   
                      
                         </div>
 
+                        <!-- CODEX C2 ADDITION: project interest rating -->
+                        <div class="project-rating" data-project-rating="flowtrack" aria-label="Rate your interest in FlowTrack">
+                           <p class="project-rating-title">Votre intérêt pour ce projet</p>
+                           <div class="rating-buttons" role="group" aria-label="Choose a rating from 1 to 5">
+                              <button class="rating-btn" type="button" data-rating="1" aria-label="Rate FlowTrack 1 out of 5">1</button>
+                              <button class="rating-btn" type="button" data-rating="2" aria-label="Rate FlowTrack 2 out of 5">2</button>
+                              <button class="rating-btn" type="button" data-rating="3" aria-label="Rate FlowTrack 3 out of 5">3</button>
+                              <button class="rating-btn" type="button" data-rating="4" aria-label="Rate FlowTrack 4 out of 5">4</button>
+                              <button class="rating-btn" type="button" data-rating="5" aria-label="Rate FlowTrack 5 out of 5">5</button>
+                           </div>
+                           <p class="rating-feedback" aria-live="polite"></p>
+                        </div>
+
+                        <button class="close project-details-close" type="button">Close project details</button>
+
+                     
+                        <!-- CODEX C2 ADDITION: fullscreen gallery modal -->
+                        <div class="lightbox" role="dialog" aria-modal="true" aria-label="Project image preview" aria-hidden="true">
                   
                      
-                        <div class="lightbox">
+                           <button class="lightbox-close" type="button" aria-label="Close gallery">&times;</button>
                   
                      
-                           <button class="close" type="button" aria-label="Close gallery">&times;</button>
+                           <button class="prev" type="button" aria-label="Previous image">&#10094;</button>
                   
                      
-                           <button class="prev">&#10094;</button>
+                           <img class="lightbox-image" alt="">
                   
                      
-                           <img class="lightbox-image"/>
-                  
-                     
-                           <button class="next">&#10095;</button>
+                           <button class="next" type="button" aria-label="Next image">&#10095;</button>
                      
                         </div>
                
@@ -190,6 +205,13 @@
             </div>
          </section>
       
+         <!-- CODEX C2 ADDITION: global loading transition -->
+         <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading" hidden>
+            <div class="page-loader-content">
+               <span class="page-loader-spinner" aria-hidden="true"></span>
+               <span class="page-loader-text">Loading...</span>
+            </div>
+         </div>
 
          
 

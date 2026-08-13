@@ -1,9 +1,9 @@
 import "./loader.js";
 
-console.info("404.js ok.");
+console.info("thank-you.js ok.");
 
 /* =========================
-   CODEX C2 ADDITION: 404 REDIRECT COUNTDOWN
+   CODEX C2 ADDITION: THANK YOU REDIRECT
    ========================= */
 
 const redirectDelay = 5;
@@ -40,7 +40,7 @@ const timer = setInterval(() => {
 
       clearInterval(timer);
 
-      window.location.replace("index.html");
+      window.location.replace("portfolio.html");
 
    }
 

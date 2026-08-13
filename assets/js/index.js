@@ -1,6 +1,7 @@
 import "./theme.js";
 import "./cards.js";
 import "./form.js";
+import "./loader.js";
 import { devConfig } from "./config.js";
 
 console.info("index.js ok.");
