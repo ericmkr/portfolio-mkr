@@ -1,5 +1,3 @@
-import { themeConfig } from
-
 const learnMoreBtn = document.querySelector(".learn-more-btn");
 const projectDetails = document.querySelector(".project-details");
 
