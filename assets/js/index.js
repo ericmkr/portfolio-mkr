@@ -7,7 +7,7 @@ console.info("index.js ok.");
 
 /* =========================
    SCROLL NAVIGATION BEHAVIOR
-========================= */
+   ========================= */
 
 history.scrollRestoration = "manual";
 
@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
    if (devConfig.enabled && devConfig.scrollToSection) {
 >>>>>>> sb2
 
-      const devAnchor = "#projects";
+      const devAnchor = "#contact";
 
       const target = document.querySelector(devAnchor);
 
@@ -63,7 +63,7 @@ const roles = [
 
    "Front-End Developer",
 
-   "UX/UI Designer",
+   "UX/UI Designer"
 
    // "Product Designer",
 

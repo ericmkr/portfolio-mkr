@@ -4,7 +4,7 @@ console.info("modal.js ok.");
 
 /* =========================
    MODAL ELEMENTS
-========================= */
+   ========================= */
 
 const overlay = document.getElementById("modal-overlay");
 
@@ -22,7 +22,7 @@ const closeBtn = document.getElementById("modal-close");
 
 /* =========================
    SCROLLBAR
-========================= */
+   ========================= */
 
 function getScrollbarWidth() {
  
@@ -32,7 +32,7 @@ function getScrollbarWidth() {
 
 /* =========================
    OPEN MODAL
-========================= */
+   ========================= */
 
 export function openModal() {
  
@@ -62,7 +62,7 @@ export function openModal() {
 
 /* =========================
    UPDATE MODAL
-========================= */
+   ========================= */
 
 export function updateModal(state) {
 
@@ -104,7 +104,7 @@ export function updateModal(state) {
 
 /* =========================
    RESOLVE AUTO CLOSE PROMISE
-========================= */
+   ========================= */
 
 let autoCloseTimer = null;
 
@@ -123,7 +123,7 @@ function resolveAutoClose() {
 
 /* =========================
    CLOSE MODAL
-========================= */
+   ========================= */
 
 export function closeModal() {
 
@@ -155,7 +155,7 @@ export function closeModal() {
 
 /* =========================
    AUTO CLOSE MODAL
-========================= */
+   ========================= */
 
 export function autoCloseModal() {
 
@@ -219,7 +219,7 @@ export function autoCloseModal() {
 
 /* =========================
    CLOSE EVENTS
-========================= */
+   ========================= */
 
 overlay.addEventListener("click", closeModal);
 

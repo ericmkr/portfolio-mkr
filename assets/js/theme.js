@@ -4,7 +4,7 @@ console.info("theme.js ok.");
 
 /* =========================
    THEME DISPLAY
-========================= */
+   ========================= */
 
 function initTheme() {
  
@@ -27,8 +27,8 @@ function initTheme() {
    }
    
    /* =========================
-   SYSTEM THEME
-   ========================= */
+      SYSTEM THEME
+      ========================= */
    
    function getSystemTheme() {
       
@@ -43,8 +43,8 @@ function initTheme() {
    }
    
    /* =========================
-   THEME UI DATA
-   ========================= */
+      THEME UI DATA
+      ========================= */
 
    const themeData = {
    
@@ -75,8 +75,8 @@ function initTheme() {
    };
 
    /* =========================   
-   UPDATE THEME UI
-   ========================= */
+      UPDATE THEME UI
+      ========================= */
    
    function updateThemeUI(currentTheme) {
 
@@ -99,8 +99,8 @@ function initTheme() {
    }
 
    /* =========================   
-   APPLY THEME
-   ========================= */
+      APPLY THEME
+      ========================= */
 
    function applyTheme(selectedMode) {
       
@@ -125,8 +125,8 @@ function initTheme() {
    }
    
    /* =========================   
-   CHANGE THEME
-   ========================= */
+      CHANGE THEME
+      ========================= */
 
    themeToggle.addEventListener("click", () => {
    
@@ -165,14 +165,14 @@ function initTheme() {
    });
    
    /* =========================
-   INITIALIZE THEME
-   ========================= */
+      INITIALIZE THEME
+      ========================= */
    
    applyTheme(mode);
 
    /* =========================   
-   AUTO THEME SYNC
-   ========================= */
+      AUTO THEME SYNC
+      ========================= */
    
    setInterval(() => {
 

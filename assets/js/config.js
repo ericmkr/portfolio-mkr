@@ -6,7 +6,7 @@ export const devConfig = {
 
    prefillForm: false,
 
-   scrollToSection: true,
+   scrollToSection: false,
 
    formData: {
 
@@ -21,11 +21,11 @@ export const devConfig = {
 
 export const formConfig = {
 
-   autoTest: true,
+   autoTest: false,
 
    autoTestDelay: 11000,
 
-   // maxMessageLength: 3000
+   maxMessageLength: 3000
 
 };
 
