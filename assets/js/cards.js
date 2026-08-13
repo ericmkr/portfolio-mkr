@@ -1,3 +1,5 @@
+console.info("cards.js ok.");
+
 /* =========================
    PROJECTS
    ========================= */
@@ -327,7 +329,7 @@
    }
 
 /* =========================
-   TOOLS
+   TOOLS / PARTNERS
    ========================= */
 
 // const track = document.querySelector(".tools-track");
@@ -346,18 +348,6 @@
    
       {
    
-         name: "Ariane M.",
-   
-         role: "Entrepreneur",
-   
-         message: "Eric transformed my idea into a clear landing page that looks professional and easy to use.",
-   
-         rating: 5.0
-   
-      },
-   
-      {
-   
          name: "David K.",
    
          role: "Startup Founder",
@@ -365,6 +355,18 @@
          message: "The interface became cleaner, faster to understand, and more convincing for our first users.",
    
          rating: 5.0
+   
+      },
+   
+      {
+   
+         name: "Sandra L.",
+   
+         role: "Independant client",
+   
+         message: "I appreciated the attention to detail, the communication, and the elegant final result.",
+   
+         rating: 4.8
    
       }
 
@@ -412,13 +414,18 @@
          ${testimonial.message}
       </p>
 
-      <p class="testimonial-rating" aria-label="${testimonial.rating} out of 5 stars">${"★".repeat(Math.floor(testimonial.rating))}<span>${testimonial.rating.toFixed(1)}</span></p>
+      <p class="testimonial-rating">
+
+      <span aria-hidden="true"> ${"★".repeat(Math.floor(testimonial.rating))} </span> 
+
+      <span> ${testimonial.rating.toFixed(1)} out of 5 </span>
+      
+      </p>
       `;
 
       return testimonialCard;
 
    }
-
 
    if (testimonialsGrid) {
 
@@ -435,30 +442,30 @@
    }
 
    /* =========================
-   RATES
-   ========================= */
+      RATES
+      ========================= */
 
    const rates = [
    
       {
       
-         title: "Starter",
+         title: "Professional",
       
-         price: "$99",
+         price: "$249",
       
          features: [
       
-            "One-page landing page",
+            "Up to 5 custom sections",
       
-            "Responsive layout",
+            "UX/UI structure included",
       
-            "Basic contact section",
+            "Animations and polish",
       
-            "Delivery from 3 days"
+            "Two revision rounds"
       
          ],
       
-         note: "Best for simple online presence.",
+         note: "Best for portfolios and small businesses.",
       
          featured: true
    
@@ -466,23 +473,23 @@
    
       {
    
-         title: "Professional",
+         title: "Premium",
    
-         price: "$249",
+         price: "$499+",
    
          features: [
    
-            "Up to 5 custom sections",
+            "Multi-page website",
    
-            "UX/UI structure included",
+            "Advanced design support",
    
-            "Animations and polish",
+            "Testing and optimization",
    
-            "Two revision rounds"
+            "Priority follow-up"
    
          ],
    
-         note: "Best for portfolios and small businesses.",
+         note: "Best for complete digital projects.",
    
          featured: false
    
@@ -523,7 +530,6 @@
 
    }
 
-
    if (ratesGrid) {
 
       rates.forEach(rate => {
@@ -533,4 +539,3 @@
       });
 
    }
-   
