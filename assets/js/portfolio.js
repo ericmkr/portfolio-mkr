@@ -1,5 +1,5 @@
 import "./theme.js";
-import "./loader.js";
+// import "./loader.js";
 
 console.info("portfolio.js ok.");
 
