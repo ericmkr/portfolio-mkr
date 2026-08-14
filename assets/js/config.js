@@ -4,9 +4,9 @@ export const devConfig = {
 
    enabled: true,
 
-   prefillForm: false,
+   prefillForm: true,
 
-   scrollToSection: false,
+   scrollToSection: true,
 
    formData: {
 

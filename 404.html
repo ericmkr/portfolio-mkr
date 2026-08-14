@@ -1,100 +1,79 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
-<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex, nofollow">
 
-    <meta charset="UTF-8">
+        <title>404 — Page introuvable</title>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        <link rel="stylesheet" href="assets/css/index.css">
+        <script type="module" src="assets/js/404.js"></script>
+    </head>
 
-    <meta
-        name="robots"
-        content="noindex, nofollow"
-    >
+    <body>
 
-    <title>404 — Page introuvable</title>
+        <main class="error-page" aria-labelledby="error-title">
 
-    <link
-        rel="stylesheet"
-        href="assets/css/index.css"
-    >
+            <div class="error-content">
 
-    <script type="module" src="assets/js/404.js"></script>
-
-</head>
-
-
-<body>
-
-    <main
-        class="error-page"
-        aria-labelledby="error-title"
-    >
-
-        <div class="error-content">
-
-            <p
-                class="error-code"
-                aria-hidden="true"
-            >
-                404
-            </p>
+                <p class="error-code" aria-hidden="true">
+                    404
+                </p>
+            
+                <h1 id="error-title">
+            
+                    Page introuvable
+            
+                </h1>
+            
+                <p class="error-message">
+            
+                    Sorry, this page seems to be missing.
+            
+                    We are actively working to resolve this issue.
+            
+                </p>
 
 
-            <h1 id="error-title">
-                Page introuvable
-            </h1>
+
+            
+                <p class="redirect-message" aria-live="polite">
+                    Redirecting to the homepage in <strong id="countdown">5</strong> seconds...
+                </p>
 
 
-            <p class="error-message">
-                Désolé, cette page semble introuvable.
-                Nous travaillons activement pour résoudre ce problème.
-            </p>
+                <div class="progress-container" aria-hidden="true">
+                
+                    <div id="progress-bar" class="progress-bar"></div>
+            
+                </div>
 
 
-            <p
-                class="redirect-message"
-                aria-live="polite"
-            >
-                Redirection vers la page d'accueil dans
-                <strong id="countdown">5</strong>
-                secondes...
-            </p>
+            
+                <a class="home-btn" href="index.html">Back to homepage</a>
 
-
-            <div
-                class="progress-container"
-                aria-hidden="true"
-            >
-                <div
-                    id="progress-bar"
-                    class="progress-bar"
-                ></div>
             </div>
 
+        </main>
 
-            <a
-                class="home-btn"
-                href="index.html"
-            >
-                Retour à l'accueil
-            </a>
+    
+        <!-- CODEX C2 ADDITION: global loading transition -->
+    
+        <!-- <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading" hidden>
+    
+            <div class="page-loader-content">
+    
+                <span class="page-loader-spinner" aria-hidden="true"></span>
+    
+                <span class="page-loader-text">Loading...</span>
+    
+            </div>
+    
+        </div> -->
 
-        </div>
 
-    </main>
-
-    <!-- CODEX C2 ADDITION: global loading transition -->
-    <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading" hidden>
-        <div class="page-loader-content">
-            <span class="page-loader-spinner" aria-hidden="true"></span>
-            <span class="page-loader-text">Loading...</span>
-        </div>
-    </div>
-
-</body>
+    </body>
 
 </html>

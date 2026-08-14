@@ -40,7 +40,7 @@ const timer = setInterval(() => {
 
       clearInterval(timer);
 
-      window.location.replace("portfolio.html");
+      window.location.replace("index.html");
 
    }
 

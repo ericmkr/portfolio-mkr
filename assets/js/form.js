@@ -299,10 +299,6 @@ form.addEventListener("submit", async (e) => {
       updateModal("error");
 
    }
-   
-   // countdown();
-         
-   // window.location.reload();
 
    await autoCloseModal();
 
@@ -310,11 +306,11 @@ form.addEventListener("submit", async (e) => {
   
    submitBtn.disabled = false;
 
-   if (submissionSucceeded) {
+   // if (submissionSucceeded) {
 
-      window.location.href = "merci.html";
+   //    window.location.reload();
 
-   }
+   // }
 
    // form.reset();
    

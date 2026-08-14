@@ -168,7 +168,6 @@ function resolveAutoClose() {
 
 }
 
-
 /* =========================
    CLOSE MODAL
    ========================= */
@@ -238,40 +237,6 @@ export function autoCloseModal() {
    });
 
 }
-
-// function startCountdown(seconds) {
-
-//    let remaining = seconds;
-
-//    countdown.textContent = `Redirecting in ${remaining} seconds...`;
-
-//    const interval = setInterval(() => {
-
-//       remaining--;
-
-//       if (remaining > 1) {
-
-//          countdown.textContent = `Redirecting in ${remaining} seconds...`;
-      
-//       }
-
-//       else if (remaining === 1) {
-       
-//          countdown.textContent = "Redirecting in 1 second...";
-      
-//       }
-
-//       else {
-
-//          clearInterval(interval);
-      
-//       }
-   
-//    }, 
-   
-//    1000);
-
-// }
 
 /* =========================
    CLOSE EVENTS
