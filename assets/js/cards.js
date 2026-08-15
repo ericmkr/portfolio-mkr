@@ -18,7 +18,7 @@ console.info("cards.js ok.");
 
          category: "UX/UI Design",
 
-         link: "#",
+         link: "maintenance.html",
 
          id: "eden-market"
 
@@ -36,7 +36,7 @@ console.info("cards.js ok.");
 
          category: "UX/UI Design",
 
-         link: "#",
+         link: "404.html",
 
          id: "oncolink"
 
