@@ -3,7 +3,7 @@ import { themeConfig } from "./config.js";
 console.info("theme.js ok.");
 
 /* =========================
-   THEME DISPLAY
+   THEME DISPLAY ✅
    ========================= */
 
 function initTheme() {
@@ -14,20 +14,10 @@ function initTheme() {
    
    const themeLabel = document.getElementById("theme-label");
 
-   if (!themeToggle || !themeIcon || !themeLabel) return;
-
    const {defaultTheme, storageKey, modes, transitionDuration} = themeConfig;
-
-   let mode = localStorage.getItem(storageKey);
-   
-   if (!modes.includes(mode)) {
-   
-      mode = defaultTheme;
-   
-   }
    
    /* =========================
-      SYSTEM THEME
+      SYSTEM THEME ✅
       ========================= */
    
    function getSystemTheme() {
@@ -43,10 +33,10 @@ function initTheme() {
    }
    
    /* =========================
-      THEME UI DATA
+      THEME UI DATA ✅
       ========================= */
 
-   const themeData = {
+      const themeData = {
    
       auto: {
    
@@ -74,13 +64,27 @@ function initTheme() {
    
    };
 
-   /* =========================   
-      UPDATE THEME UI
+   /* =========================
+      GET SAVED MODE ✅
       ========================= */
    
-   function updateThemeUI(currentTheme) {
+      let mode = localStorage.getItem(storageKey);
+   
+      if (!modes.includes(mode)) {
+   
+         mode = defaultTheme;
+   
+      }
 
-      const data = themeData[currentTheme];
+   /* =========================   
+      UPDATE THEME UI ✅
+      ========================= */
+   
+   function updateThemeUI(currentMode) {
+
+      const data = themeData[currentMode];
+
+      if (!themeToggle || !themeIcon || !themeLabel) return;
    
       if (!data) return;
       
@@ -99,7 +103,7 @@ function initTheme() {
    }
 
    /* =========================   
-      APPLY THEME
+      APPLY THEME ✅
       ========================= */
 
    function applyTheme(selectedMode) {
@@ -125,16 +129,16 @@ function initTheme() {
    }
    
    /* =========================   
-      CHANGE THEME
+      THEME TOGGLE
       ========================= */
 
-   themeToggle.addEventListener("click", () => {
+      if (!themeToggle) return;
+
+      themeToggle.addEventListener("click", () => {
    
       const currentIndex = modes.indexOf(mode);
    
-      const nextIndex =
-   
-      (currentIndex + 1) % modes.length;
+      const nextIndex = (currentIndex + 1) % modes.length;
       
       mode = modes[nextIndex];
 
@@ -165,13 +169,13 @@ function initTheme() {
    });
    
    /* =========================
-      INITIALIZE THEME
+      INITIALIZE THEME ✅
       ========================= */
    
    applyTheme(mode);
 
    /* =========================   
-      AUTO THEME SYNC
+      AUTO THEME SYNC ✅
       ========================= */
    
    setInterval(() => {
