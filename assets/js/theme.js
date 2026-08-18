@@ -30,20 +30,22 @@ function initTheme() {
       
       : "dark";
 
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+      // return window.matchMedia("(prefers-color-scheme: dark)").matches
+
+      // ? "dark"
+
+      // : "light";
     
    }
    
    /* =========================
       THEME UI DATA ✅
       ========================= */
-
-      const themeData = {
+      
+   const themeData = {
    
       auto: {
-   
+      
          label: "Auto",
    
          icon: "🌓"
@@ -72,13 +74,13 @@ function initTheme() {
       GET SAVED MODE ✅
       ========================= */
    
-      let mode = localStorage.getItem(storageKey);
+   let mode = localStorage.getItem(storageKey);
+      
+   if (!modes.includes(mode)) {
    
-      if (!modes.includes(mode)) {
-   
-         mode = defaultTheme;
-   
-      }
+      mode = defaultTheme;   
+         
+   }
 
    /* =========================   
       UPDATE THEME UI ✅
@@ -136,9 +138,9 @@ function initTheme() {
       THEME TOGGLE
       ========================= */
 
-      if (!themeToggle) return;
+   if (!themeToggle) return;
 
-      themeToggle.addEventListener("click", () => {
+   themeToggle.addEventListener("click", () => {
    
       const currentIndex = modes.indexOf(mode);
    
