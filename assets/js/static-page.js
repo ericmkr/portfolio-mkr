@@ -7,24 +7,24 @@ console.info("static-page.js ok.");
    HIDE THEME TOGGLE
    ========================= */
 
-function hideThemeToggle() {
+// function hideThemeToggle() {
 
-   const themeToggle = document.getElementById("theme-toggle");
+//    const themeToggle = document.getElementById("theme-toggle");
     
-   if (!themeToggle) return;
+//    if (!themeToggle) return;
 
-   themeToggle.hidden = true;
+//    themeToggle.hidden = true;
 
-}
+// }
 
 /* =========================
    INITIALIZE STATIC PAGE
    ========================= */
 
-function initStaticPage() {
+// function initStaticPage() {
 
-   hideThemeToggle();
+//    hideThemeToggle();
 
-}
+// }
 
-initStaticPage();
+// initStaticPage();
