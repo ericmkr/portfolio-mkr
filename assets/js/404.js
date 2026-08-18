@@ -1,3 +1,4 @@
+import "./theme.js";
 import "./loader.js";
 
 console.info("404.js ok.");
@@ -10,7 +11,7 @@ const redirectDelay = 5;
 
 const countdown = document.getElementById("countdown");
 
-// const progressBar = document.getElementById("progress-bar");
+const progressBar = document.getElementById("progress-bar");
 
 let remainingTime = redirectDelay;
 

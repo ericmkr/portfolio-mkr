@@ -138,7 +138,9 @@ function initTheme() {
       THEME TOGGLE
       ========================= */
 
-   if (!themeToggle) return;
+   // if (!themeToggle) return;
+
+   if (themeToggle) {
 
    themeToggle.addEventListener("click", () => {
    
@@ -196,6 +198,6 @@ function initTheme() {
    
    60000);
 
-}
+}};
 
 initTheme();
