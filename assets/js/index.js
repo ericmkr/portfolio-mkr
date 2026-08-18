@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
    if (devConfig.enabled && devConfig.scrollToSection) {
 >>>>>>> sb2
 
-      const devAnchor = "#contact";
+      const devAnchor = "#projects";
 
       const target = document.querySelector(devAnchor);
 
