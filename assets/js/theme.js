@@ -3,7 +3,7 @@ import { themeConfig } from "./config.js";
 console.info("theme.js ok.");
 
 /* =========================
-   THEME DISPLAY ✅
+   THEME DISPLAY
    ========================= */
 
 function initTheme() {
@@ -17,7 +17,7 @@ function initTheme() {
    const {defaultTheme, storageKey, modes, transitionDuration} = themeConfig;
    
    /* =========================
-      SYSTEM THEME ✅
+      SYSTEM THEME
       ========================= */
    
    function getSystemTheme() {
@@ -39,7 +39,7 @@ function initTheme() {
    }
    
    /* =========================
-      THEME UI DATA ✅
+      THEME UI DATA
       ========================= */
       
    const themeData = {
@@ -71,7 +71,7 @@ function initTheme() {
    };
 
    /* =========================
-      GET SAVED MODE ✅
+      GET SAVED MODE
       ========================= */
    
    let mode = localStorage.getItem(storageKey);
@@ -83,7 +83,7 @@ function initTheme() {
    }
 
    /* =========================   
-      UPDATE THEME UI ✅
+      UPDATE THEME UI
       ========================= */
    
    function updateThemeUI(currentMode) {
@@ -109,7 +109,7 @@ function initTheme() {
    }
 
    /* =========================   
-      APPLY THEME ✅
+      APPLY THEME
       ========================= */
 
    function applyTheme(selectedMode) {
@@ -175,13 +175,13 @@ function initTheme() {
    });
    
    /* =========================
-      INITIALIZE THEME ✅
+      INITIALIZE THEME
       ========================= */
    
    applyTheme(mode);
 
    /* =========================   
-      AUTO THEME SYNC ✅
+      AUTO THEME SYNC
       ========================= */
    
    setInterval(() => {
