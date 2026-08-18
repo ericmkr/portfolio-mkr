@@ -6,42 +6,42 @@ console.info("404.js ok.");
    CODEX C2 ADDITION: 404 REDIRECT COUNTDOWN
    ========================= */
 
-const redirectDelay = 5;
+// const redirectDelay = 5;
 
-const countdown = document.getElementById("countdown");
+// const countdown = document.getElementById("countdown");
 
-const progressBar = document.getElementById("progress-bar");
+// // const progressBar = document.getElementById("progress-bar");
 
-let remainingTime = redirectDelay;
+// let remainingTime = redirectDelay;
 
-function updateCountdown() {
+// function updateCountdown() {
 
-   if (countdown) countdown.textContent = remainingTime;
+//    if (countdown) countdown.textContent = remainingTime;
 
-   if (progressBar) {
+//    if (progressBar) {
 
-      const progress = ((redirectDelay - remainingTime) / redirectDelay) * 100;
+//       const progress = ((redirectDelay - remainingTime) / redirectDelay) * 100;
 
-      progressBar.style.width = `${progress}%`;
+//       progressBar.style.width = `${progress}%`;
 
-   }
+//    }
 
-}
+// }
 
-updateCountdown();
+// updateCountdown();
 
-const timer = setInterval(() => {
+// const timer = setInterval(() => {
 
-   remainingTime--;
+//    remainingTime--;
 
-   updateCountdown();
+//    updateCountdown();
 
-   if (remainingTime <= 0) {
+//    if (remainingTime <= 0) {
 
-      clearInterval(timer);
+//       clearInterval(timer);
 
-      window.location.replace("index.html");
+//       window.location.replace("index.html");
 
-   }
+//    }
 
-}, 1000);
+// }, 1000);
