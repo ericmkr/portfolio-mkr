@@ -98,37 +98,34 @@ header {
    top: 0;
    left: 0;
    right: 0;
-   z-index: 1000;
    background-color: var(--header);
    backdrop-filter: blur(11px);
    border-bottom: solid 1px var(--border);
-   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
-
    box-sizing: border-box;
    height: var(--header-height);
+   z-index: 1000;
+   transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .header-content {
-   padding: 1rem 3rem;
-   /* display: flex; */
-
    display: grid;
    grid-template-columns: 1fr auto auto;
-   align-items: center;
+   column-gap: 3rem;
    height: 100%;
+   padding: 1rem 3rem;
+   align-items: center;
    box-sizing: border-box;
 
-   column-gap: 3rem;
+   /* display: flex; */   
 }
 
 .logo {
+   grid-column: 1;
+   justify-self: start;
    font-size: 1.25rem;
    font-weight: 500;
    color: var(--primary);
    text-decoration: none;
-
-   grid-column: 1;
-   justify-self: start;
 }
 
 .navbar {
@@ -158,9 +155,11 @@ header {
 }
 
 .theme-toggle {
-   border: solid 3px var(--border);
+   grid-column: 3;
+   justify-self: end;
    background: var(--surface);
    color: var(--txt);
+   border: solid 3px var(--border);
    border-radius: 111px;
    padding: .65rem .95rem;
    display: inline-flex;
@@ -168,9 +167,6 @@ header {
    gap: .5rem;
    box-shadow: var(--shadow);
    transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease, opacity .3s ease;
- 
-   grid-column: 3;
-   justify-self: end;
 }
 
 .theme-toggle:hover {
