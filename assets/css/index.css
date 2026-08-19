@@ -83,12 +83,13 @@ a:focus-visible, #submit-btn:focus-visible, #theme-toggle:focus-visible {
 .skip-link { 
    position: absolute;
    top: 1rem;
-   left: 11rem;
+   left: 9rem;
    transform: translateY(-200%);
    z-index: 9999;
+   transition: transform 0.3s ease;
 }
 
-.skip-link:focus-visible { 
+.skip-link:focus { 
    transform: translateY(0);
 }
 
