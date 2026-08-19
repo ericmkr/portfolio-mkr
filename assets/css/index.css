@@ -66,15 +66,15 @@ html {
 }
 
 body {
+   min-height: 100vh;
    background-color: var(--bg);
    color: var(--txt);
-   min-height: 100vh;
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
    line-height: 1.5;
    transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
-a:focus-visible, #submit-btn:focus-visible {
+a:focus-visible, #submit-btn:focus-visible, #theme-toggle:focus-visible {
    outline: solid 3px var(--txt);
    outline-offset: 7px;
    border-radius: .6875rem;
@@ -82,7 +82,10 @@ a:focus-visible, #submit-btn:focus-visible {
 
 .skip-link { 
    position: absolute;
+   top: 1rem;
+   left: 11rem;
    transform: translateY(-200%);
+   z-index: 9999;
 }
 
 .skip-link:focus-visible { 
