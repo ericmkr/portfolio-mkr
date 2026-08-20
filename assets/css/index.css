@@ -1199,6 +1199,7 @@ button:hover {
    padding: 3rem;
    /* overflow: hidden; */
    /* opacity: 0; */
+   /* transition: grid-template-rows .7s cubic-bezier(.22, 1, .36, 1); */
    transition: grid-template-rows 400ms ease, opacity 250ms ease;
 }
 

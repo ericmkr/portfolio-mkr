@@ -24,6 +24,32 @@ const nextBtn = document.querySelector(".next");
 let currentImageIndex = 0;
 
 /* =========================
+   AUTO OPEN PROJECT DETAILS
+   ========================= */
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const project = urlParams.get("project");
+
+/* =========================
+   FLOWTRACK PROJECT DETAILS OPENING
+   ========================= */
+
+if (project === "flowtrack") {
+
+   projectDetails.classList.add("is-open");
+
+   // Mise à jour de l'accessibilité
+   projectDetails.setAttribute("aria-hidden", "false");
+
+   // Le bouton doit également refléter l'état ouvert
+   learnMoreBtn.setAttribute("aria-expanded", "true");
+
+   // Modification du texte du bouton
+   learnMoreBtn.textContent = "Réduire";
+}
+
+/* =========================
    CODEX C2 ADDITION: PROJECT DETAILS
    ========================= */
 
