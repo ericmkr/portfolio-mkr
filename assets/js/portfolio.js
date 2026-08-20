@@ -183,70 +183,72 @@ document.addEventListener("keydown", event => {
    CODEX C2 ADDITION: PROJECT RATING STORAGE
    ========================= */
 
-const ratingBlocks = document.querySelectorAll("[data-project-rating]");
+// const ratingBlocks = document.querySelectorAll("[data-project-rating]");
 
-function getRatings() {
+// function getRatings() {
 
-   return JSON.parse(localStorage.getItem("portfolio-project-ratings") || "{}");
+//    return JSON.parse(localStorage.getItem("portfolio-project-ratings") || "{}");
 
-}
+// }
 
-function saveRating(projectId, rating) {
+// function saveRating(projectId, rating) {
 
-   const ratings = getRatings();
+//    const ratings = getRatings();
 
-   ratings[projectId] = {
+//    ratings[projectId] = {
 
-      rating,
+//       rating,
 
-      updatedAt: new Date().toISOString()
+//       updatedAt: new Date().toISOString()
 
-   };
+//    };
 
-   localStorage.setItem("portfolio-project-ratings", JSON.stringify(ratings));
+//    localStorage.setItem("portfolio-project-ratings", JSON.stringify(ratings));
 
-}
+// }
 
-ratingBlocks.forEach(block => {
+// ratingBlocks.forEach(block => {
 
-   const projectId = block.dataset.projectRating;
+//    const projectId = block.dataset.projectRating;
 
-   const buttons = block.querySelectorAll(".rating-btn");
+//    const buttons = block.querySelectorAll(".rating-btn");
 
-   const feedback = block.querySelector(".rating-feedback");
+//    const feedback = block.querySelector(".rating-feedback");
 
-   const storedRating = getRatings()[projectId]?.rating;
+//    const storedRating = getRatings()[projectId]?.rating;
 
-   function paintRating(rating) {
+//    function paintRating(rating) {
 
-      buttons.forEach(button => {
+//       buttons.forEach(button => {
 
-         const isSelected = Number(button.dataset.rating) <= rating;
+//          const isSelected = Number(button.dataset.rating) <= rating;
 
-         button.classList.toggle("is-selected", isSelected);
+//          button.classList.toggle("is-selected", isSelected);
 
-         button.setAttribute("aria-pressed", String(Number(button.dataset.rating) === rating));
+//          button.setAttribute("aria-pressed", String(Number(button.dataset.rating) === rating));
 
-      });
+//       });
 
-      if (feedback) feedback.textContent = rating ? `Saved rating: ${rating}/5.` : "";
+//       if (feedback) feedback.textContent = rating ? `Saved rating: ${rating}/5.` : "";
 
-   }
+//    }
 
-   paintRating(Number(storedRating) || 0);
+//    paintRating(Number(storedRating) || 0);
 
-   buttons.forEach(button => {
+//    buttons.forEach(button => {
 
-      button.addEventListener("click", () => {
+//       button.addEventListener("click", () => {
 
-         const rating = Number(button.dataset.rating);
+//          const rating = Number(button.dataset.rating);
 
-         saveRating(projectId, rating);
+//          saveRating(projectId, rating);
 
-         paintRating(rating);
+//          paintRating(rating);
 
-      });
+//       });
 
-   });
+//    });
 
-});
+// });
+
+

@@ -1197,15 +1197,13 @@ button:hover {
    grid-template-rows: 0fr;
    width: 100%;
    padding: 3rem;
-   /* overflow: hidden; */
-   /* opacity: 0; */
-   /* transition: grid-template-rows .7s cubic-bezier(.22, 1, .36, 1); */
-   transition: grid-template-rows 400ms ease, opacity 250ms ease;
+   transition: grid-template-rows .3s cubic-bezier(.22, 1, .36, 1);
+   /* transition: grid-template-rows 400ms ease, opacity 250ms ease; */
 }
 
-.project-details > * {
-   /* min-height: 0; */
-}
+/* .project-details > * {
+   /* min-height: 0;
+} */
 
 .project-details-content {
    min-height: 0;
@@ -1214,7 +1212,6 @@ button:hover {
 
 .project-details.is-open {
    grid-template-rows: 1fr;
-   opacity: 1;
 }
 
 .project-details-title {
