@@ -1126,10 +1126,6 @@ body.no-scroll .navbar, body.no-scroll .form-modal {
    PORTFOLIO
 ========================= */
 
-header {
-   /* display: none; */
-}
-
 .portfolio {
    width: 100%;
    margin-top: 4.8rem;
