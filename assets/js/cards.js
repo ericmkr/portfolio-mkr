@@ -14,7 +14,7 @@ console.info("cards.js ok.");
 
          image: "assets/img/eden-market-logo.jpg",
 
-         imageAlt: "Eden Market logo",
+         imageAlt: "",
 
          category: "UX/UI Design",
 
@@ -32,7 +32,7 @@ console.info("cards.js ok.");
 
          image: "assets/img/OncoLink-splash-logo.png",
 
-         imageAlt: "ONCOLINK logo",
+         imageAlt: "",
 
          category: "UX/UI Design",
 
