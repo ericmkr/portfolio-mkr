@@ -88,9 +88,9 @@ function initTheme() {
    
    function updateThemeUI(currentMode) {
 
-      const data = themeData[currentMode];
-
       if (!themeToggle || !themeIcon || !themeLabel) return;
+
+      const data = themeData[currentMode];
    
       if (!data) return;
       
@@ -102,7 +102,7 @@ function initTheme() {
    
          "aria-label",
    
-         `Current theme: ${data.label}. Activate to change theme.`
+         `Theme: ${data.label}. Change.`
    
       );
    
