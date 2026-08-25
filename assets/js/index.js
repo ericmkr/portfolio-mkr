@@ -60,7 +60,7 @@ const roles = [
 
    "Front-End Developer",
 
-   "UX/UI Designer"
+   "UX/UI Designer",
 
    // "Product Designer",
 
@@ -68,11 +68,19 @@ const roles = [
 
    // "Graphic Designer",
 
-   // "QA Analyst"
+   "QA Analyst"
 
 ];
 
 const typingText = document.getElementById("typing-text");
+
+const accessibleRoles = document.getElementById("accessible-roles");
+
+if (accessibleRoles) {
+
+   accessibleRoles.textContent = roles.join(", ");
+   
+}
 
 let roleIndex = 0;
 
