@@ -1704,3 +1704,7 @@ body.no-scroll .form-modal {
       flex: 0 0 auto;
    }
 }
+
+.maintenance-page {
+   overflow: hidden;
+}
