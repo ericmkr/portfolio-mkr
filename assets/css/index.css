@@ -1146,7 +1146,6 @@ body.no-scroll .navbar, body.no-scroll .form-modal {
 .grid {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   height: .9375rem;
 }
 
 .card-image {
@@ -1212,7 +1211,7 @@ button:hover {
 }
 
 .project-details > * {
-   /* min-height: 0; */
+   min-height: 0;
 }
 
 .project-details-content {
@@ -1553,128 +1552,7 @@ body.no-scroll .form-modal {
    font-weight: 700;
 }
 
-.grid {
-   height: auto;
-}
 
-.project-details {
-   overflow: hidden;
-   opacity: 0;
-   padding-top: 0;
-   padding-bottom: 0;
-}
-
-.project-details > * {
-   min-height: 0;
-}
-
-.project-details.is-open {
-   opacity: 1;
-   padding-top: 3rem;
-   padding-bottom: 3rem;
-}
-
-.project-details-close {
-   margin-top: 2rem;
-}
-
-.project-rating {
-   margin-top: 2rem;
-   padding: 1.25rem;
-   border: solid 1px var(--border);
-   border-radius: var(--radius);
-   background-color: var(--bg);
-}
-
-.project-rating-title {
-   margin-bottom: .85rem;
-   font-weight: 700;
-}
-
-.rating-buttons {
-   display: flex;
-   flex-wrap: wrap;
-   gap: .6rem;
-}
-
-.rating-btn {
-   min-width: 2.75rem;
-   min-height: 2.75rem;
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   border-color: var(--border);
-   border-radius: 50%;
-   color: var(--txt);
-   background-color: var(--surface);
-}
-
-.rating-btn.is-selected,
-.rating-btn:hover {
-   border-color: var(--primary);
-   background-color: var(--primary);
-   color: var(--primary-color);
-}
-
-.rating-feedback {
-   margin-top: .75rem;
-   color: var(--muted);
-}
-
-.lightbox {
-   position: fixed;
-   inset: 0;
-   display: none;
-   align-items: center;
-   justify-content: center;
-   gap: 1rem;
-   padding: 5rem 1.5rem;
-   background-color: rgba(0, 0, 0, .82);
-   z-index: 2500;
-}
-
-.lightbox.is-open {
-   display: flex;
-}
-
-.lightbox-image {
-   max-width: min(92vw, 70rem);
-   max-height: 82vh;
-   border-radius: var(--radius);
-   object-fit: contain;
-   box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
-}
-
-.lightbox-close,
-.prev,
-.next {
-   border-color: rgba(255, 255, 255, .35);
-   background-color: rgba(255, 255, 255, .12);
-   color: #fff;
-}
-
-.lightbox-close {
-   position: fixed;
-   top: 1.5rem;
-   right: 1.5rem;
-   width: 3rem;
-   height: 3rem;
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 50%;
-   font-size: 2rem;
-}
-
-.prev,
-.next {
-   width: 3rem;
-   height: 3rem;
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 50%;
-}
 
 @media (prefers-reduced-motion: reduce) {
    .page-loader-spinner,

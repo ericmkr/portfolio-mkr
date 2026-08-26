@@ -62,13 +62,13 @@ const roles = [
 
    "UX/UI Designer",
 
-   // "Product Designer",
-
-   // "Web Designer",
-
-   // "Graphic Designer",
-
    "QA Analyst"
+
+   // "Product Designer"
+
+   // "Web Designer"
+
+   // "Graphic Designer"
 
 ];
 
