@@ -1212,17 +1212,16 @@ button:hover {
    display: grid;
    grid-template-rows: 0fr;
    width: 100%;
-   padding: 0 3rem;
-
-   /* overflow: hidden; */
-   /* opacity: 0; */
+   /* padding:0 3rem; */
+   overflow: hidden;
+   opacity: 0;
    /* transition: grid-template-rows .7s cubic-bezier(.22, 1, .36, 1); */
    transition: grid-template-rows 400ms ease, opacity 250ms ease;
 }
 
-/* .project-details > * {
+.project-details > * {
    min-height: 0;
-} */
+}
 
 .project-details-content {
    min-height: 0;
@@ -1231,7 +1230,12 @@ button:hover {
 
 .project-details.is-open {
    grid-template-rows: 1fr;
-   /* opacity: 1; */
+   opacity: 1;
+   padding: 3rem;
+}
+
+.project-details-close {
+   margin-top: 2rem;
 }
 
 .project-details-title {
@@ -1262,6 +1266,61 @@ button:hover {
 
 .screen:hover {
    transform: scale(1.01);
+}
+
+.lightbox {
+   position: fixed;
+   inset: 0;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   padding: 5rem 1.5rem;
+   background-color: rgba(0, 0, 0, .82);
+   z-index: 2500;
+}
+
+.lightbox.is-open {
+   display: flex;
+}
+
+.lightbox-image {
+   max-width: min(92vw, 70rem);
+   max-height: 82vh;
+   border-radius: var(--radius);
+   object-fit: contain;
+   box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+}
+
+.lightbox-close,
+.prev,
+.next {
+   border-color: rgba(255, 255, 255, .35);
+   background-color: rgba(255, 255, 255, .12);
+   color: #fff;
+}
+
+.lightbox-close {
+   position: fixed;
+   top: 1.5rem;
+   right: 1.5rem;
+   width: 3rem;
+   height: 3rem;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   font-size: 2rem;
+}
+
+.prev,
+.next {
+   width: 3rem;
+   height: 3rem;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
 }
 
 .close {
