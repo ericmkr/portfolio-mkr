@@ -12,13 +12,9 @@ console.info("index.js ok.");
 
 history.scrollRestoration = "manual";
 
-<<<<<<< HEAD
-   const devAnchor = "#hero";
-=======
 window.addEventListener("load", () => {
  
    if (devConfig.enabled && devConfig.scrollToSection) {
->>>>>>> sb2
 
       const devAnchor = "#projects";
 
