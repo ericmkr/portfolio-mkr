@@ -4,17 +4,73 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
-      <title>Portfolio - Victor Eric MOUKOURI</title>
+
+      <!-- =========================
+        SEO
+        ========================= -->
+      
+      <meta name="author" content="Eric Moukouri">
+      <meta name="description" content="Eric Moukouri — Front-End Developer, UX/UI Designer and QA Analyst creating high-performance, accessible and user-centered digital products with intuitive interfaces and scalable web solutions.">
+
+      <link rel="canonical" href="https://ton-domaine.com/">
+
+      <title>Eric Moukouri | Front-End Developer, UX/UI Designer & QA Analyst</title>
+  
+      <!-- =========================
+        COLOR & THEME
+        ========================= -->
+
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+      <meta name="color-scheme" content="light dark">
+   
+      <!-- =========================
+        OPEN GRAPH
+        ========================= -->
+
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Eric Moukouri | Front-End Developer, UX/UI Designer & QA Analyst">
+      <meta property="og:description" content="Front-End Developer, UX/UI Designer and QA Analyst creating high-performance, accessible and user-centered digital products.">
+      <meta property="og:url" content="https://ton-domaine.com/">
+      <meta property="og:image" content="https://ton-domaine.com/assets/images/og-image.png">
+      <meta property="og:site_name" content="Eric Moukouri">
+      <meta property="og:locale" content="en_US">
+
+      <!-- =========================
+        TWITTER / X
+        ========================= -->
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Eric Moukouri | Front-End Developer, UX/UI Designer & QA Analyst">
+      <meta name="twitter:description" content="High-performance, accessible and user-centered digital products.">
+      <meta name="twitter:image" content="https://ton-domaine.com/assets/images/og-image.png">
+  
+      <!-- =========================
+        FAVICONS
+        ========================= -->
+
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+      <!-- =========================
+        PWA
+        ========================= -->
+
+      <link rel="manifest" href="/site.webmanifest">
+
+      <!-- =========================
+        STYLES & SCRIPTS
+        ========================= -->
+
       <link rel="stylesheet" href="assets/css/index.css">
-      <script src="assets/js/index.js" defer></script> 
-      <script src="assets/js/form.js" defer></script>
-      <script src="assets/js/cards.js" defer></script>
+      <script type="module" src="assets/js/index.js"></script> 
    </head>
 
    <body>
 
-      <a class="skip-link" href="#main-content" hidden>Skip to main content</a>
+      <a class="skip-link" href="#main-content">Skip to main content</a>
 
       <header>
 
@@ -50,7 +106,7 @@
 
             </nav>
 
-            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Theme: Auto. Change.">
                   
                <span id="theme-icon" aria-hidden="true">🌓</span>
                 
@@ -64,11 +120,11 @@
 
       <main id="main-content">
 
-         <section id="hero" class="hero" aria-labelledby="hero-title" aria-describedby="hero-description">
+         <section id="hero" class="hero" aria-labelledby="hero-title">
 
             <div class="avatar">
 
-               <img class="avatar-img" src="assets/img/4x4.jpg" width="250" height="330" alt="Portrait of Victor Eric MOUKOURI"/>
+               <img class="avatar-img" src="assets/img/4x4.jpg" width="250" height="330" alt="Portrait of Victor Eric MOUKOURI">
 
             </div>
             
@@ -78,7 +134,9 @@
 
                <h1 id="hero-title">
 
-                  <span id="typing-text" aria-live="polite">Front-End Developer</span>
+                  <span id="accessible-roles" class="sr-only"></span>
+
+                  <span id="typing-text" aria-hidden="true">Front-End Developer</span>
 
                   <span class="cursor" aria-hidden="true">_</span>
 
@@ -108,19 +166,19 @@
 
                   <h2 id="projects-title">My projects</h2>
 
-                  <p id="projects-description" class="projects-description">A selection of my recent work in product design and UX/UI.</p>
+                  <p id="projects-description" class="projects-description">A selection of my recent work in web development, product design and UX/UI.</p>
 
                </div>
                
                <div class="projects-grid">
 
-                  <a class="card-link" href="#">
+                  <a class="card-link" href="portfolio.html?project=flowtrack">
 
                      <article class="project-card" data-project="flowtrack">
 
                         <div class="project-image">
 
-                           <img src="assets/img/FlowTrack logo.jpg" alt="FlowTrack logo"/>
+                           <img src="assets/img/FlowTrack logo.jpg" alt="">
 
                            <div class="project-overlay">
 
@@ -170,7 +228,7 @@
 
                               <div class="icon-box">
 
-                                 <i class="fa-regular fa-user"></i>    
+                                 <i class="fa-regular fa-user" aria-hidden="true"></i>    
 
                               </div>
 
@@ -297,9 +355,13 @@
                      <article class="tool-card">
                         <img src="assets/img/logos/vscode.svg" alt="Visual Studio Code" loading="lazy" decoding="async">
                      </article>
+
                   </div>
+
                </div>
+
             </div>
+            
          </section> -->
          
          <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title" aria-describedby="testimonials-description">
@@ -338,7 +400,10 @@
                         Eric transformed my idea into a clear landing page that looks professional and easy to use.
                      </p>
          
-                     <p class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★ <span>5.0</span></p>
+                     <p class="testimonial-rating">
+                        <span aria-hidden="true">★★★★★</span>
+                        <span>5.0 out of 5</span>
+                     </p>
 
                   </article>
 
@@ -429,7 +494,7 @@
 
                      </a>
 
-                     <a href="https://github.com/ericmkr" target="_blank" class="contact-link" rel="noopener noreferrer">
+                     <a href="https://github.com/ericmkr" target="_blank" class="contact-link" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
 
                         <div class="contact-icon">
 
@@ -538,13 +603,13 @@
 
       </footer>
       
-      <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">⇧</button>
+      <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">⇧</button>
       
       <div id="modal-overlay" class="modal-overlay" hidden></div>
       
       <!-- Feedback Modal -->
       
-      <div id="form-modal" class="form-modal" role="alertdialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-message" aria-live="assertive" hidden>
+      <div id="form-modal" class="form-modal" role="alertdialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-message" hidden>
 
          <button id="modal-close" class="modal-close" type="button" aria-label="Close notification">&times;</button>
 
@@ -554,7 +619,7 @@
          
          <p id="modal-message">Please wait while your message is being sent.</p>
          
-         <!-- <p id="modal-countdown" class="modal-countdown" aria-live="polite"></p> -->
+         <p id="modal-countdown" class="modal-countdown" aria-live="polite"></p>
 
       </div>
 
