@@ -1212,53 +1212,32 @@ button:hover {
    display: grid;
    grid-template-rows: 0fr;
    width: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
    padding: 3rem;
    transition: grid-template-rows .3s cubic-bezier(.22, 1, .36, 1);
    /* transition: grid-template-rows 400ms ease, opacity 250ms ease; */
-}
 
-<<<<<<< HEAD
-/* .project-details > * {
-   /* min-height: 0;
-} */
-=======
-.project-details > * {
-   min-height: 0;
-}
->>>>>>> fd247c4 (Working on project-details update)
-=======
+
    padding: 0 3rem;
 
    /* overflow: hidden; */
    /* opacity: 0; */
-=======
+
    /* padding:0 3rem; */
    overflow: hidden;
    opacity: 0;
->>>>>>> 40763bf (Cleaning & optimizing c2)
+
    /* transition: grid-template-rows .7s cubic-bezier(.22, 1, .36, 1); */
    transition: grid-template-rows 400ms ease, opacity 250ms ease;
-=======
+
    /* padding:0 5rem; */
    overflow: hidden;
    opacity: 0;
    border-top:  solid 1px rgba(210, 175, 103, .45);
    border-bottom: solid 1px rgba(210, 175, 103, .45);
    transition: grid-template-rows .7s cubic-bezier(.22, 1, .36, 1), opacity .45s ease, padding .7s cubic-bezier(.22, 1, .36, 1);
->>>>>>> e8d73c8 (Cleaning & optimizing c2 .project-details)
-}
 
-.project-details > * {
-   min-height: 0;
-<<<<<<< HEAD
-} */
->>>>>>> 17260d9 (One view on project-details padding)
-=======
 }
->>>>>>> 40763bf (Cleaning & optimizing c2)
 
 .project-details-content {
    min-height: 0;
@@ -1271,12 +1250,9 @@ button:hover {
 
 .project-details.is-open {
    grid-template-rows: 1fr;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
    /* opacity: 1; */
->>>>>>> 17260d9 (One view on project-details padding)
-=======
+
    opacity: 1;
    padding: 3rem;
    padding-block: 0;
@@ -1284,7 +1260,7 @@ button:hover {
 
 .project-details-close {
    margin-top: 2rem;
->>>>>>> 40763bf (Cleaning & optimizing c2)
+
 }
 
 .project-details-title {
@@ -1737,6 +1713,22 @@ body.no-scroll .form-modal {
       height: 2.5rem;
       flex: 0 0 auto;
    }
+}
+
+/* =========================
+   CODEX FIX: prevent fixed controls from shifting when modal locks scroll
+========================= */
+
+body.no-scroll .navbar {
+   padding-right: 0;
+}
+
+body.no-scroll #theme-toggle {
+   transform: translateX(calc(-1 * var(--scrollbar-width)));
+}
+
+body.no-scroll #back-to-top {
+   right: calc(1.15rem + var(--scrollbar-width));
 }
 
 /* .maintenance-page {
