@@ -1612,11 +1612,10 @@ body.no-scroll .form-modal {
    font-weight: 700;
    letter-spacing: .08rem;
    text-transform: uppercase;
-   font-size: 11rem;
+   font-size: 7rem;
 }
 
-#status-title,
-.error-content h1 {
+#status-title, #error-title {
    margin: .75rem 0 1rem;
    font-size: clamp(2.25rem, 8vw, 4.5rem);
    line-height: 1.05;
@@ -1625,6 +1624,7 @@ body.no-scroll .form-modal {
 .status-message, .error-message, .redirect-message {
    color: var(--muted);
    font-size: 1.125rem;
+   margin-top: 1.1rem;
 }
 
 .progress-container {
