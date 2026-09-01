@@ -1245,7 +1245,7 @@ button:hover {
    /* max-width: 1200px; */
    /* width: 100%; */
    /* margin-inline: auto; */
-   /* padding-block: 3.5rem 4rem; */
+   padding-block: 3.5rem 4rem;
 }
 
 .project-details.is-open {
