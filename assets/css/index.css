@@ -1219,12 +1219,13 @@ button:hover {
    transition: grid-template-rows .7s cubic-bezier(.22, 1, .36, 1), opacity .45s ease, padding .7s cubic-bezier(.22, 1, .36, 1);
 }
 
-.project-details > * {
+/* .project-details > * {
    min-height: 0;
-}
+} */
 
 .project-details-content {
-   min-height: 0;
+   background-color: maroon;
+   /* min-height: 0; */
    overflow: hidden;
    /* max-width: 1200px; */
    /* width: 100%; */
@@ -1235,8 +1236,8 @@ button:hover {
 .project-details.is-open {
    grid-template-rows: 1fr;
    opacity: 1;
-   padding: 3rem;
-   padding-block: 0;
+   /* padding: 3rem; */
+   /* padding-block: 0; */
 }
 
 .project-details-close {
